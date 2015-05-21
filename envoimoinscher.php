@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name: EnvoiMoinsCher.
  * Plugin URI: http://ecommerce.envoimoinscher.com/
  * Description: Shipping plugin allowing to compare and order negotiated delivery options of 15 carriers.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: EnvoiMoinsCher
  * Author URI: http://www.envoimoinscher.com
  * Text Domain: envoimoinscher

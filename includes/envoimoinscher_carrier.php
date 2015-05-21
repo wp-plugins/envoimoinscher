@@ -24,7 +24,7 @@ class envoimoinscher_carrier extends WC_Shipping_Method {
 	 */
 	public function  __construct() {				
 		
-		$this->id = envoimoinscher::getCalledClass();
+		$this->id = self::getCalledClass();
 		
 		$service = envoimoinscher_model::get_service_by_carrier_code($this->id);
 		$this->ope_code = $service->ope_code;
@@ -72,6 +72,7 @@ class envoimoinscher_carrier extends WC_Shipping_Method {
 			envoimoinscher_model::save_scale_data($params);
 		}
 	}
+	
 	/**
 	 * init_form_fields function.
 	 *
@@ -149,6 +150,26 @@ class envoimoinscher_carrier extends WC_Shipping_Method {
 			),
 		);
 
+	}
+	
+	/*
+	 * Fix for PHP 5.2
+	 */
+	public static function getCalledClass(){
+		
+		if ( function_exists('get_called_class') ) {
+			return get_called_class();
+		}
+		else {
+			$arr = array(); 
+			$arrTraces = debug_backtrace();
+			foreach ($arrTraces as $arrTrace){
+				 if(!array_key_exists("class", $arrTrace)) continue;
+				 if(count($arr)==0) $arr[] = $arrTrace['class'];
+				 else if(get_parent_class($arrTrace['class'])==end($arr)) $arr[] = $arrTrace['class'];
+			}
+			return end($arr);
+		}
 	}
 	
 	/**
