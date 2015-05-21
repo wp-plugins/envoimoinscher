@@ -1,0 +1,554 @@
+/* =Mixins
+-------------------------------------------------------------- */
+@import "mixins.less";
+
+/* Settings */
+table.emc_carrier_list {
+  th{
+    text-align:center;
+    font-weight:600;
+    color:#333;
+  }
+
+  td{
+    padding:3px 7px;
+  }
+
+  .offers{
+    width:320px;
+    vertical-align:middle;
+
+    .name{
+      font-weight:700;
+      color:#555;
+    }
+
+    .parcelPoint{
+      text-align:right;
+
+      label{
+        width:auto;
+        display:inline-block;
+      }
+
+      input{
+        display:inline-block;
+        width:auto;
+        border:1px solid #ccc;
+        border-radius:3px;
+      }
+
+      div{
+        text-align:right;
+      }
+    }
+  }
+
+  .price{
+    text-align:right;
+    width:100px;
+    vertical-align:middle;
+    font-weight:700;
+    color:#555;
+
+    div{
+      line-height:2em;
+
+      label{
+        display:inline-block;
+        width:auto;
+      }
+
+      input{
+        margin-top:3px;
+      }
+    }
+  }
+
+  .description{
+    vertical-align:middle;
+  }
+
+  .status{
+    text-align:center;
+    vertical-align:middle;
+
+    input{
+      margin:0;
+    }
+  }
+}
+
+table.weight_options {
+  th{
+    text-align:center;
+    font-weight:600;
+    color:#333;
+  }
+
+  td{
+    text-align:center;
+    padding:3px 7px;
+    vertical-align:middle;
+
+    input{
+      border:1px solid #ccc !important;
+      display:inline;
+      width:auto !important;
+      border-radius:3px;
+    }
+  }
+}
+
+table.emc_shipping_tab {
+  th{
+    text-align:center;
+    font-weight:600;
+    color:#333;
+  }
+
+  td{
+    padding:3px 7px;
+  }
+}
+
+table.emc_simulator_list {
+  th {
+    text-align:center;
+    font-weight:600;
+    color:#333;
+  }
+  td {
+    padding:8px 10px;
+  }
+  td.center {
+    text-align: center;
+    vertical-align: middle;
+  }
+  td.center.label {
+    color: #333;
+  }
+  td.hide_links a{
+    color: #555;
+    cursor: text;
+  }
+}
+
+/* admin orders list page */
+mark.shipped.tips {
+  background: url('../img/ico_shipped_status.png') no-repeat !important;
+  background-size: 100% 100% !important;
+}
+mark.awaiting-shipment.tips {
+  background: url('../img/ico_awating_shipment_status.png') no-repeat !important;
+  background-size: 100% 100% !important;
+}
+.order_actions .awaiting-shipment,
+.order_actions .shipped {
+  float: left;
+  margin: 0 4px 2px 0;
+  cursor: pointer;
+  vertical-align: baseline;
+  display: block;
+  text-indent: -9999px;
+  position: relative;
+  padding: 0!important;
+  height: 2em!important;
+  width: 2em;
+}
+.order_actions .awaiting-shipment::after {
+  content: url('../img/ico-action-awaiting-shipment.png');
+  margin: 0;
+  text-indent: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 1.85;
+}
+.order_actions .shipped::after {
+  content: url('../img/ico-action-shipped.png');
+  margin: 0;
+  text-indent: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 1.85;
+}
+.order_actions .awaiting-shipment:hover::after{
+  content: url('../img/ico-action-awaiting-shipment-hover.png');
+}
+.order_actions .shipped:hover::after{
+  content: url('../img/ico-action-shipped-hover.png');
+}
+
+#envoimoinscher-order-shipping {
+  .inside{
+		.emc-shipping-actions{
+			text-align:right;
+		}
+		
+		.red{
+			color:red;
+		}
+						
+    .panel-wrap.woocommerce{
+      #order_shipping{
+        h2 {
+          margin: 0;
+          font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
+          font-size: 21px;
+          font-weight: normal;
+          line-height: 1.2;
+          text-shadow: 1px 1px 1px white;
+          padding: 0;
+        }
+
+        h4 {
+          color: #333;
+          margin: 1.33em 0 0;
+        }
+
+        p {
+          color: #777;
+        }
+
+        p.order_number {
+          margin: 0;
+          font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
+          font-weight: normal;
+          line-height: 1.6em;
+          font-size: 16px;
+        }
+
+        div.already_sent {
+          border-bottom:1px solid #eee;
+          padding-bottom:10px;
+
+          .reference{
+            font-size:1.5em;
+            padding-top:10px;
+            padding-bottom:8px;
+
+            .carrier_ref, .emc_ref{
+              padding-top:6px;
+							font-size: 0.8em;
+            }
+
+						.green{
+							color:#7ad03a;
+						}
+          }
+        }
+
+        div.rates {
+          .type{
+            font-size:1.5em;
+            padding-top:10px;
+            padding-bottom:10px;
+          }
+
+          #display_rate .amount{
+            font-weight:bold;
+          }
+
+          #current_rate{
+            display:none;
+          }
+        }
+
+        .order_shipping_column_container {
+          clear: both;
+        }
+
+        .order_shipping_column {
+          width: 32%;
+          padding: 0 2% 0 0;
+          float: left;
+
+          &:last-child {
+            padding-right: 0;
+          }
+
+          p {
+            padding: 0 !important;
+          }
+
+          .address {
+            strong {
+              display: block;
+            }
+          }
+
+          .form-field {
+            float: left;
+            width: 48%;
+            padding: 0;
+            margin: 9px 0 0 0;
+
+            label {
+              display: block;
+              padding: 0 0 3px;
+            }
+
+            input,
+            textarea {
+              width: 100%;
+            }
+
+            select {
+              width: 100%;
+            }
+
+            .select2-container {
+              width: 100% !important;
+            }
+
+            .date-picker {
+              width: 50%;
+            }
+
+            .hour,
+            .minute {
+              width: 2.5em;
+            }
+
+            small {
+              display: block;
+              margin: 5px 0 0 0;
+              color: #999;
+            }
+          }
+
+          .form-field.last {
+            float: right;
+          }
+
+          .form-field-wide {
+            width: 100%;
+            clear: both;
+
+            input,
+            textarea,
+            select,
+            .wc-enhanced-select,
+            .wc-customer-search {
+              width: 100%;
+            }
+          }
+
+          p.none_set {
+            color: #999;
+          }
+					
+					div.carrier_select {
+						select{
+							margin-top:9px;
+						}
+					}
+					
+          div.shipment_info {
+            small{
+              display:inline;
+            }
+          }
+
+          div.edit_shipment_info {
+            display: none;
+            zoom: 1;
+            padding-right: 1px;
+
+            input{
+              width:auto;
+            }
+          }
+
+          #insurance_rate_unformatted {
+            display:none;
+          }
+          div.edit_dimensions {
+            display: none;
+            zoom: 1;
+            padding-right: 1px;
+
+            input{
+              width:auto;
+            }
+          }
+
+          div.edit_insurance {
+            display: none;
+            zoom: 1;
+            padding-right: 1px;
+          }
+
+        }
+
+        a.edit_shipment_info {
+          opacity: 0.4;
+
+          &:hover,
+          &:focus {
+            opacity: 1;
+          }
+        }
+
+        a.edit_dimensions {
+          opacity: 0.4;
+
+          &:hover,
+          &:focus {
+            opacity: 1;
+          }
+        }
+      }
+      #international_shipping{
+        h3{
+          padding-left: 0;
+          border-top: 1px solid #eee;
+          border-bottom: 1px solid #eee;
+          margin: 16px 0;
+        }
+				p.select_reason{
+          border-bottom: 1px solid #eee;
+          padding: 0 0 1.2em 0;
+          font-size: 15px;
+          font-weight: bold;
+          label{
+            padding-right: 1em;
+          }
+        }
+        .item{
+          border-bottom: 1px solid #eee;
+          margin: 16px 0 0 0;
+          .img, .proforma, .edit_proforma{
+            display: inline-block;
+            vertical-align: top;
+          }
+					.edit_proforma {
+            display: none;
+            zoom: 1;
+            padding-right: 1px;
+						
+						p{
+              margin: 0.33em 0;
+              select{
+                font-size: 13px;
+              }
+            }
+            .proforma_weight{
+              margin: 0.33em 0 1em 0;
+            }
+						
+            input{
+              width:auto;
+							font-size: 13px;
+            }
+          }
+          .img{
+            margin: 20px 20px 0 0;
+            img{
+              padding: 1px;
+              margin: 0;
+              border: 1px solid #dfdfdf;
+              vertical-align: middle;
+              width: 100px;
+              height: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#mass_order{
+	.ongoing, .finished{
+		margin:15px 15px 2px 0px;
+		font-size:1.1em;
+		width:45%;
+		background-color:#fff;
+		border-left:4px solid #ffba00;
+		box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+		padding:10px;
+		line-height:1.5em;
+		
+		.title{
+			font-size:1.2em;
+		}
+	}
+		
+	.success{
+		border-color:#7ad03a;
+	}
+	
+	.failure{
+		border-color:#dd3d36;
+	}		
+	
+	.ongoing{
+		.image{
+			margin:10px;
+			float:right;
+		}
+	}
+	
+	.finished{
+		// display:none;
+		
+		.warning{
+			// display:none;
+			font-size:0.9em;
+			color:red;
+		}
+		
+		.already{
+			// display:none;
+			font-size:0.9em;
+		}
+	}
+}
+
+/* Help page */
+#emc_help{
+	max-width: 800px;
+	
+	.category{
+		.category_head{
+			cursor:pointer;
+			
+			h3{
+				display:inline-block;
+			}
+			
+			img{
+				margin:1em 0;
+				vertical-align:bottom;
+			}
+		}
+	
+		.questions{
+			display:none;
+
+			.question{
+				font-weight:bold;
+				cursor:pointer;
+				margin-bottom:10px;
+			}
+			
+			.answer{
+				margin-bottom:15px;
+				display:none;
+				
+				ul{
+					list-style:initial;
+					padding-left:20px;
+				}
+			}
+		}
+	}
+}
