@@ -2,8 +2,8 @@
 Contributors: Boxtale
 Tags: shipping
 Requires at least: 3.9
-Tested up to: 4.2.1
-Stable tag: 1.0.0
+Tested up to: 4.2.2
+Stable tag: 1.0.1
 
 This plugin uses the envoimoinscher.com API to provide shipping costs and functionalities to WooCommerce.
 
@@ -27,5 +27,5 @@ You can find help for how to setup the plugin on 'wp-admin/admin.php?page=envoim
 
 == Changelog ==
 
-= 1.0 =
-* First public release!
+= 1.0.1 =
+* Increased module stability
