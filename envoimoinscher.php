@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name: EnvoiMoinsCher.
  * Plugin URI: http://ecommerce.envoimoinscher.com/
  * Description: Shipping plugin allowing to compare and order negotiated delivery options of 15 carriers.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: EnvoiMoinsCher
  * Author URI: http://www.envoimoinscher.com
  * Text Domain: envoimoinscher
@@ -151,9 +151,6 @@ if ( ! class_exists('envoimoinscher')){
 				// add tracking number in URL
 				add_action( 'woocommerce_order_details_after_order_table', array( $this,'add_tracking_in_FO') );
 				
-				// Recompile less files if missing or user is admin
-				$this->recompile_less_files();
-				
 				$this->check_version();
 				
 			}
@@ -277,45 +274,6 @@ if ( ! class_exists('envoimoinscher')){
 				}
 
 				return apply_filters( 'woocommerce_shipping_' . $this->id . '_is_available', $is_available, $package );
-			}
-			
-			/**
-			 * function to recompile less files.
-			 */
-			public function recompile_less_files() {
-				
-				// check which less files don't have a css equivalent
-				$missing_files = array();			
-				
-				foreach (glob(dirname(__FILE__)."/assets/css/*.less") as $filename) {
-					if( "mixins" != basename($filename, '.less') ) {
-						if ( !file_exists( dirname( $filename ).basename($filename, '.less').'.css' ) ) {
-							array_push( $missing_files, basename($filename, '.less') );
-						}
-					}
-				}
-			
-				// launch recompiling for missing files or if user is admin
-				if ( is_admin() || ( !empty($missing_files) ) ) {
-					if ( ! class_exists( 'lessc' ) )
-						include_once( WC()->plugin_path() . '/includes/libraries/class-lessc.php' );
-					if ( ! class_exists( 'cssmin' ) )
-						include_once( WC()->plugin_path() . '/includes/libraries/class-cssmin.php' );
-					
-					foreach ( $missing_files as $file ) {
-						try {
-							$less         = new lessc;
-							$compiled_css = $less->compileFile( dirname(__FILE__)."/assets/css/".$file.".less" );
-							$compiled_css = CssMin::minify( $compiled_css );
-							
-							if ( $compiled_css ) {
-								file_put_contents( dirname(__FILE__)."/assets/css/".$file.".css", $compiled_css );
-							}
-						} catch ( exception $ex ) {
-							wp_die( sprintf(__( 'Could not compile %s.less:', 'envoimoinscher' ), $file) . ' ' . $ex->getMessage() );
-						}
-					}
-				}
 			}
 			
 		  /**
