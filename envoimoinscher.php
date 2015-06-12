@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name: EnvoiMoinsCher.
  * Plugin URI: http://ecommerce.envoimoinscher.com/
  * Description: Shipping plugin allowing to compare and order negotiated delivery options of 15 carriers.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: EnvoiMoinsCher
  * Author URI: http://www.envoimoinscher.com
  * Text Domain: envoimoinscher
@@ -16,13 +16,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 /**
- * Check if WooCommerce is active
+ * Check if WooCommerce is active (include network check)
  **/
-if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) return; // Check if WooCommerce is active
+if ( ! function_exists( 'is_plugin_active_for_network' ) )
+	require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 
-/**
- *   Wrap the class to hook into woocommerce
- **/
+if ( ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) :
+	if ( ! is_plugin_active_for_network( 'woocommerce/woocommerce.php' ) ) :
+		return;
+	endif;
+endif;
+
+
 if ( ! class_exists('envoimoinscher')){
 		
 		define('EMC_LOG_FILE','envoimoinscher');
@@ -31,10 +36,15 @@ if ( ! class_exists('envoimoinscher')){
 		register_activation_hook( __FILE__, array( 'envoimoinscher', 'activate' ) );
 		register_deactivation_hook( __FILE__, array( 'envoimoinscher', 'deactivate' ) );
 		register_uninstall_hook (__FILE__, array( 'envoimoinscher', 'uninstall' ) );
-
+		
+		// Add action to activate plugin on new multisite site if plugin already configured as network activated
+		add_action( 'wpmu_new_blog', array( 'envoimoinscher', 'network_activated' ), 10, 6 );
+		// Add action to uninstall plugin on multisite site if site is deleted
+		add_action( 'wpmu_drop_tables', array( 'envoimoinscher', 'uninstall_multisite_instance' ) );
+		
 		class envoimoinscher {
 
-			public $version = '1.0.0';
+			public $version = '1.0.4';
 			public $platform = 'woocommerce';
 			protected $model = null;
 			protected $view  = null;
@@ -72,7 +82,7 @@ if ( ! class_exists('envoimoinscher')){
 				$this->define_constants();
 				
 				// Include required files
-				add_action( 'woocommerce_loaded', array( &$this, 'includes' )	);
+				add_action( 'woocommerce_init', array( &$this, 'includes' )	);
 				
 				$this->id = self::getCalledClass();
 
@@ -94,7 +104,7 @@ if ( ! class_exists('envoimoinscher')){
 			 */
 			public function init() {
 				
-				$this->view  = new envoimoinscher_view();
+				// $this->view  = new envoimoinscher_view();
 
 				// Add shipping methods
 				add_filter( 'woocommerce_shipping_methods', array(&$this, 'envoimoinscher_filter_shipping_methods'));
@@ -152,7 +162,6 @@ if ( ! class_exists('envoimoinscher')){
 				add_action( 'woocommerce_order_details_after_order_table', array( $this,'add_tracking_in_FO') );
 				
 				$this->check_version();
-				
 			}
 			
 			/*
@@ -567,9 +576,44 @@ if ( ! class_exists('envoimoinscher')){
 
 			
 			/**
-			 * Activate the module, install it if the plugin's tables do not exists
+			 * Activate the module, install it if its tables do not exist
 			 */
-			public static function activate() {
+			public static function activate($network_wide) {
+				update_site_option('EMC_NETWORK_ACTIVATED', 'test');
+				// multisite activation. See if being activated on the entire network or one site.
+				if ( function_exists('is_multisite') && is_multisite() && $network_wide ) {
+					global $wpdb;
+			 
+					// Get this so we can switch back to it later
+					$current_blog = $wpdb->blogid;
+					// For storing the list of activated blogs
+					$activated = array();
+			 
+					// Get all blogs in the network and activate plugin on each one
+					$blog_ids = $wpdb->get_col("SELECT blog_id FROM ".$wpdb->blogs);
+					foreach ($blog_ids as $blog_id) {
+						switch_to_blog($blog_id);
+						self::activate_simple(); // The normal activation function
+						$activated[] = $blog_id;
+					}
+			 
+					// Switch back to the current blog
+					switch_to_blog($current_blog);
+			 
+					// Store the array for a later function
+					update_site_option('EMC_NETWORK_ACTIVATED', $activated);
+				}
+				
+				// normal activation
+				else {
+					self::activate_simple();
+				}
+			}
+			
+			/**
+			 * Activate the module, install it if its tables do not exist
+			 */
+			public static function activate_simple() {
 				require_once(WP_PLUGIN_DIR.'/envoimoinscher/envoimoinscher_model.php');
 				
 				if (!envoimoinscher_model::is_plugin_installed())
@@ -583,7 +627,41 @@ if ( ! class_exists('envoimoinscher')){
 			/**
 			 * Deactivate the module and flush the offers cache
 			 */
-			public static function deactivate() {
+			public static function deactivate($network_wide) {
+				// multisite deactivation. See if being deactivated on the entire network or one site.
+				if ( function_exists('is_multisite') && is_multisite() && $network_wide ) {
+					global $wpdb;
+			 
+					// Get this so we can switch back to it later
+					$current_blog = $wpdb->blogid;
+					// For storing the list of activated blogs
+					$activated = array();
+			 
+					// Get all blogs in the network and activate plugin on each one
+					$blog_ids = $wpdb->get_col("SELECT blog_id FROM ".$wpdb->blogs);
+					foreach ($blog_ids as $blog_id) {
+						switch_to_blog($blog_id);
+						self::deactivate_simple(); // The normal activation function
+						$activated[] = $blog_id;
+					}
+			 
+					// Switch back to the current blog
+					switch_to_blog($current_blog);
+			 
+					// Store the array for a later function
+					update_site_option('EMC_NETWORK_ACTIVATED', $activated);
+				}
+				
+				// normal activation
+				else {
+					self::deactivate_simple();
+				}
+			}
+			
+			/**
+			 * Deactivate the module and flush the offers cache
+			 */
+			public static function deactivate_simple() {
 				require_once(WP_PLUGIN_DIR.'/envoimoinscher/envoimoinscher_model.php');
 				
 				return envoimoinscher_model::flush_rates_cache();
@@ -592,10 +670,63 @@ if ( ! class_exists('envoimoinscher')){
 			/**
 			 * Remove completely the plugin from woocommerce
 			 */
-			public static function uninstall() {
+			public static function uninstall($network_wide) {
+				// multisite deactivation. See if being deactivated on the entire network or one site.
+				if ( function_exists('is_multisite') && is_multisite() && $network_wide ) {
+					global $wpdb;
+			 
+					// Get this so we can switch back to it later
+					$current_blog = $wpdb->blogid;
+			 
+					// Get all blogs in the network and activate plugin on each one
+					$blog_ids = $wpdb->get_col("SELECT blog_id FROM ".$wpdb->blogs);
+					foreach ($blog_ids as $blog_id) {
+						switch_to_blog($blog_id);
+						self::uninstall_simple(); // The normal activation function
+					}
+			 
+					// Switch back to the current blog
+					switch_to_blog($current_blog);
+				}
+				
+				// normal activation
+				else {
+					self::uninstall_simple();
+				}
+			}
+			
+			/**
+			 * Remove completely the plugin from woocommerce
+			 */
+			public static function uninstall_simple() {
 				require_once(WP_PLUGIN_DIR.'/envoimoinscher/envoimoinscher_model.php');
 				
 				return envoimoinscher_model::delete_database();
+			}
+			
+			/**
+			 * Runs activation for a plugin on a new site if plugin is already set as network activated on multisite
+			 */
+			public static function network_activated( $blog_id, $user_id, $domain, $path, $site_id, $meta ) {
+				if ( is_plugin_active_for_network( 'envoimoinscher/envoimoinscher.php' ) ) {
+					switch_to_blog( $blog_id );
+					self::activate_simple();
+					restore_current_blog();
+				}
+			}
+			
+			/**
+			 * Runs uninstall for a plugin on a multisite site if site is deleted
+			 */
+			public static function uninstall_multisite_instance( $tables ) {
+				global $wpdb;
+				$tables[] = $wpdb->prefix . 'emc_categories';
+				$tables[] = $wpdb->prefix . 'emc_dimensions';
+				$tables[] = $wpdb->prefix . 'emc_operators';
+				$tables[] = $wpdb->prefix . 'emc_services';
+				$tables[] = $wpdb->prefix . 'emc_orders';
+				$tables[] = $wpdb->prefix . 'emc_scales';
+				return $tables;
 			}
 			
 			/**

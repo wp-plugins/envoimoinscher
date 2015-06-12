@@ -1,1 +1,446 @@
-.clear{clear:both}.nobr{white-space:nowrap}table.emc_carrier_list th{text-align:center;font-weight:600;color:#333}table.emc_carrier_list td{padding:3px 7px}table.emc_carrier_list .offers{width:320px;vertical-align:middle}table.emc_carrier_list .offers .name{font-weight:700;color:#555}table.emc_carrier_list .offers .parcelPoint{text-align:right}table.emc_carrier_list .offers .parcelPoint label{width:auto;display:inline-block}table.emc_carrier_list .offers .parcelPoint input{display:inline-block;width:auto;border:1px solid #ccc;border-radius:3px}table.emc_carrier_list .offers .parcelPoint div{text-align:right}table.emc_carrier_list .price{text-align:right;width:100px;vertical-align:middle;font-weight:700;color:#555}table.emc_carrier_list .price div{line-height:2em}table.emc_carrier_list .price div label{display:inline-block;width:auto}table.emc_carrier_list .price div input{margin-top:3px}table.emc_carrier_list .description{vertical-align:middle}table.emc_carrier_list .status{text-align:center;vertical-align:middle}table.emc_carrier_list .status input{margin:0}table.weight_options th{text-align:center;font-weight:600;color:#333}table.weight_options td{text-align:center;padding:3px 7px;vertical-align:middle}table.weight_options td input{border:1px solid #ccc !important;display:inline;width:auto !important;border-radius:3px}table.emc_shipping_tab th{text-align:center;font-weight:600;color:#333}table.emc_shipping_tab td{padding:3px 7px}table.emc_simulator_list th{text-align:center;font-weight:600;color:#333}table.emc_simulator_list td{padding:8px 10px}table.emc_simulator_list td.center{text-align:center;vertical-align:middle}table.emc_simulator_list td.center.label{color:#333}table.emc_simulator_list td.hide_links a{color:#555;cursor:text}mark.shipped.tips{background:url('../img/ico_shipped_status.png') no-repeat !important;background-size:100% 100% !important}mark.awaiting-shipment.tips{background:url('../img/ico_awating_shipment_status.png') no-repeat !important;background-size:100% 100% !important}.order_actions .awaiting-shipment,.order_actions .shipped{float:left;margin:0 4px 2px 0;cursor:pointer;vertical-align:baseline;display:block;text-indent:-9999px;position:relative;padding:0 !important;height:2em !important;width:2em}.order_actions .awaiting-shipment::after{content:url('../img/ico-action-awaiting-shipment.png');margin:0;text-indent:0;position:absolute;top:0;left:0;width:100%;height:100%;text-align:center;line-height:1.85}.order_actions .shipped::after{content:url('../img/ico-action-shipped.png');margin:0;text-indent:0;position:absolute;top:0;left:0;width:100%;height:100%;text-align:center;line-height:1.85}.order_actions .awaiting-shipment:hover::after{content:url('../img/ico-action-awaiting-shipment-hover.png')}.order_actions .shipped:hover::after{content:url('../img/ico-action-shipped-hover.png')}#envoimoinscher-order-shipping .inside .emc-shipping-actions{text-align:right}#envoimoinscher-order-shipping .inside .red{color:red}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping h2{margin:0;font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;font-size:21px;font-weight:normal;line-height:1.2;text-shadow:1px 1px 1px white;padding:0}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping h4{color:#333;margin:1.33em 0 0}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping p{color:#777}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping p.order_number{margin:0;font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;font-weight:normal;line-height:1.6em;font-size:16px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.already_sent{border-bottom:1px solid #eee;padding-bottom:10px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.already_sent .reference{font-size:1.5em;padding-top:10px;padding-bottom:8px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.already_sent .reference .carrier_ref,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.already_sent .reference .emc_ref{padding-top:6px;font-size:0.8em}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.already_sent .reference .green{color:#7ad03a}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.rates .type{font-size:1.5em;padding-top:10px;padding-bottom:10px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.rates #display_rate .amount{font-weight:bold}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.rates #current_rate{display:none}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column_container{clear:both}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column{width:32%;padding:0 2% 0 0;float:left}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column:last-child{padding-right:0}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column p{padding:0 !important}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .address strong{display:block}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field{float:left;width:48%;padding:0;margin:9px 0 0 0}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field label{display:block;padding:0 0 3px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field input,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field textarea{width:100%}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field select{width:100%}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field .select2-container{width:100% !important}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field .date-picker{width:50%}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field .hour,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field .minute{width:2.5em}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field small{display:block;margin:5px 0 0 0;color:#999}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field.last{float:right}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide{width:100%;clear:both}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide input,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide textarea,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide select,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide .wc-enhanced-select,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide .wc-customer-search{width:100%}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column p.none_set{color:#999}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.carrier_select select{margin-top:9px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.shipment_info small{display:inline}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.edit_shipment_info{display:none;zoom:1;padding-right:1px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.edit_shipment_info input{width:auto}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column #insurance_rate_unformatted{display:none}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.edit_dimensions{display:none;zoom:1;padding-right:1px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.edit_dimensions input{width:auto}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.edit_insurance{display:none;zoom:1;padding-right:1px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_shipment_info{opacity:0.4}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_shipment_info:hover,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_shipment_info:focus{opacity:1}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_dimensions{opacity:0.4}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_dimensions:hover,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_dimensions:focus{opacity:1}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping h3{padding-left:0;border-top:1px solid #eee;border-bottom:1px solid #eee;margin:16px 0}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping p.select_reason{border-bottom:1px solid #eee;padding:0 0 1.2em 0;font-size:15px;font-weight:bold}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping p.select_reason label{padding-right:1em}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item{border-bottom:1px solid #eee;margin:16px 0 0 0}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .img,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .proforma,#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma{display:inline-block;vertical-align:top}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma{display:none;zoom:1;padding-right:1px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma p{margin:0.33em 0}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma p select{font-size:13px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma .proforma_weight{margin:0.33em 0 1em 0}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma input{width:auto;font-size:13px}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .img{margin:20px 20px 0 0}#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .img img{padding:1px;margin:0;border:1px solid #dfdfdf;vertical-align:middle;width:100px;height:100px}#mass_order .ongoing,#mass_order .finished{margin:15px 15px 2px 0px;font-size:1.1em;width:45%;background-color:#fff;border-left:4px solid #ffba00;box-shadow:0 1px 1px 0 rgba(0,0,0,0.1);padding:10px;line-height:1.5em}#mass_order .ongoing .title,#mass_order .finished .title{font-size:1.2em}#mass_order .success{border-color:#7ad03a}#mass_order .failure{border-color:#dd3d36}#mass_order .ongoing .image{margin:10px;float:right}#mass_order .finished .warning{font-size:0.9em;color:red}#mass_order .finished .already{font-size:0.9em}#emc_help{max-width:800px}#emc_help .category .category_head{cursor:pointer}#emc_help .category .category_head h3{display:inline-block}#emc_help .category .category_head img{margin:1em 0;vertical-align:bottom}#emc_help .category .questions{display:none}#emc_help .category .questions .question{font-weight:bold;cursor:pointer;margin-bottom:10px}#emc_help .category .questions .answer{margin-bottom:15px;display:none}#emc_help .category .questions .answer ul{list-style:initial;padding-left:20px}
+.clear{
+	clear:both;
+}
+.nobr{
+	white-space:nowrap;
+}
+
+/* Settings */
+table.emc_carrier_list th{
+	text-align:center;
+	font-weight:600;
+	color:#333;
+}
+table.emc_carrier_list td{
+	padding:3px 7px;
+}
+table.emc_carrier_list .offers{
+	width:320px;
+	vertical-align:middle;
+}
+table.emc_carrier_list .offers .name{
+	font-weight:700;
+	color:#555;
+}
+table.emc_carrier_list .offers .parcelPoint{
+	text-align:right;
+}
+table.emc_carrier_list .offers .parcelPoint label{
+	width:auto;
+	display:inline-block;
+}
+table.emc_carrier_list .offers .parcelPoint input{
+	display:inline-block;
+	width:auto;
+	border:1px solid #ccc;
+	border-radius:3px;
+}
+table.emc_carrier_list .offers .parcelPoint div{
+	text-align:right;
+}
+table.emc_carrier_list .price{
+	text-align:right;
+	width:100px;
+	vertical-align:middle;
+	font-weight:700;
+	color:#555;
+}
+table.emc_carrier_list .price div{
+	line-height:2em;
+}
+table.emc_carrier_list .price div label{
+	display:inline-block;
+	width:auto;
+}
+table.emc_carrier_list .price div input{
+	margin-top:3px;
+}
+table.emc_carrier_list .description{
+	vertical-align:middle;
+}
+table.emc_carrier_list .status{
+	text-align:center;
+	vertical-align:middle;
+}
+table.emc_carrier_list .status input{
+	margin:0;
+}
+table.weight_options th{
+	text-align:center;
+	font-weight:600;
+	color:#333;
+}
+table.weight_options td{
+	text-align:center;
+	padding:3px 7px;
+	vertical-align:middle;
+}
+table.weight_options td input{
+	border:1px solid #ccc !important;
+	display:inline;
+	width:auto !important;
+	border-radius:3px;
+}
+table.emc_shipping_tab th{
+	text-align:center;
+	font-weight:600;
+	color:#333;
+}
+table.emc_shipping_tab td{
+	padding:3px 7px;
+}
+table.emc_simulator_list th{
+	text-align:center;
+	font-weight:600;
+	color:#333;
+}
+table.emc_simulator_list td{
+	padding:8px 10px;
+}
+table.emc_simulator_list td.center{
+	text-align:center;
+	vertical-align:middle;
+}
+table.emc_simulator_list td.center.label{
+	color:#333;
+}
+table.emc_simulator_list td.hide_links a{
+	color:#555;
+	cursor:text;
+}
+
+/* admin orders list page */
+mark.shipped.tips{
+	background:url('../img/ico_shipped_status.png') no-repeat !important;
+	background-size:100% 100% !important
+}
+mark.awaiting-shipment.tips{
+	background:url('../img/ico_awating_shipment_status.png') no-repeat !important;
+	background-size:100% 100% !important;
+}
+.order_actions .awaiting-shipment,.order_actions .shipped{
+	float:left;
+	margin:0 4px 2px 0;
+	cursor:pointer;
+	vertical-align:baseline;
+	display:block;
+	text-indent:-9999px;
+	position:relative;
+	padding:0 !important;
+	height:2em !important;
+	width:2em;
+}
+.order_actions .awaiting-shipment::after{
+	content:url('../img/ico-action-awaiting-shipment.png');
+	margin:0;
+	text-indent:0;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	text-align:center;
+	line-height:1.85;
+}
+.order_actions .shipped::after{
+	content:url('../img/ico-action-shipped.png');
+	margin:0;
+	text-indent:0;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	text-align:center;
+	line-height:1.85;
+}
+.order_actions .awaiting-shipment:hover::after{
+	content:url('../img/ico-action-awaiting-shipment-hover.png');
+}
+.order_actions .shipped:hover::after{
+	content:url('../img/ico-action-shipped-hover.png');
+}
+#envoimoinscher-order-shipping .inside .emc-shipping-actions{
+	text-align:right;
+}
+#envoimoinscher-order-shipping .inside .red{
+	color:red;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping h2{
+	margin:0;
+	font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+	font-size:21px;
+	font-weight:normal;
+	line-height:1.2;
+	text-shadow:1px 1px 1px white;
+	padding:0;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping h4{
+	color:#333;
+	margin:1.33em 0 0;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping p{
+	color:#777;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping p.order_number{
+	margin:0;
+	font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+	font-weight:normal;
+	line-height:1.6em;
+	font-size:16px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.already_sent{
+	border-bottom:1px solid #eee;
+	padding-bottom:10px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.already_sent .reference{
+	font-size:1.5em;
+	padding-top:10px;
+	padding-bottom:8px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.already_sent .reference .carrier_ref,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.already_sent .reference .emc_ref{
+	padding-top:6px;
+	font-size:0.8em;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.already_sent .reference .green{
+	color:#7ad03a
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.rates .type{
+	font-size:1.5em;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.rates #display_rate .amount{
+	font-weight:bold;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping div.rates #current_rate{
+	display:none;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column_container{
+	clear:both;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column{
+	width:32%;
+	padding:0 2% 0 0;
+	float:left;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column:last-child{
+	padding-right:0;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column p{
+	padding:0 !important;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .address strong{
+	display:block;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field{
+	float:left;
+	width:48%;
+	padding:0;
+	margin:9px 0 0 0;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field label{
+	display:block;
+	padding:0 0 3px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field input,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field textarea{
+	width:100%;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field select{
+	width:100%;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field .select2-container{
+	width:100% !important;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field .date-picker{
+	width:50%;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field .hour,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field .minute{
+	width:2.5em;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field small{
+	display:block;
+	margin:5px 0 0 0;
+	color:#999;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field.last{
+	float:right;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide{
+	width:100%;
+	clear:both;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide input,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide textarea,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide select,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide .wc-enhanced-select,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column .form-field-wide .wc-customer-search{
+	width:100%;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column p.none_set{
+	color:#999;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.carrier_select select{
+	margin-top:9px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.shipment_info small{
+	display:inline;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.edit_shipment_info{
+	display:none;
+	zoom:1;
+	padding-right:1px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.edit_shipment_info input{
+	width:auto;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column #insurance_rate_unformatted{
+	display:none;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.edit_dimensions{
+	display:none;
+	zoom:1;
+	padding-right:1px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.edit_dimensions input{
+	width:auto;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping .order_shipping_column div.edit_insurance{
+	display:none;
+	zoom:1;
+	padding-right:1px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_shipment_info{
+	opacity:0.4;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_shipment_info:hover,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_shipment_info:focus{
+	opacity:1;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_dimensions{
+	opacity:0.4;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_dimensions:hover,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #order_shipping a.edit_dimensions:focus{
+	opacity:1;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping h3{
+	padding-left:0;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	margin:16px 0;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping p.select_reason{
+	border-bottom:1px solid #eee;
+	padding:0 0 1.2em 0;
+	font-size:15px;
+	font-weight:bold;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping p.select_reason label{
+	padding-right:1em;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item{
+	border-bottom:1px solid #eee;
+	margin:16px 0 0 0;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .img,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .proforma,
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma{
+	display:inline-block;
+	vertical-align:top;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma{
+	display:none;
+	zoom:1;
+	padding-right:1px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma p{
+	margin:0.33em 0;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma p select{
+	font-size:13px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma .proforma_weight{
+	margin:0.33em 0 1em 0;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .edit_proforma input{
+	width:auto;
+	font-size:13px;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .img{
+	margin:20px 20px 0 0;
+}
+#envoimoinscher-order-shipping .inside .panel-wrap.woocommerce #international_shipping .item .img img{
+	padding:1px;
+	margin:0;
+	border:1px solid #dfdfdf;
+	vertical-align:middle;
+	width:100px;
+	height:100px;
+}
+#mass_order .ongoing,
+#mass_order .finished{
+	margin:15px 15px 2px 0px;
+	font-size:1.1em;
+	width:45%;
+	background-color:#fff;
+	border-left:4px solid #ffba00;
+	box-shadow:0 1px 1px 0 rgba(0,0,0,0.1);
+	padding:10px;
+	line-height:1.5em;
+}
+#mass_order .ongoing .title,
+#mass_order .finished .title{
+	font-size:1.2em;
+}
+#mass_order .success{
+	border-color:#7ad03a;
+}
+#mass_order .failure{
+	border-color:#dd3d36;
+}
+#mass_order .ongoing .image{
+	margin:10px;
+	float:right;
+}
+#mass_order .finished .warning{
+	font-size:0.9em;
+	color:red;
+}
+#mass_order .finished .already{
+	font-size:0.9em;
+}
+
+/* Help page */
+#emc_help{
+	max-width:800px;
+}
+#emc_help .category .category_head{
+	cursor:pointer;
+}
+#emc_help .category .category_head h3{
+	display:inline-block;
+}
+#emc_help .category .category_head img{
+	margin:1em 0;
+	vertical-align:bottom;
+}
+#emc_help .category .questions{
+	display:none;
+}
+#emc_help .category .questions .question{
+	font-weight:bold;
+	cursor:pointer;
+	margin-bottom:10px;
+}
+#emc_help .category .questions .answer{
+	margin-bottom:15px;
+	display:none;
+}
+#emc_help .category .questions .answer ul{
+	list-style:initial;
+	padding-left:20px;
+}
