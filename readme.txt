@@ -36,14 +36,14 @@ Want to know more?
 2. Activate the plugin,
 3. Head to "EnvoiMoinsCher" under the WooCommerce tab and configure the plugin.
 
-You can find help for how to set up the plugin on the plugin help page.
+Find more information about setting up the plugin on the plugin help page.
 
 == Screenshots ==
 
 1. Choose among the best shipping offers available on the market
 2. Use our simulator to check which offers and rates will be available for your customers
 3. Front-office view
-4. Mass order directly from your orders page, or send one order at a time via the order edit page
+4. Go to the Orders page to send one or several of your orders at the same time.
 
 == Changelog ==
 
