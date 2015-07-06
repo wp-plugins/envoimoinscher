@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Plugin Name: EnvoiMoinsCher.
+ * Plugin Name: EnvoiMoinsCher
  * Plugin URI: http://ecommerce.envoimoinscher.com/
  * Description: The EnvoiMoinsCher delivery plugin for WooCommerce connects your site to over 15 carriers and simplifies your shipping process.
  * Version: 1.0.5
