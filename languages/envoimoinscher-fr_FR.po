@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Module 1.0.0\n"
-"POT-Creation-Date: 2015-04-28 09:34+0100\n"
-"PO-Revision-Date: 2015-04-28 09:34+0100\n"
+"POT-Creation-Date: 2015-07-06 12:57+0100\n"
+"PO-Revision-Date: 2015-07-06 12:58+0100\n"
 "Last-Translator: \n"
 "Language-Team: EnvoiMoinsCher\n"
 "Language: fr_FR\n"
@@ -15,88 +15,83 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_n_noop:1,2;_x:1,2c\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../envoimoinscher.php:76
+#: ../envoimoinscher.php:89
 msgid "Shipping plugin: 15 negotiated carriers"
 msgstr "Module de livraison : 15 transporteurs à tarifs négociés"
 
-#: ../envoimoinscher.php:237
+#: ../envoimoinscher.php:246
 msgid "l, F jS Y"
 msgstr "l j F Y"
 
-#: ../envoimoinscher.php:248
+#: ../envoimoinscher.php:258
 msgid "Choose a parcel point"
 msgstr "Choisissez un point relais"
 
-#: ../envoimoinscher.php:249
+#: ../envoimoinscher.php:259
 msgid "Selected "
 msgstr "Sélectionné"
 
-#: ../envoimoinscher.php:312
-#, php-format
-msgid "Could not compile %s.less:"
-msgstr "%s.less n'a pas pu être compilé:"
-
-#: ../envoimoinscher.php:326
+#: ../envoimoinscher.php:297
 msgid "Re-send using EnvoiMoinsCher"
 msgstr "Renvoyer avec EnvoiMoinsCher"
 
-#: ../envoimoinscher.php:329
+#: ../envoimoinscher.php:300
 msgid "Download waybill"
 msgstr "Télécharger le bordereau"
 
-#: ../envoimoinscher.php:333
+#: ../envoimoinscher.php:304
 msgid "Download delivery waybill"
 msgstr "Télécharger le bordereau de remise"
 
-#: ../envoimoinscher.php:339 ../envoimoinscher.php:694
-#: ../envoimoinscher.php:695
+#: ../envoimoinscher.php:310 ../envoimoinscher.php:809
+#: ../envoimoinscher.php:810
 msgid "Send using EnvoiMoinsCher"
 msgstr "Envoyer avec EnvoiMoinsCher"
 
-#: ../envoimoinscher.php:421
+#: ../envoimoinscher.php:392
 msgid "waybill"
 msgstr "bordereau"
 
-#: ../envoimoinscher.php:423
+#: ../envoimoinscher.php:394
 msgid "delivery-waybill"
 msgstr "bordereau-de-remise"
 
-#: ../envoimoinscher.php:439 ../envoimoinscher_model.php:1183
+#: ../envoimoinscher.php:410 ../envoimoinscher_model.php:1177
 #, php-format
 msgid "Order passed with the reference %s."
 msgstr "Commande passée avec la référence %s."
 
-#: ../envoimoinscher.php:444
+#: ../envoimoinscher.php:415
 msgid "Please select an EnvoiMoinsCher carrier."
 msgstr "Veuillez choisir un transporteur EnvoiMoinsCher."
 
-#: ../envoimoinscher.php:447
-#: ../includes/admin/settings/class-emc-settings-simulator.php:141
+#: ../envoimoinscher.php:418
+#: ../includes/admin/settings/class-emc-settings-simulator.php:148
 #, php-format
 msgid "EnvoiMoinsCher API error returned: %s"
 msgstr "Une erreur a été rencontrée par l'API EnvoiMoinsCher : %s"
 
-#: ../envoimoinscher.php:459
+#: ../envoimoinscher.php:430
 msgid "Processing order"
 msgstr "Traitement de la commande"
 
-#: ../envoimoinscher.php:460 ../envoimoinscher.php:472
+#: ../envoimoinscher.php:431 ../envoimoinscher.php:443
 msgid "Successfully sent orders:"
 msgstr "Commandes envoyées avec succès :"
 
-#: ../envoimoinscher.php:461 ../envoimoinscher.php:473
+#: ../envoimoinscher.php:432 ../envoimoinscher.php:444
 msgid "Orders not sent:"
 msgstr "Commandes non passées :"
 
-#: ../envoimoinscher.php:462 ../envoimoinscher.php:477
+#: ../envoimoinscher.php:433 ../envoimoinscher.php:448
 msgid "Orders already sent:"
 msgstr "Commandes déjà envoyées :"
 
-#: ../envoimoinscher.php:471
+#: ../envoimoinscher.php:442
 msgid "All orders processed."
 msgstr "Tous les commandes ont été traitées."
 
-#: ../envoimoinscher.php:475
+#: ../envoimoinscher.php:446
 msgid ""
 "Orders not sent may have missing parameters. You should check these orders "
 "individually."
@@ -104,7 +99,7 @@ msgstr ""
 "Les commandes non envoyées peuvent avoir des paramètres manquants. Veuillez "
 "vérifier ces commandes individuellement."
 
-#: ../envoimoinscher.php:479
+#: ../envoimoinscher.php:450
 msgid ""
 "Orders already sent cannot be re-sent using bulk action. You should re-send "
 "them individually."
@@ -112,335 +107,335 @@ msgstr ""
 "Les commandes déjà envoyées ne peuvent pas être envoyées en masse. Veuillez "
 "les réexpédier individuellement."
 
-#: ../envoimoinscher.php:508
+#: ../envoimoinscher.php:479
 msgid "Shipping Options - EnvoiMoinsCher"
 msgstr "Options d'envoi - EnvoiMoinsCher"
 
-#: ../envoimoinscher.php:529
+#: ../envoimoinscher.php:500
 msgid "Unable to load parcel points"
 msgstr "Les points relais n'ont pas pu être chargés"
 
-#: ../envoimoinscher.php:530
+#: ../envoimoinscher.php:501
 msgid "I want this pickup point"
 msgstr "Je choisis ce point relais"
 
-#: ../envoimoinscher.php:531
+#: ../envoimoinscher.php:502
 msgid "From %1 to %2"
 msgstr "De %1 à %2"
 
-#: ../envoimoinscher.php:532
+#: ../envoimoinscher.php:503
 msgid " and %1 to %2"
 msgstr " et %1 à %2"
 
-#: ../envoimoinscher.php:533
+#: ../envoimoinscher.php:504
 msgid "monday"
 msgstr "lundi"
 
-#: ../envoimoinscher.php:534
+#: ../envoimoinscher.php:505
 msgid "tuesday"
 msgstr "mardi"
 
-#: ../envoimoinscher.php:535
+#: ../envoimoinscher.php:506
 msgid "wednesday"
 msgstr "mercredi"
 
-#: ../envoimoinscher.php:536
+#: ../envoimoinscher.php:507
 msgid "thursday"
 msgstr "jeudi"
 
-#: ../envoimoinscher.php:537
+#: ../envoimoinscher.php:508
 msgid "friday"
 msgstr "vendredi"
 
-#: ../envoimoinscher.php:538
+#: ../envoimoinscher.php:509
 msgid "saturday"
 msgstr "samedi"
 
-#: ../envoimoinscher.php:539
+#: ../envoimoinscher.php:510
 msgid "sunday"
 msgstr "dimanche"
 
-#: ../envoimoinscher.php:564
+#: ../envoimoinscher.php:551
 msgid "Please select a parcel point"
 msgstr "Veuillez choisir un point relais"
 
-#: ../envoimoinscher.php:643
+#: ../envoimoinscher.php:758
 msgctxt "Order status"
 msgid "Awaiting Shipment"
 msgstr "En attente d'expédition"
 
-#: ../envoimoinscher.php:648
+#: ../envoimoinscher.php:763
 #, php-format
 msgid "Awaiting Shipment <span class=\"count\">(%s)</span>"
 msgid_plural "Awaiting Shipment <span class=\"count\">(%s)</span>"
 msgstr[0] "En attente d'expédition <span class=\"count\">(%s)</span>"
 msgstr[1] "En attente d'expédition <span class=\"count\">(%s)</span>"
 
-#: ../envoimoinscher.php:651
+#: ../envoimoinscher.php:766
 msgctxt "Order status"
 msgid "Shipped"
 msgstr "Expédiée"
 
-#: ../envoimoinscher.php:656
+#: ../envoimoinscher.php:771
 #, php-format
 msgid "Shipped <span class=\"count\">(%s)</span>"
 msgid_plural "Shipped <span class=\"count\">(%s)</span>"
 msgstr[0] "Expédiée <span class=\"count\">(%s)</span>"
 msgstr[1] "Expédiées <span class=\"count\">(%s)</span>"
 
-#: ../envoimoinscher.php:688 ../envoimoinscher.php:689
+#: ../envoimoinscher.php:803 ../envoimoinscher.php:804
 msgid "Mark awaiting shipment"
 msgstr "Marquer en attente d'expédition"
 
-#: ../envoimoinscher.php:691 ../envoimoinscher.php:692
+#: ../envoimoinscher.php:806 ../envoimoinscher.php:807
 msgid "Mark shipped"
 msgstr "Marquer expédiée"
 
-#: ../envoimoinscher.php:697 ../envoimoinscher.php:698
+#: ../envoimoinscher.php:812 ../envoimoinscher.php:813
 msgid "Download all waybills"
 msgstr "Télécharger tous les bordereaux"
 
-#: ../envoimoinscher.php:700 ../envoimoinscher.php:701
+#: ../envoimoinscher.php:815 ../envoimoinscher.php:816
 msgid "Download all delivery waybills"
 msgstr "Télécharger tous les bordereaux de remise"
 
-#: ../envoimoinscher.php:810
+#: ../envoimoinscher.php:925
 msgid "Processing"
 msgstr ""
 
-#: ../envoimoinscher.php:818
+#: ../envoimoinscher.php:933
 msgid "Awaiting Shipment"
 msgstr "En attente d'expédition"
 
-#: ../envoimoinscher.php:826
+#: ../envoimoinscher.php:941
 msgid "Shipped"
 msgstr "Expédiée"
 
-#: ../envoimoinscher.php:834
+#: ../envoimoinscher.php:949
 msgid "Complete"
 msgstr ""
 
-#: ../envoimoinscher.php:946
+#: ../envoimoinscher.php:1061
 #, php-format
 msgid "Your carrier tracking reference is %s."
 msgstr "Votre référence de suivi transporteur est %s."
 
-#: ../envoimoinscher_model.php:603 ../envoimoinscher_model.php:617
+#: ../envoimoinscher_model.php:591 ../envoimoinscher_model.php:605
 msgid "An error occurred while updating your carrier list: "
 msgstr ""
 "Une erreur s'est produite lors de la mise à jour de vos transporteurs : "
 
-#: ../envoimoinscher_model.php:1188 ../envoimoinscher_model.php:1201
+#: ../envoimoinscher_model.php:1182 ../envoimoinscher_model.php:1195
 msgid "Invalid request: "
 msgstr "Requête invalide : "
 
-#: ../envoimoinscher_model.php:1345
+#: ../envoimoinscher_model.php:1339
 msgid "France"
 msgstr "France"
 
-#: ../envoimoinscher_model.php:1541
+#: ../envoimoinscher_model.php:1535
 msgid "Packing type"
 msgstr "Type d'emballage utilisé"
 
-#: ../envoimoinscher_model.php:1542
+#: ../envoimoinscher_model.php:1536
 #: ../includes/admin/settings/class-emc-settings-shipping-description.php:80
 msgid "Box"
 msgstr "Boîte"
 
-#: ../envoimoinscher_model.php:1543
+#: ../envoimoinscher_model.php:1537
 msgid "Crate"
 msgstr "Caisse"
 
-#: ../envoimoinscher_model.php:1544
+#: ../envoimoinscher_model.php:1538
 msgid "Container"
 msgstr "Bac"
 
-#: ../envoimoinscher_model.php:1545
+#: ../envoimoinscher_model.php:1539
 msgid "Insulated packaging"
 msgstr "Emballage isotherme"
 
-#: ../envoimoinscher_model.php:1546
+#: ../envoimoinscher_model.php:1540
 msgid "Carrying case"
 msgstr "Etui"
 
-#: ../envoimoinscher_model.php:1547
+#: ../envoimoinscher_model.php:1541
 msgid "Trunk"
 msgstr "Malle"
 
-#: ../envoimoinscher_model.php:1548
+#: ../envoimoinscher_model.php:1542
 msgid "Bag/sack"
 msgstr "Sac"
 
-#: ../envoimoinscher_model.php:1549
+#: ../envoimoinscher_model.php:1543
 #: ../includes/admin/settings/class-emc-settings-shipping-description.php:80
 msgid "Tube"
 msgstr "Tube"
 
-#: ../envoimoinscher_model.php:1550
+#: ../envoimoinscher_model.php:1544
 msgid "Materials"
 msgstr "Matériau utilisé"
 
-#: ../envoimoinscher_model.php:1551
+#: ../envoimoinscher_model.php:1545
 msgid "Cardboard box"
 msgstr "Carton"
 
-#: ../envoimoinscher_model.php:1552
+#: ../envoimoinscher_model.php:1546
 msgid "Wood"
 msgstr "Bois"
 
-#: ../envoimoinscher_model.php:1553
+#: ../envoimoinscher_model.php:1547
 msgid "Reinforced cardboard"
 msgstr "Carton blindé"
 
-#: ../envoimoinscher_model.php:1554
+#: ../envoimoinscher_model.php:1548
 msgid "Opaque film"
 msgstr "Film opaque"
 
-#: ../envoimoinscher_model.php:1555
+#: ../envoimoinscher_model.php:1549
 msgid "Transparent film"
 msgstr "Film transparent"
 
-#: ../envoimoinscher_model.php:1556
+#: ../envoimoinscher_model.php:1550
 msgid "Metal"
 msgstr "Métal"
 
-#: ../envoimoinscher_model.php:1557
+#: ../envoimoinscher_model.php:1551
 msgid "Paper"
 msgstr "Papier"
 
-#: ../envoimoinscher_model.php:1558
+#: ../envoimoinscher_model.php:1552
 msgid "Reinforced paper"
 msgstr "Papier armé"
 
-#: ../envoimoinscher_model.php:1559
+#: ../envoimoinscher_model.php:1553
 msgid "Plastic and cardboard"
 msgstr "Plastique et carton"
 
-#: ../envoimoinscher_model.php:1560
+#: ../envoimoinscher_model.php:1554
 msgid "Plastic"
 msgstr "Plastique"
 
-#: ../envoimoinscher_model.php:1561
+#: ../envoimoinscher_model.php:1555
 msgid "Opaque plastic"
 msgstr "Plastique opaque"
 
-#: ../envoimoinscher_model.php:1562
+#: ../envoimoinscher_model.php:1556
 msgid "Transparent plastic"
 msgstr "Plastique transparent"
 
-#: ../envoimoinscher_model.php:1563
+#: ../envoimoinscher_model.php:1557
 msgid "Polystyrene"
 msgstr "Polystyrène"
 
-#: ../envoimoinscher_model.php:1564
+#: ../envoimoinscher_model.php:1558
 msgid "Interior protection"
 msgstr "Protection intérieure utilisée"
 
-#: ../envoimoinscher_model.php:1565
+#: ../envoimoinscher_model.php:1559
 msgid "No specific protection"
 msgstr "Sans protection particulière"
 
-#: ../envoimoinscher_model.php:1566
+#: ../envoimoinscher_model.php:1560
 msgid "Paper cushioning"
 msgstr "Calage papier"
 
-#: ../envoimoinscher_model.php:1567
+#: ../envoimoinscher_model.php:1561
 msgid "Plastic bubble wrap"
 msgstr "Bulles plastiques"
 
-#: ../envoimoinscher_model.php:1568
+#: ../envoimoinscher_model.php:1562
 msgid "Impact-resistant cardboard"
 msgstr "Carton antichoc"
 
-#: ../envoimoinscher_model.php:1569
+#: ../envoimoinscher_model.php:1563
 msgid "Air cushion"
 msgstr "Coussin air"
 
-#: ../envoimoinscher_model.php:1570
+#: ../envoimoinscher_model.php:1564
 msgid "Foam cushion"
 msgstr "Coussin mousse"
 
-#: ../envoimoinscher_model.php:1571
+#: ../envoimoinscher_model.php:1565
 msgid "Cardboard bottle protector"
 msgstr "Manchon carton (bouteille)"
 
-#: ../envoimoinscher_model.php:1572
+#: ../envoimoinscher_model.php:1566
 msgid "Foam bottle protector"
 msgstr "Manchon mousse (bouteille)"
 
-#: ../envoimoinscher_model.php:1573
+#: ../envoimoinscher_model.php:1567
 msgid "Padding"
 msgstr "Matelassage"
 
-#: ../envoimoinscher_model.php:1574
+#: ../envoimoinscher_model.php:1568
 msgid "Foam pad"
 msgstr "Plaque mousse"
 
-#: ../envoimoinscher_model.php:1575
+#: ../envoimoinscher_model.php:1569
 msgid "Cushioning material"
 msgstr "Coussin de calage"
 
-#: ../envoimoinscher_model.php:1576
+#: ../envoimoinscher_model.php:1570
 msgid "Padded mailer"
 msgstr "Sachet bulles"
 
-#: ../envoimoinscher_model.php:1577
+#: ../envoimoinscher_model.php:1571
 msgid "Fastener used"
 msgstr "Fermeture utilisée"
 
-#: ../envoimoinscher_model.php:1578
+#: ../envoimoinscher_model.php:1572
 msgid "Self-adhesive fastener"
 msgstr "Fermeture autocollante"
 
-#: ../envoimoinscher_model.php:1579
+#: ../envoimoinscher_model.php:1573
 msgid "Adhesive tape"
 msgstr "Ruban adhésif"
 
-#: ../envoimoinscher_model.php:1580
+#: ../envoimoinscher_model.php:1574
 msgid "Staples"
 msgstr "Agrafes"
 
-#: ../envoimoinscher_model.php:1581
+#: ../envoimoinscher_model.php:1575
 msgid "Nails"
 msgstr "Clous"
 
-#: ../envoimoinscher_model.php:1582
+#: ../envoimoinscher_model.php:1576
 msgid "Binding"
 msgstr "Collage"
 
-#: ../envoimoinscher_model.php:1583
+#: ../envoimoinscher_model.php:1577
 msgid "Strapping tape"
 msgstr "Ruban de cerclage"
 
-#: ../envoimoinscher_model.php:1584
+#: ../envoimoinscher_model.php:1578
 msgid "Strap or coiled strip"
 msgstr "Sangle ou feuillard"
 
-#: ../envoimoinscher_model.php:1585
+#: ../envoimoinscher_model.php:1579
 msgid "Stapling and strapping"
 msgstr "Agraphes et cerclage"
 
-#: ../envoimoinscher_model.php:1586
+#: ../envoimoinscher_model.php:1580
 msgid "Nails and fastening"
 msgstr "Clous et cerclage"
 
-#: ../envoimoinscher_model.php:1587
+#: ../envoimoinscher_model.php:1581
 msgid "String"
 msgstr "Ficelles"
 
-#: ../envoimoinscher_model.php:1670
+#: ../envoimoinscher_model.php:1664
 msgid "Order tracking: ordered."
 msgstr "Etat de la commande : passée."
 
-#: ../envoimoinscher_model.php:1673
+#: ../envoimoinscher_model.php:1667
 msgid "Order tracking: processing."
 msgstr "Etat de la commande : envoyée."
 
-#: ../envoimoinscher_model.php:1676
+#: ../envoimoinscher_model.php:1670
 msgid "Order tracking: cancelled."
 msgstr "Etat de la commande : annulée."
 
-#: ../envoimoinscher_model.php:1679
+#: ../envoimoinscher_model.php:1673
 msgid "Order tracking: delivered."
 msgstr "Etat de la commande : livrée."
 
@@ -448,7 +443,7 @@ msgstr "Etat de la commande : livrée."
 msgid "Close map"
 msgstr "Fermer la carte"
 
-#: ../includes/admin/class-emc-admin-menus.php:63
+#: ../includes/admin/class-emc-admin-menus.php:134
 msgid "EnvoiMoinsCher"
 msgstr "EnvoiMoinsCher"
 
@@ -701,7 +696,7 @@ msgstr "Informations concernant l'envoi"
 
 #: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:629
 #: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:637
-#: ../includes/envoimoinscher_carrier.php:140
+#: ../includes/envoimoinscher_carrier.php:141
 msgid "Get code"
 msgstr "Obtenir le code"
 
@@ -937,7 +932,7 @@ msgstr ""
 "général à 17h00)"
 
 #: ../includes/admin/settings/class-emc-settings-account.php:340
-#: ../includes/admin/settings/class-emc-settings-shipping-description.php:291
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:290
 #, php-format
 msgid "%s is a required field."
 msgstr "%s est un champ obligatoire."
@@ -1195,31 +1190,31 @@ msgstr "Choisissez un produit *"
 msgid "Sender address"
 msgstr "Adresse de départ"
 
-#: ../includes/admin/settings/class-emc-settings-simulator.php:72
-msgid "Sender city *"
-msgstr "Ville de départ *"
-
-#: ../includes/admin/settings/class-emc-settings-simulator.php:80
+#: ../includes/admin/settings/class-emc-settings-simulator.php:71
 msgid "Sender ZIP code *"
 msgstr "Code postal de départ *"
 
-#: ../includes/admin/settings/class-emc-settings-simulator.php:88
+#: ../includes/admin/settings/class-emc-settings-simulator.php:79
+msgid "Sender city *"
+msgstr "Ville de départ *"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:87
 msgid "Recipient address"
 msgstr "Adresse d'arrivée"
 
-#: ../includes/admin/settings/class-emc-settings-simulator.php:98
-msgid "Recipient city *"
-msgstr "Ville d'arrivée *"
-
-#: ../includes/admin/settings/class-emc-settings-simulator.php:106
+#: ../includes/admin/settings/class-emc-settings-simulator.php:96
 msgid "Recipient ZIP code *"
 msgstr "Code postal d'arrivée *"
 
-#: ../includes/admin/settings/class-emc-settings-simulator.php:114
+#: ../includes/admin/settings/class-emc-settings-simulator.php:104
+msgid "Recipient city *"
+msgstr "Ville d'arrivée *"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:112
 msgid "Recipient country *"
 msgstr "Pays de destination *"
 
-#: ../includes/admin/settings/class-emc-settings-simulator.php:158
+#: ../includes/admin/settings/class-emc-settings-simulator.php:165
 msgid "Please fill in all the required * fields."
 msgstr "Veuillez remplir les champs marqués par *"
 
@@ -1864,7 +1859,7 @@ msgstr "Offres"
 
 #: ../includes/admin/views/html-admin-carriers-carrier-list.php:37
 #: ../includes/admin/views/html-admin-simulator.php:21
-#: ../includes/envoimoinscher_carrier.php:117
+#: ../includes/envoimoinscher_carrier.php:118
 msgid "Description"
 msgstr "Description"
 
@@ -1898,7 +1893,7 @@ msgstr ""
 "Envoimoinscher, qui seront affichés."
 
 #: ../includes/admin/views/html-admin-carriers-weight-options.php:21
-#: ../includes/envoimoinscher_carrier.php:134
+#: ../includes/envoimoinscher_carrier.php:135
 msgid "Weight"
 msgstr "Poids"
 
@@ -1942,36 +1937,36 @@ msgstr "Prix HT €"
 msgid "Price ATI"
 msgstr "Prix TTC €"
 
-#: ../includes/envoimoinscher_carrier.php:106
+#: ../includes/envoimoinscher_carrier.php:107
 msgid "Enable/Disable"
 msgstr "Activer/Désactiver"
 
-#: ../includes/envoimoinscher_carrier.php:111
+#: ../includes/envoimoinscher_carrier.php:112
 msgid "Label"
 msgstr "Nom"
 
-#: ../includes/envoimoinscher_carrier.php:113
+#: ../includes/envoimoinscher_carrier.php:114
 msgid "This controls the label which the user sees during checkout."
 msgstr "Ceci contrôle le nom que voit l'utilisateur pendant le checkout."
 
-#: ../includes/envoimoinscher_carrier.php:119
+#: ../includes/envoimoinscher_carrier.php:120
 msgid "This controls the description which the user sees during checkout."
 msgstr ""
 "Ceci contrôle la description que voit l'utilisateur pendant le checkout."
 
-#: ../includes/envoimoinscher_carrier.php:123
+#: ../includes/envoimoinscher_carrier.php:124
 msgid "Prices"
 msgstr "Prix"
 
-#: ../includes/envoimoinscher_carrier.php:126
+#: ../includes/envoimoinscher_carrier.php:127
 msgid "Real price"
 msgstr "Prix réel"
 
-#: ../includes/envoimoinscher_carrier.php:126
+#: ../includes/envoimoinscher_carrier.php:127
 msgid "Rate"
 msgstr "Forfait"
 
-#: ../includes/envoimoinscher_carrier.php:131
+#: ../includes/envoimoinscher_carrier.php:132
 msgid ""
 "Define the type of rate to make your scales : weight for total cart weight "
 "and price for total cart price"
@@ -1979,19 +1974,19 @@ msgstr ""
 "Veuillez indiquer sur quoi vous voulez baser votre forfait : le poids total "
 "du panier ou le prix total du panier."
 
-#: ../includes/envoimoinscher_carrier.php:134
+#: ../includes/envoimoinscher_carrier.php:135
 msgid "Price"
 msgstr "Prix"
 
-#: ../includes/envoimoinscher_carrier.php:139
+#: ../includes/envoimoinscher_carrier.php:140
 msgid "Dropoff relay point"
 msgstr "Point relais de départ"
 
-#: ../includes/envoimoinscher_carrier.php:145
+#: ../includes/envoimoinscher_carrier.php:146
 msgid "Carrier tracking url"
 msgstr "URL de suivi transporteur"
 
-#: ../includes/envoimoinscher_carrier.php:146
+#: ../includes/envoimoinscher_carrier.php:147
 msgid ""
 "Use this field to add a carrier tracking URL to your customer order view "
 "page. If you use @ it will be replaced by the carrier tracking reference to "
@@ -2338,11 +2333,22 @@ msgstr "Petit déménagement, cartons, effets personnels"
 
 #: ../languages/misc.php:5
 msgid ""
-"Shipping plugin allowing to compare and order negotiated delivery options of "
-"15 carriers."
+"The EnvoiMoinsCher delivery plugin for WooCommerce connects your site to "
+"over 15 carriers and simplifies your shipping process."
 msgstr ""
-"Module de livraison permettant de comparer et commander les offres de 15 "
-"transporteurs, à tarifs négociés."
+"Le module de livraison EnvoiMoinsCher pour WooCommerce vous permet de "
+"choisir parmi plus de 15 transporteurs et simplifie votre processus de "
+"livraison."
+
+#~ msgid "Could not compile %s.less:"
+#~ msgstr "%s.less n'a pas pu être compilé:"
+
+#~ msgid ""
+#~ "Shipping plugin allowing to compare and order negotiated delivery options "
+#~ "of 15 carriers."
+#~ msgstr ""
+#~ "Module de livraison permettant de comparer et commander les offres de 15 "
+#~ "transporteurs, à tarifs négociés."
 
 #~ msgid "Company"
 #~ msgstr "Société"
