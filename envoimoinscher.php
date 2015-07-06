@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Plugin Name: EnvoiMoinsCher.
  * Plugin URI: http://ecommerce.envoimoinscher.com/
- * Description: Shipping plugin allowing to compare and order negotiated delivery options of 15 carriers.
+ * Description: The EnvoiMoinsCher delivery plugin for WooCommerce connects your site to over 15 carriers and simplifies your shipping process.
  * Version: 1.0.4
  * Author: EnvoiMoinsCher
  * Author URI: http://www.envoimoinscher.com
@@ -250,7 +250,8 @@ if ( ! class_exists('envoimoinscher')){
 					}
 					
 					// Add a parcel points list
-					if ( ( (stristr(WC()->cart->get_checkout_url(), $_SERVER['REQUEST_URI']) ||  (stristr(WC()->cart->get_checkout_url(), $_SERVER['HTTP_REFERER'] ) ) ) ) 
+					if ( ( (stristr(WC()->cart->get_checkout_url(), $_SERVER['REQUEST_URI']) )
+								|| (stristr(WC()->cart->get_checkout_url(), $_SERVER['HTTP_REFERER']) && !stristr(WC()->cart->get_cart_url(), $_SERVER['REQUEST_URI']) ) )
 								&& in_array($method->id , WC()->session->get('chosen_shipping_methods') ) ) {
 						$service = envoimoinscher_model::get_service_by_carrier_code($method->id);
 						if ($service->srv_pickup_point) {
@@ -414,7 +415,7 @@ if ( ! class_exists('envoimoinscher')){
 							$this->_show_admin_notice( __( 'Please select an EnvoiMoinsCher carrier.', 'envoimoinscher' ), 'error' );
 							break;
 						case 14:
-							$this->_show_admin_notice( sprintf(__( 'EnvoiMoinsCher API error returned: %s', 'envoimoinscher' ), urldecode($_GET['emc_mess'] )));
+							$this->_show_admin_notice( sprintf(__( 'EnvoiMoinsCher API error returned: %s', 'envoimoinscher' ), stripslashes(urldecode($_GET['emc_mess']))) );
 							break;
 							
 						// notices starting from 21
