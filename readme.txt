@@ -36,7 +36,7 @@ Want to know more?
 2. Activate the plugin,
 3. Head to "EnvoiMoinsCher" under the WooCommerce tab and configure the plugin.
 
-Find more information about setting up the plugin on the plugin help page.
+Find more information about the plugin settings on the plugin help page.
 
 == Screenshots ==
 
