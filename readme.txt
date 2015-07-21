@@ -11,7 +11,7 @@ The EnvoiMoinsCher delivery plugin for WooCommerce connects your site to over 15
 
 = Simplify your shipping with the EnvoiMoinsCher delivery plugin! =
 
-Choose among the best offers available on the market (Mondial Relay, Coliposte ,TNT, Fedex, UPS, DHL, Chronopost, Relais Colis...) for your shipments to or from France.
+Choose among the best offers available on the market (Mondial Relay, Coliposte, TNT, Fedex, UPS, DHL, Chronopost, Relais Colis...) for your shipments to or from France.
 
 The EnvoiMoinsCher plugin enables you to...
 
