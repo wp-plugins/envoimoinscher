@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name: EnvoiMoinsCher
  * Plugin URI: http://ecommerce.envoimoinscher.com/
  * Description: The EnvoiMoinsCher delivery plugin for WooCommerce connects your site to over 15 carriers and simplifies your shipping process.
- * Version: 1.0.5
+ * Version: 1.1.0
  * Author: EnvoiMoinsCher
  * Author URI: http://www.envoimoinscher.com
  * Text Domain: envoimoinscher
@@ -44,7 +44,7 @@ if ( ! class_exists('envoimoinscher')){
 		
 		class envoimoinscher {
 
-			public $version = '1.0.5';
+			public $version = '1.1.0';
 			public $platform = 'woocommerce';
 			protected $model = null;
 			protected $view  = null;
@@ -511,7 +511,7 @@ if ( ! class_exists('envoimoinscher')){
 				);
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'gmap', '//maps.google.com/maps/api/js?sensor=false' );
-				wp_enqueue_script( 'emc_shipping','/wp-content/plugins/envoimoinscher/assets/js/shipping.js',array( 'jquery', 'gmap' ) );
+				wp_enqueue_script( 'emc_shipping', plugins_url( '/assets/js/shipping.js', EMC_PLUGIN_FILE ), array( 'jquery', 'gmap' ), EMC_VERSION );
 				wp_localize_script( 'emc_shipping', 'plugin_url', plugins_url() );
 				wp_localize_script( 'emc_shipping', 'lang', $lang );
 				wp_localize_script( 'emc_shipping', 'map', envoimoinscher_view::display_google_map_container() );

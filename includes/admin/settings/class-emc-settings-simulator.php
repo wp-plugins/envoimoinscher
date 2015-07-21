@@ -35,9 +35,20 @@ class emc_settings_simulator extends WC_Settings_Page {
 		$products = array();
 		$args     = array( 'post_type' => 'product' );
 		foreach(get_posts( $args ) as $value) {
-			$products[$value->ID] = $value->post_title;
+			$product  = wc_get_product( $value->ID );
+			if( $product->product_type == 'simple' ) {
+				$products[$value->ID] = $value->post_title;
+			} elseif ( $product->product_type == 'variable' ) {
+				foreach($product->get_available_variations() as $variation) {
+					$title = $value->post_title;
+					foreach($variation['attributes'] as $attributes){
+						$title .= ' ' . $attributes;
+					}
+					$products[$variation['variation_id']] = $title;
+				}
+			}
 		}
-		
+
 		if( empty($products) ) {
 			$products[''] = __( 'No product available in your online shop', 'envoimoinscher' );
 		}

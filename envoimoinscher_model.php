@@ -530,7 +530,8 @@ class envoimoinscher_model{
 		
 		$total_weight = 0;
 		foreach( $order->get_items( 'line_item' ) as $value ) {
-			$product_weight=self::get_product_weight($value['product_id']);
+			$product_id = ( !empty($value['variation_id']) ? $value['variation_id'] : $value['product_id'] );
+			$product_weight=self::get_product_weight($product_id);
 			$total_weight += (int)$value['qty'] * (float)$product_weight;
 		}
 		return (float)$total_weight;
@@ -1063,8 +1064,9 @@ class envoimoinscher_model{
 		$weight = 0;
 		foreach ( WC()->cart->get_cart() as $item_id => $values ) {
 			$_product = $values['data'];
+			$product_id = ( !empty($values['variation_id']) ? $values['variation_id'] : $_product->id );
 			if($_product->needs_shipping()){
-				$weight += self::get_product_weight($_product->id)*$values['quantity'];
+				$weight += self::get_product_weight($product_id)*$values['quantity'];
 			}
 		}
 		return $weight;
