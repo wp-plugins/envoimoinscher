@@ -583,9 +583,11 @@ class envoimoinscher_model{
 		$pass = get_option('EMC_PASS');
 		$key = get_option('EMC_KEY');
 		$env = get_option('EMC_ENV');
-		$lib = new Env_CarriersList(array('user' => $login, 'pass' => $pass, 'key' => $key));
+		$lib = new EnvCarriersList(array('user' => $login, 'pass' => $pass, 'key' => $key));
 		$lib->setPlatformParams(EMC_PLATFORM, WC_VERSION, EMC_VERSION);
 		$lib->setEnv($env);
+		$upload_dir = wp_upload_dir();
+    $lib->setUploadDir($upload_dir['basedir']);
 		$lib->getCarriersList(EMC_PLATFORM, EMC_VERSION);
 
 		if ($lib->curl_error) {
@@ -870,8 +872,10 @@ class envoimoinscher_model{
 			'ville' => $city
 		);
 		
-		$lib = new Env_ListPoints(array('user' => $login, 'pass' => $pass, 'key' => $key));
+		$lib = new EnvListPoints(array('user' => $login, 'pass' => $pass, 'key' => $key));
 		$lib->setEnv($env);
+		$upload_dir = wp_upload_dir();
+    $lib->setUploadDir($upload_dir['basedir']);
 		$lib->setPlatformParams(EMC_PLATFORM, WC_VERSION, EMC_VERSION);
 		
 		$lib->getListPoints($carrier_info[0], $params);
@@ -953,8 +957,10 @@ class envoimoinscher_model{
 		// Create quotation object
 		require_once('env/WebService.php');
 		require_once('env/Quotation.php');
-		$lib = new Env_Quotation(array('user' => get_option('EMC_LOGIN'), 'pass' => get_option('EMC_PASS'), 'key' => get_option('EMC_KEY')));
+		$lib = new EnvQuotation(array('user' => get_option('EMC_LOGIN'), 'pass' => get_option('EMC_PASS'), 'key' => get_option('EMC_KEY')));
 		$lib->setEnv(get_option('EMC_ENV'));
+		$upload_dir = wp_upload_dir();
+    $lib->setUploadDir($upload_dir['basedir']);
 		$lib->setPlatformParams(EMC_PLATFORM, WC_VERSION, EMC_VERSION);
 
 		// Initialize the quotation
@@ -1123,8 +1129,10 @@ class envoimoinscher_model{
 		include_once('env/WebService.php');
 		include_once('env/Quotation.php');
 		
-		$cotCl = new Env_Quotation(array('user' => get_option('EMC_LOGIN'), 'pass' => get_option('EMC_PASS'), 'key' => get_option('EMC_KEY')));
+		$cotCl = new EnvQuotation(array('user' => get_option('EMC_LOGIN'), 'pass' => get_option('EMC_PASS'), 'key' => get_option('EMC_KEY')));
 		$cotCl->setEnv( get_option( 'EMC_ENV' ) );
+		$upload_dir = wp_upload_dir();
+    $cotCl->setUploadDir($upload_dir['basedir']);
 		$cotCl->setPlatformParams(EMC_PLATFORM, WC_VERSION, EMC_VERSION);
 		
 		self::initialize_default_params( $order );
@@ -1427,7 +1435,7 @@ class envoimoinscher_model{
 			'code_postal' => get_post_meta( $order->id, '_shipping_postcode', true ),
 			'ville'       => get_post_meta( $order->id, '_shipping_city', true ),
 			'type'        => $dest_type,
-			'adresse'     => get_post_meta( $order->id, '_shipping_address_1', true ).' '.get_post_meta( $order->id, '_shipping_address_2', true ),
+			'adresse'     => get_post_meta( $order->id, '_shipping_address_1', true )."|".get_post_meta( $order->id, '_shipping_address_2', true ),
 			'civilite' 	  => 'M.',
 			'prenom'      => get_post_meta( $order->id, '_shipping_first_name', true ),
 			'nom'         => get_post_meta( $order->id, '_shipping_last_name', true ),
@@ -1466,8 +1474,10 @@ class envoimoinscher_model{
 			$key = get_option('EMC_KEY');
 			$env = get_option('EMC_ENV');
 
-			$lib = new Env_User(array('user' => $login, 'pass' => $pass, 'key' => $key));
+			$lib = new EnvUser(array('user' => $login, 'pass' => $pass, 'key' => $key));
 			$lib->setEnv($env);
+			$upload_dir = wp_upload_dir();
+			$lib->setUploadDir($upload_dir['basedir']);
 			$lib->getPartnership();
 
 			$partnership = $lib->partnership;

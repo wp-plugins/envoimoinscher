@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 					<tr id="<?php echo $carrier_code; ?>" class="<?php echo ( 1 == $carrier->status ? 'active' : 'inactive' ); ?>">
 						<td class="offers">
-							<div class="name"><?php echo $carrier->ope_name.' ('.$carrier->srv_name_bo.')'; ?></div> 				
+							<div class="name"><?php echo $carrier->srv_name_bo; ?></div> 				
 						</td>
 
 						<td class="description"><?php echo $carrier->srv_description_bo; ?></td>

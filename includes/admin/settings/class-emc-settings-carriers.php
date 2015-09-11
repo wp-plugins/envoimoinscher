@@ -188,7 +188,7 @@ class emc_settings_carriers extends WC_Settings_Page {
 		
 					$option = array(
 						'enabled' => 'yes',
-						'srv_name' => $service->ope_name. ' (' . $service->srv_name_bo . ')',
+						'srv_name' => $service->srv_name_bo,
 						'srv_description' => $service->srv_description,
 						'pricing' => 1,
 						'default_dropoff_point' => $default_PP,

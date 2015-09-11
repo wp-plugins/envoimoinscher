@@ -37,11 +37,13 @@ class emc_settings_parameters extends WC_Settings_Page {
   public function update_email_options() {
     require_once(WP_PLUGIN_DIR.'/envoimoinscher/env/WebService.php');
     require_once(WP_PLUGIN_DIR.'/envoimoinscher/env/User.php');
-		$user_class = new Env_User(array('user' => get_option('EMC_LOGIN'), 'pass' => get_option('EMC_PASS'), 'key' => get_option('EMC_KEY')));
+		$user_class = new EnvUser(array('user' => get_option('EMC_LOGIN'), 'pass' => get_option('EMC_PASS'), 'key' => get_option('EMC_KEY')));
     $user_class->setPlatformParams(EMC_PLATFORM, WC_VERSION, EMC_VERSION);
     $env = get_option('EMC_ENV');
     $user_class->setEnv($env);
-    $user_class->getEmailConfiguration();
+		$upload_dir = wp_upload_dir();
+    $user_class->setUploadDir($upload_dir['basedir']);
+		$user_class->getEmailConfiguration();
     $emails_params = $user_class->user_configuration['emails'];
 
     if( !empty($emails_params) ){
@@ -115,14 +117,15 @@ class emc_settings_parameters extends WC_Settings_Page {
         'notification' => ! empty( $_POST['EMC_mail_notif'] ) ? '1' : '',
         'bill' => ! empty( $_POST['EMC_mail_bill'] ) ? '1' : ''
       );
-              
+      
       require_once(WP_PLUGIN_DIR.'/envoimoinscher/env/WebService.php');
 			require_once(WP_PLUGIN_DIR.'/envoimoinscher/env/User.php');
-      $user_class = new Env_User(array('user' => get_option('EMC_LOGIN'), 'pass' => get_option('EMC_PASS'), 'key' => get_option('EMC_KEY')));
+      $user_class = new EnvUser(array('user' => get_option('EMC_LOGIN'), 'pass' => get_option('EMC_PASS'), 'key' => get_option('EMC_KEY')));
       $user_class->setPlatformParams(EMC_PLATFORM, WC_VERSION, EMC_VERSION);
       $env = get_option('EMC_ENV');
       $user_class->setEnv($env);
-
+			$upload_dir = wp_upload_dir();
+			$user_class->setUploadDir($upload_dir['basedir']);
       $user_class->postEmailConfiguration($new_emails_params);
 
       $new_emails_params['label'] == '1' ? $label = 'yes' : $label = 'no';

@@ -30,8 +30,8 @@ class envoimoinscher_carrier extends WC_Shipping_Method {
 		$this->ope_code = $service->ope_code;
 		$this->srv_code = $service->srv_code;
 		
-		$this->title = $service->ope_name. ' (' . $service->srv_name_bo . ')';
-		$this->method_title = $service->ope_name. ' (' . $service->srv_name_bo . ')';
+		$this->title = $service->srv_name_bo;
+		$this->method_title = $service->srv_name_bo;
 	
 		$this->init();
 	}
@@ -377,7 +377,7 @@ class envoimoinscher_carrier extends WC_Shipping_Method {
 		// set carrier shipping cost
 		$rate = array(
 			'id'    			 => $this->id,
-			'label'  			 => isset($carrier_settings['srv_name']) ? $carrier_settings['srv_name'] : $this->id .' ('.$operator[0]->ope_name.')',
+			'label'  			 => $this->title,
 			'cost'    		 => ($scale_cost != null) ? $scale_cost : $offers[$this->id]['price']['tax-exclusive'],
 		);
 

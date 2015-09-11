@@ -555,7 +555,7 @@ class EMC_Meta_Box_Order_Shipping {
 									foreach( $offers as $key => $value ){
 										echo '<option value="'.$key.'" ';
 										if ( $key == $carrier_code ) echo 'selected';
-										echo '>'.$value['service']['code'].' - '.wc_price( $value['price']['tax-exclusive'], array('ex_tax_label'=>true) ).'</option>';
+										echo '>'.$value['operator']['label'].' ('.$value['service']['label'].') - '.wc_price( $value['price']['tax-exclusive'], array('ex_tax_label'=>true) ).'</option>';
 									}
 								?>
 							</select>
@@ -704,7 +704,7 @@ class EMC_Meta_Box_Order_Shipping {
 								echo '<p>';
 								echo '<input type="checkbox" id="'.$key.'" name="'.$key.'"';
 								if ( get_post_meta( $post->ID, $key, true ) ) echo 'checked';
-								echo '/>'.$field['label'].' (<span id="insurance_rate">'.wc_price( $insurance_price, array('ex_tax_label'=>false) ).'</span>)</p>';
+								echo '/>'.$field['label'].' (<span id="insurance_rate">'.wc_price( $insurance_price, array('ex_tax_label'=>true) ).'</span>)</p>';
 								echo '<span id="insurance_rate_unformatted">'.$insurance_price.'</span>';
 							}
 							?>
