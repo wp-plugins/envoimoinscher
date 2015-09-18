@@ -377,7 +377,7 @@ class envoimoinscher_carrier extends WC_Shipping_Method {
 		// set carrier shipping cost
 		$rate = array(
 			'id'    			 => $this->id,
-			'label'  			 => $this->title,
+			'label'  			 => isset($carrier_settings['srv_name']) ? $carrier_settings['srv_name'] : $this->title,
 			'cost'    		 => ($scale_cost != null) ? $scale_cost : $offers[$this->id]['price']['tax-exclusive'],
 		);
 

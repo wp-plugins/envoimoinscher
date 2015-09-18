@@ -3,7 +3,7 @@ Contributors: Boxtale
 Tags: shipping
 Requires at least: 3.9
 Tested up to: 4.3
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 
 The EnvoiMoinsCher delivery plugin for WooCommerce connects your site to over 15 carriers and simplifies your shipping process.
 
@@ -46,6 +46,9 @@ Find more information about the plugin settings on the plugin help page.
 4. Go to the Orders page to send one or several of your orders at the same time.
 
 == Changelog ==
+
+= 1.1.3 =
+* Bug fix: displayed carrier label
 
 = 1.1.2 =
 * Changed carrier naming

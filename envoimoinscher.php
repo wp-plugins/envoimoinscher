@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name: EnvoiMoinsCher
  * Plugin URI: http://ecommerce.envoimoinscher.com/
  * Description: The EnvoiMoinsCher delivery plugin for WooCommerce connects your site to over 15 carriers and simplifies your shipping process.
- * Version: 1.1.2
+ * Version: 1.1.3
  * Author: EnvoiMoinsCher
  * Author URI: http://www.envoimoinscher.com
  * Text Domain: envoimoinscher
@@ -44,7 +44,7 @@ if ( ! class_exists('envoimoinscher')){
 		
 		class envoimoinscher {
 
-			public $version = '1.1.2';
+			public $version = '1.1.3';
 			public $platform = 'woocommerce';
 			protected $model = null;
 			protected $view  = null;
