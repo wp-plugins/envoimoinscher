@@ -1,7 +1,7 @@
 var emc_parcels = null;
 var infowindow = null;
 var carrier_code = '';
-var gmap = null;
+var map = null;
 var geocoder = null;
 var markers = [];
 var parcels_info = [];
@@ -9,9 +9,14 @@ var parcels_info = [];
 jQuery(window).load(function(){
 	
 	// see function load_pickup_point_js in class envoimoinscher
-	jQuery('body').append(map);
+	jQuery('body').append(map_container);
+	
+	// close map if selected carrier is changed
+	jQuery('body').delegate('input.shipping_method', 'change', close_map);
 	
 	jQuery('body').delegate('.select-parcel','click',function(){
+			
+		init_map();
 		carrier_attributes = jQuery(this).attr('id').split('_');
 		carrier_code = carrier_attributes[1]+'_'+carrier_attributes[2];
 		jQuery.ajax({
@@ -22,31 +27,35 @@ jQuery(window).load(function(){
 			error:error_pickup_points,
 			success:show_pickup_points
 		});
+		if(typeof jQuery(this).attr("shown") == "undefined"){
+			google.maps.event.trigger(map, 'resize');
+		}
 	});
 	
 	jQuery('#map-canvas').delegate('.emc-select-point','click',select_pickup_point);
 	
-	jQuery('.emc-close-map').click(close_gmap);
+	jQuery('.emc-close-map').click(close_map);
 });
 
 /*
  * Initialize the google map for a new display
  */
-function init_gmap() {
+function init_map() {
 	jQuery('#map-container').css('display','block');
   var options = {
     zoom: 11, 
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-	gmap = new google.maps.Map(document.getElementById("map-canvas"), options);
+	map = new google.maps.Map(document.getElementById("map-canvas"), options);
   geocoder = new google.maps.Geocoder();
 	infowindow = new google.maps.InfoWindow();
+	google.maps.event.trigger(map, 'resize');
 }
 
 /*
  * Close and clear the google map
  */
-function close_gmap() {
+function close_map() {
 	jQuery('#map-container').css('display','none');
 	jQuery('#map-canvas').html('');
   for (var i = 0; i < markers.length; i++) {
@@ -59,7 +68,7 @@ function close_gmap() {
 /*
  * We update the zoom level to the best fit 
  */
-function update_zoom_gmap() {
+function update_zoom_map() {
 	// zoom only if we have all markers
 	if (emc_parcels.length == 0 ||  (emc_parcels.length != 0 && markers.length < emc_parcels.length))
 	{
@@ -71,13 +80,17 @@ function update_zoom_gmap() {
 		if (typeof markers[i] != 'undefined')
 			bounds.extend(markers[i].getPosition());
 	}
-	gmap.setCenter(bounds.getCenter());
-	gmap.fitBounds(bounds);
-	gmap.setZoom(gmap.getZoom()-1); 
+	map.setCenter(bounds.getCenter());	
+	google.maps.event.addDomListener(window, 'resize', function() {
+			map.setCenter(bounds.getCenter());	
+	});
+	map.fitBounds(bounds);
+	map.setZoom(map.getZoom()-1); 
 	// if only 1 marker, unzoom
-	if(gmap.getZoom()> 15){
-		gmap.setZoom(15);
-	}
+	if(map.getZoom()> 15){
+		map.setZoom(15);
+	}	
+	google.maps.event.trigger(map, 'resize');
 }
 
 /*
@@ -85,8 +98,6 @@ function update_zoom_gmap() {
  */
 function show_pickup_points(parcel_points) {
 	emc_parcels = parcel_points;
-
-	init_gmap();
 	
 	// add parcel point markers
   for (i in parcel_points){
@@ -132,9 +143,9 @@ function show_pickup_points(parcel_points) {
         geocoder.geocode({ 'address': address + ', ' + zipcode + ' ' + city }, function(results, status) {
           if(status == google.maps.GeocoderStatus.OK)   
           {
-						gmap.setCenter(results[0].geometry.location);
+						map.setCenter(results[0].geometry.location);
 						var marker = new google.maps.Marker({
-							map: gmap, 
+							map: map, 
 							position: results[0].geometry.location,
 							title : name
 						});
@@ -142,19 +153,18 @@ function show_pickup_points(parcel_points) {
 						google.maps.event.addListener(marker,"click",function() {
 							infowindow.close();
 							infowindow.setContent(this.get("content"));
-							infowindow.open(gmap,marker);
+							infowindow.open(map,marker);
 						});
 						markers[i] = marker;
-						update_zoom_gmap();
+						update_zoom_map();
           }
         });
       }
     })(i);
+		
   }
-  
-  
   // remove info if we click on the map
-	google.maps.event.addListener(gmap,"click",function() {
+	google.maps.event.addListener(map,"click",function() {
 		infowindow.close();
 	});
 }
@@ -168,7 +178,7 @@ function select_pickup_point(source){
 	jQuery('#input_'+carrier_code).html('<input type="hidden" name="_pickup_point" value="'+code+'"/>');
 	jQuery('#emc-parcel-client').html(name);
 	jQuery('#map-container').css('display','none');
-	close_gmap();
+	close_map();
 }
 
 function error_pickup_points(jqXHR, textStatus, errorThrown ) {

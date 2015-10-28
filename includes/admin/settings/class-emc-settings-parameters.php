@@ -95,7 +95,20 @@ class emc_settings_parameters extends WC_Settings_Page {
 				'desc_tip' => true,
 			),
 			
-		array( 'type' => 'sectionend', 'id' => 'emails_parameters'),
+			array( 'type' => 'sectionend', 'id' => 'emails_parameters'),
+			
+			array( 'title' => __( 'Display', 'envoimoinscher' ), 'type' => 'title', 'id' => 'display_options' ),
+					
+			array(
+				'title'    => __( 'Carrier logos', 'envoimoinscher' ),
+				'desc'     => __( 'Uncheck this box to hide carrier logos in front office.', 'envoimoinscher' ),
+				'id'       => 'EMC_carrier_display',
+				'type'     => 'checkbox',
+				'default'  => 'yes',
+				'desc_tip' => true,
+			),
+			
+			array( 'type' => 'sectionend', 'id' => 'display_options'),
 			
 		);
 
@@ -136,6 +149,8 @@ class emc_settings_parameters extends WC_Settings_Page {
       update_option( 'EMC_mail_notif', $notification );
       update_option( 'EMC_mail_bill', $bill );
     }
+		
+		update_option( 'EMC_carrier_display', isset($_POST['EMC_carrier_display']) ? 'yes' : 'no');
   }
 }
 

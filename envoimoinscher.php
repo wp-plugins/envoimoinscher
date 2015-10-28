@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Plugin Name: EnvoiMoinsCher
  * Plugin URI: http://ecommerce.envoimoinscher.com/
  * Description: The EnvoiMoinsCher delivery plugin for WooCommerce connects your site to over 15 carriers and simplifies your shipping process.
- * Version: 1.1.3
+ * Version: 1.1.6
  * Author: EnvoiMoinsCher
  * Author URI: http://www.envoimoinscher.com
  * Text Domain: envoimoinscher
@@ -44,7 +44,7 @@ if ( ! class_exists('envoimoinscher')){
 		
 		class envoimoinscher {
 
-			public $version = '1.1.3';
+			public $version = '1.1.6';
 			public $platform = 'woocommerce';
 			protected $model = null;
 			protected $view  = null;
@@ -234,7 +234,17 @@ if ( ! class_exists('envoimoinscher')){
 				if(in_array( $method->id, envoimoinscher_model::get_enabled_shipping_methods(true) ) ) {
 					// get carrier settings
 					$carrier_settings = get_option('woocommerce_'.$method->id.'_settings');
+					list($operator, $service) = explode('_', $method->id);
 					
+					// add logo
+					if (get_option('EMC_carrier_display') == 'yes') {
+						$img = plugins_url( '/assets/img/carriers/logo-'.strtolower($operator).'.png', EMC_PLUGIN_FILE );
+						if (@getimagesize($img)) {
+							$full_label = '<span class="carrier_logo '.$operator.'"><img src="'.$img.'"/></span>' . $full_label;
+						}
+					}
+					
+					// add description
 					$full_label .= '<br/><span class="description">'.$carrier_settings['srv_description'].'</span>';
 					
 					// add delivery date				
@@ -248,10 +258,10 @@ if ( ! class_exists('envoimoinscher')){
 					if ( $string != ''){
 						$full_label .=  '<br/><span class="delivery_date">'.$string.'</span>';
 					}
-					
+
 					// Add a parcel points list
 					if ( ( (stristr(WC()->cart->get_checkout_url(), $_SERVER['REQUEST_URI']) )
-								|| (stristr(WC()->cart->get_checkout_url(), $_SERVER['HTTP_REFERER']) && !stristr(WC()->cart->get_cart_url(), $_SERVER['REQUEST_URI']) ) )
+								|| ( isset($_SERVER['HTTP_REFERER']) && stristr(WC()->cart->get_checkout_url(), $_SERVER['HTTP_REFERER']) && !stristr(WC()->cart->get_cart_url(), $_SERVER['REQUEST_URI']) ) )
 								&& in_array($method->id , WC()->session->get('chosen_shipping_methods') ) ) {
 						$service = envoimoinscher_model::get_service_by_carrier_code($method->id);
 						if ($service->srv_pickup_point) {
@@ -495,7 +505,6 @@ if ( ! class_exists('envoimoinscher')){
 			 * Loads parcel point js on checkout page if at least one shipping service has parcel points
 			**/
 			public function load_pickup_point_js( $checkout ) {
-				
 				$lang = array(
 					'Unable to load parcel points' => __( 'Unable to load parcel points', 'envoimoinscher' ),
 					'I want this pickup point' => __( 'I want this pickup point', 'envoimoinscher' ),
@@ -510,11 +519,11 @@ if ( ! class_exists('envoimoinscher')){
 					'day_7' => __( 'sunday', 'envoimoinscher' )
 				);
 				wp_enqueue_script( 'jquery' );
-				wp_enqueue_script( 'gmap', '//maps.google.com/maps/api/js?sensor=false' );
+				wp_enqueue_script( 'gmap', 'https://maps.googleapis.com/maps/api/js?sensor=false' );
 				wp_enqueue_script( 'emc_shipping', plugins_url( '/assets/js/shipping.js', EMC_PLUGIN_FILE ), array( 'jquery', 'gmap' ), EMC_VERSION );
 				wp_localize_script( 'emc_shipping', 'plugin_url', plugins_url() );
 				wp_localize_script( 'emc_shipping', 'lang', $lang );
-				wp_localize_script( 'emc_shipping', 'map', envoimoinscher_view::display_google_map_container() );
+				wp_localize_script( 'emc_shipping', 'map_container', envoimoinscher_view::display_google_map_container() );
 				wp_localize_script( 'emc_shipping', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
 				
 				// Add nonce for security
@@ -543,7 +552,7 @@ if ( ! class_exists('envoimoinscher')){
 				if (isset($_POST['shipping_method']))	{
 					foreach($_POST['shipping_method'] as $shipping_method) {
 						$service = envoimoinscher_model::get_service_by_carrier_code($shipping_method);
-						if ($service->srv_pickup_point) {
+						if ($service != false && $service->srv_pickup_point) {
 							if (isset($_POST['_pickup_point'])) {
 								update_post_meta( $order_id, '_pickup_point', $_POST['_pickup_point'] );
 							}
@@ -1035,8 +1044,9 @@ if ( ! class_exists('envoimoinscher')){
 			/**
 			 * Call to api only when city, country and postcode are complete
 			 */	
-			public function limit_cost_calculation( ) {
-				if ( ( (stristr(WC()->cart->get_checkout_url(), $_SERVER['REQUEST_URI']) ||  (stristr(WC()->cart->get_checkout_url(), $_SERVER['HTTP_REFERER'] ) ) ) ) ) {
+			public function limit_cost_calculation() {
+				if ( ( (isset($_SERVER['REQUEST_URI']) && stristr(WC()->cart->get_checkout_url(), $_SERVER['REQUEST_URI'])) 
+							|| (isset($_SERVER['HTTP_REFERER']) && stristr(WC()->cart->get_checkout_url(), $_SERVER['HTTP_REFERER'])) ) ) {
 					if ( ! WC()->customer->has_calculated_shipping() ) {
 						if ( ! WC()->customer->get_shipping_country() || ! WC()->customer->get_shipping_city() || ! WC()->customer->get_shipping_postcode() )
 							return false;

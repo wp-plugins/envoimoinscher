@@ -1666,10 +1666,15 @@ class envoimoinscher_model{
 		parse_str( $query_string, $params );
 		
 		if ( get_post_meta( $params['order'], '_key_push', true ) == $params['key'] ){			
-			$emc_tracking = get_post_meta( $params['order'], '_emc_tracking');
+			
+			$current_track_info = get_post_meta( $params['order'], '_emc_tracking' );
+			if(isset($current_track_info[0])) {
+				$current_track_info = current($current_track_info);
+			}
+			$text = urldecode( $params['text'] );
+			$order = WC()->order_factory->get_order($params['order']);
 			
 			// Generate a tracking message if no one was given
-			$text = urldecode( $params['text'] );
 			if ( $text == '' ) {
 				switch ( $params['etat'] ) {
 					case 'CMD':
@@ -1688,24 +1693,62 @@ class envoimoinscher_model{
 						return false;
 				}
 			}
-
+			
 			// Generate the default date if no one was given
 			$date = strtotime( $params['date'] );
-			if ( $date == false)
+			if ( $date == false) {
 				$date = time();
+			}
 			
-			$track_info = array(
+			// New tracking information
+			$new_track_info = array(
 				'trk_state' 				=> $params['etat'],
 				'trk_date' 					=> date( 'Y-m-d H:i:s', $date ),
 				'trk_text' 					=> $text,
 				'trk_localisation' 	=> urldecode( $params['localisation'] ),
 			);
 
-			// add order note
-			$order = WC()->order_factory->get_order($params['order']);		
-			$order->add_order_note( $text );
-			
-			update_post_meta( $params['order'], '_emc_tracking', $emc_tracking );
+			if(isset($current_track_info['trk_state'])) {
+				// update order status and/or add order note
+				switch ( $params['etat'] ) {
+					case 'CMD':
+						if($current_track_info['trk_date'] < $new_track_info['trk_date'] && $current_track_info['trk_text'] != $new_track_info['trk_text']) {
+							$order->add_order_note( $text );
+						}
+						break;
+					case 'ENV':
+						if ($current_track_info['trk_date'] <= $new_track_info['trk_date'] && $current_track_info['trk_state'] != $new_track_info['trk_state']) {
+							$order->update_status( 'wc-shipped', $text );
+						} elseif ($current_track_info['trk_date'] < $new_track_info['trk_date'] && $current_track_info['trk_text'] != $new_track_info['trk_text']) {
+							$order->add_order_note( $text );
+						}
+						break;
+					case 'ANN':
+						if($current_track_info['trk_date'] < $new_track_info['trk_date'] && $current_track_info['trk_text'] != $new_track_info['trk_text']) {
+							$order->add_order_note( $text );
+						}
+						break;
+					case 'LIV':
+						if ($current_track_info['trk_date'] <= $new_track_info['trk_date'] && $current_track_info['trk_state'] != $new_track_info['trk_state']) {
+							$order->update_status( 'wc-completed', $text );
+						} elseif ($current_track_info['trk_date'] < $new_track_info['trk_date'] && $current_track_info['trk_text'] != $new_track_info['trk_text']) {
+							$order->add_order_note( $text );
+						}
+						break;
+					default:
+						break;
+				}
+				
+				// update tracking info post meta if more current
+				if ($current_track_info['trk_date'] <= $new_track_info['trk_date']) {
+					update_post_meta( $params['order'], '_emc_tracking', $new_track_info );
+				}
+			} else { // no previous tracking information
+				$order->add_order_note( $text );
+				
+				// update tracking info post meta
+				update_post_meta( $params['order'], '_emc_tracking', $new_track_info );
+			}	
 		}
 		exit;				
 	}
