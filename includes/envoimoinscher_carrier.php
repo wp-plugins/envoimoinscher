@@ -53,13 +53,13 @@ class envoimoinscher_carrier extends WC_Shipping_Method {
 		// Process settings
 		add_action('woocommerce_update_options_shipping_'.$this->id, array(&$this, 'process_admin_options'));
 	}
+	
 	/**
 	 * update carrier options (scale options)
 	 * @access public
 	 * @return void
 	 * 
 	 */
-	
 	public function process_admin_options(){
 		parent::process_admin_options();
 		if( isset($_POST['rate_from']) ){
@@ -135,6 +135,14 @@ class envoimoinscher_carrier extends WC_Shipping_Method {
 				'options'  => array( 'weight' => __( 'Weight', 'envoimoinscher' ), 'price' => __( 'Price', 'envoimoinscher' )),
 				'css' => '-webkit-margin-before:0.2em;',
 				'class' => 'rate-type'
+			),
+			'handling_fees' => array(
+				'title' => __( 'Handling fee', 'envoimoinscher' ),
+				'type' => 'text',
+				'description' => sprintf(__( 'Fee excluding tax. Enter an amount, e.g. %s, or a percentage, e.g. 5%%. Leave blank or set to 0 to disable.', 'envoimoinscher' ), '2'.wc_get_price_decimal_separator().'50'),
+				'default' => '',
+				'css' => '-webkit-margin-before:0.2em;',
+				'class' => 'pricing'
 			),
 			'default_dropoff_point' => array(
 				'title' => __( 'Dropoff relay point', 'envoimoinscher' ),
@@ -373,12 +381,27 @@ class envoimoinscher_carrier extends WC_Shipping_Method {
 		if( isset($offers[$this->id]['delivery']['date']) ) {
 			update_option( '_delivery_date_' . $this->id , $offers[$this->id]['delivery']['date'] );
 		}
-
+		
+		$final_rate = ($scale_cost != null) ? $scale_cost : $offers[$this->id]['price']['tax-exclusive'];
+		
+		// add handling fees
+		if(isset($carrier_settings['handling_fees']) && $carrier_settings['handling_fees'] != '') {
+			$handling_fees = floatval(str_replace(',', '.', $carrier_settings['handling_fees']));
+			if($handling_fees != 0) {
+				// check if percentage
+				if(strpos($carrier_settings['handling_fees'], '%') !== false) {
+					$final_rate = $final_rate * (1 + $handling_fees/100);
+				} else {
+					$final_rate = $final_rate + $handling_fees;
+				}
+			}
+		}
+		
 		// set carrier shipping cost
 		$rate = array(
 			'id'    			 => $this->id,
 			'label'  			 => isset($carrier_settings['srv_name']) ? $carrier_settings['srv_name'] : $this->title,
-			'cost'    		 => ($scale_cost != null) ? $scale_cost : $offers[$this->id]['price']['tax-exclusive'],
+			'cost'    		 => $final_rate,
 		);
 
 		$this->add_rate($rate);

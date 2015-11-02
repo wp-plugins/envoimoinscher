@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Module 1.0.0\n"
-"POT-Creation-Date: 2015-10-26 17:11+0100\n"
-"PO-Revision-Date: 2015-10-26 17:13+0100\n"
+"POT-Creation-Date: 2015-10-30 11:56+0100\n"
+"PO-Revision-Date: 2015-10-30 14:04+0100\n"
 "Last-Translator: \n"
 "Language-Team: EnvoiMoinsCher\n"
 "Language: fr_FR\n"
@@ -696,7 +696,7 @@ msgstr "Informations concernant l'envoi"
 
 #: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:629
 #: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:637
-#: ../includes/envoimoinscher_carrier.php:141
+#: ../includes/envoimoinscher_carrier.php:149
 msgid "Get code"
 msgstr "Obtenir le code"
 
@@ -1993,14 +1993,27 @@ msgid "Price"
 msgstr "Prix"
 
 #: ../includes/envoimoinscher_carrier.php:140
+msgid "Handling fee"
+msgstr "Frais de manutention"
+
+#: ../includes/envoimoinscher_carrier.php:142
+#, php-format
+msgid ""
+"Fee excluding tax. Enter an amount, e.g. %s, or a percentage, e.g. 5%%. "
+"Leave blank or set to 0 to disable."
+msgstr ""
+"Les frais sans TVA. Entrez un montant, ex : %s, ou un pourcentage, ex : 5%%. "
+"Laissez vide ou à 0 pour désactiver."
+
+#: ../includes/envoimoinscher_carrier.php:148
 msgid "Dropoff relay point"
 msgstr "Point relais de départ"
 
-#: ../includes/envoimoinscher_carrier.php:146
+#: ../includes/envoimoinscher_carrier.php:154
 msgid "Carrier tracking url"
 msgstr "URL de suivi transporteur"
 
-#: ../includes/envoimoinscher_carrier.php:147
+#: ../includes/envoimoinscher_carrier.php:155
 msgid ""
 "Use this field to add a carrier tracking URL to your customer order view "
 "page. If you use @ it will be replaced by the carrier tracking reference to "
