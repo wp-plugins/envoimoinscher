@@ -1,0 +1,2722 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Module 1.0.0\n"
+"POT-Creation-Date: 2015-10-30 11:56+0100\n"
+"PO-Revision-Date: 2015-10-30 14:04+0100\n"
+"Last-Translator: \n"
+"Language-Team: EnvoiMoinsCher\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_n_noop:1,2;_x:1,2c\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../envoimoinscher.php:89
+msgid "Shipping plugin: 15 negotiated carriers"
+msgstr "Module de livraison : 15 transporteurs à tarifs négociés"
+
+#: ../envoimoinscher.php:256
+msgid "l, F jS Y"
+msgstr "l j F Y"
+
+#: ../envoimoinscher.php:268
+msgid "Choose a parcel point"
+msgstr "Choisissez un point relais"
+
+#: ../envoimoinscher.php:269
+msgid "Selected "
+msgstr "Sélectionné"
+
+#: ../envoimoinscher.php:307
+msgid "Re-send using EnvoiMoinsCher"
+msgstr "Renvoyer avec EnvoiMoinsCher"
+
+#: ../envoimoinscher.php:310
+msgid "Download waybill"
+msgstr "Télécharger le bordereau"
+
+#: ../envoimoinscher.php:314
+msgid "Download delivery waybill"
+msgstr "Télécharger le bordereau de remise"
+
+#: ../envoimoinscher.php:320 ../envoimoinscher.php:818
+#: ../envoimoinscher.php:819
+msgid "Send using EnvoiMoinsCher"
+msgstr "Envoyer avec EnvoiMoinsCher"
+
+#: ../envoimoinscher.php:402
+msgid "waybill"
+msgstr "bordereau"
+
+#: ../envoimoinscher.php:404
+msgid "delivery-waybill"
+msgstr "bordereau-de-remise"
+
+#: ../envoimoinscher.php:420 ../envoimoinscher_model.php:1187
+#, php-format
+msgid "Order passed with the reference %s."
+msgstr "Commande passée avec la référence %s."
+
+#: ../envoimoinscher.php:425
+msgid "Please select an EnvoiMoinsCher carrier."
+msgstr "Veuillez choisir un transporteur EnvoiMoinsCher."
+
+#: ../envoimoinscher.php:428
+#: ../includes/admin/settings/class-emc-settings-simulator.php:159
+#, php-format
+msgid "EnvoiMoinsCher API error returned: %s"
+msgstr "Une erreur a été rencontrée par l'API EnvoiMoinsCher : %s"
+
+#: ../envoimoinscher.php:440
+msgid "Processing order"
+msgstr "Traitement de la commande"
+
+#: ../envoimoinscher.php:441 ../envoimoinscher.php:453
+msgid "Successfully sent orders:"
+msgstr "Commandes envoyées avec succès :"
+
+#: ../envoimoinscher.php:442 ../envoimoinscher.php:454
+msgid "Orders not sent:"
+msgstr "Commandes non passées :"
+
+#: ../envoimoinscher.php:443 ../envoimoinscher.php:458
+msgid "Orders already sent:"
+msgstr "Commandes déjà envoyées :"
+
+#: ../envoimoinscher.php:452
+msgid "All orders processed."
+msgstr "Tous les commandes ont été traitées."
+
+#: ../envoimoinscher.php:456
+msgid ""
+"Orders not sent may have missing parameters. You should check these orders "
+"individually."
+msgstr ""
+"Les commandes non envoyées peuvent avoir des paramètres manquants. Veuillez "
+"vérifier ces commandes individuellement."
+
+#: ../envoimoinscher.php:460
+msgid ""
+"Orders already sent cannot be re-sent using bulk action. You should re-send "
+"them individually."
+msgstr ""
+"Les commandes déjà envoyées ne peuvent pas être envoyées en masse. Veuillez "
+"les réexpédier individuellement."
+
+#: ../envoimoinscher.php:489
+msgid "Shipping Options - EnvoiMoinsCher"
+msgstr "Options d'envoi - EnvoiMoinsCher"
+
+#: ../envoimoinscher.php:509
+msgid "Unable to load parcel points"
+msgstr "Les points relais n'ont pas pu être chargés"
+
+#: ../envoimoinscher.php:510
+msgid "I want this pickup point"
+msgstr "Je choisis ce point relais"
+
+#: ../envoimoinscher.php:511
+msgid "From %1 to %2"
+msgstr "De %1 à %2"
+
+#: ../envoimoinscher.php:512
+msgid " and %1 to %2"
+msgstr " et %1 à %2"
+
+#: ../envoimoinscher.php:513
+msgid "monday"
+msgstr "lundi"
+
+#: ../envoimoinscher.php:514
+msgid "tuesday"
+msgstr "mardi"
+
+#: ../envoimoinscher.php:515
+msgid "wednesday"
+msgstr "mercredi"
+
+#: ../envoimoinscher.php:516
+msgid "thursday"
+msgstr "jeudi"
+
+#: ../envoimoinscher.php:517
+msgid "friday"
+msgstr "vendredi"
+
+#: ../envoimoinscher.php:518
+msgid "saturday"
+msgstr "samedi"
+
+#: ../envoimoinscher.php:519
+msgid "sunday"
+msgstr "dimanche"
+
+#: ../envoimoinscher.php:560
+msgid "Please select a parcel point"
+msgstr "Veuillez choisir un point relais"
+
+#: ../envoimoinscher.php:767
+msgctxt "Order status"
+msgid "Awaiting Shipment"
+msgstr "En attente d'expédition"
+
+#: ../envoimoinscher.php:772
+#, php-format
+msgid "Awaiting Shipment <span class=\"count\">(%s)</span>"
+msgid_plural "Awaiting Shipment <span class=\"count\">(%s)</span>"
+msgstr[0] "En attente d'expédition <span class=\"count\">(%s)</span>"
+msgstr[1] "En attente d'expédition <span class=\"count\">(%s)</span>"
+
+#: ../envoimoinscher.php:775
+msgctxt "Order status"
+msgid "Shipped"
+msgstr "Expédiée"
+
+#: ../envoimoinscher.php:780
+#, php-format
+msgid "Shipped <span class=\"count\">(%s)</span>"
+msgid_plural "Shipped <span class=\"count\">(%s)</span>"
+msgstr[0] "Expédiée <span class=\"count\">(%s)</span>"
+msgstr[1] "Expédiées <span class=\"count\">(%s)</span>"
+
+#: ../envoimoinscher.php:812 ../envoimoinscher.php:813
+msgid "Mark awaiting shipment"
+msgstr "Marquer en attente d'expédition"
+
+#: ../envoimoinscher.php:815 ../envoimoinscher.php:816
+msgid "Mark shipped"
+msgstr "Marquer expédiée"
+
+#: ../envoimoinscher.php:821 ../envoimoinscher.php:822
+msgid "Download all waybills"
+msgstr "Télécharger tous les bordereaux"
+
+#: ../envoimoinscher.php:824 ../envoimoinscher.php:825
+msgid "Download all delivery waybills"
+msgstr "Télécharger tous les bordereaux de remise"
+
+#: ../envoimoinscher.php:934
+msgid "Processing"
+msgstr ""
+
+#: ../envoimoinscher.php:942
+msgid "Awaiting Shipment"
+msgstr "En attente d'expédition"
+
+#: ../envoimoinscher.php:950
+msgid "Shipped"
+msgstr "Expédiée"
+
+#: ../envoimoinscher.php:958
+msgid "Complete"
+msgstr ""
+
+#: ../envoimoinscher.php:1071
+#, php-format
+msgid "Your carrier tracking reference is %s."
+msgstr "Votre référence de suivi transporteur est %s."
+
+#: ../envoimoinscher_model.php:594 ../envoimoinscher_model.php:608
+msgid "An error occurred while updating your carrier list: "
+msgstr ""
+"Une erreur s'est produite lors de la mise à jour de vos transporteurs : "
+
+#: ../envoimoinscher_model.php:1192 ../envoimoinscher_model.php:1205
+msgid "Invalid request: "
+msgstr "Requête invalide : "
+
+#: ../envoimoinscher_model.php:1349
+msgid "France"
+msgstr "France"
+
+#: ../envoimoinscher_model.php:1547
+msgid "Packing type"
+msgstr "Type d'emballage utilisé"
+
+#: ../envoimoinscher_model.php:1548
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:80
+msgid "Box"
+msgstr "Boîte"
+
+#: ../envoimoinscher_model.php:1549
+msgid "Crate"
+msgstr "Caisse"
+
+#: ../envoimoinscher_model.php:1550
+msgid "Container"
+msgstr "Bac"
+
+#: ../envoimoinscher_model.php:1551
+msgid "Insulated packaging"
+msgstr "Emballage isotherme"
+
+#: ../envoimoinscher_model.php:1552
+msgid "Carrying case"
+msgstr "Etui"
+
+#: ../envoimoinscher_model.php:1553
+msgid "Trunk"
+msgstr "Malle"
+
+#: ../envoimoinscher_model.php:1554
+msgid "Bag/sack"
+msgstr "Sac"
+
+#: ../envoimoinscher_model.php:1555
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:80
+msgid "Tube"
+msgstr "Tube"
+
+#: ../envoimoinscher_model.php:1556
+msgid "Materials"
+msgstr "Matériau utilisé"
+
+#: ../envoimoinscher_model.php:1557
+msgid "Cardboard box"
+msgstr "Carton"
+
+#: ../envoimoinscher_model.php:1558
+msgid "Wood"
+msgstr "Bois"
+
+#: ../envoimoinscher_model.php:1559
+msgid "Reinforced cardboard"
+msgstr "Carton blindé"
+
+#: ../envoimoinscher_model.php:1560
+msgid "Opaque film"
+msgstr "Film opaque"
+
+#: ../envoimoinscher_model.php:1561
+msgid "Transparent film"
+msgstr "Film transparent"
+
+#: ../envoimoinscher_model.php:1562
+msgid "Metal"
+msgstr "Métal"
+
+#: ../envoimoinscher_model.php:1563
+msgid "Paper"
+msgstr "Papier"
+
+#: ../envoimoinscher_model.php:1564
+msgid "Reinforced paper"
+msgstr "Papier armé"
+
+#: ../envoimoinscher_model.php:1565
+msgid "Plastic and cardboard"
+msgstr "Plastique et carton"
+
+#: ../envoimoinscher_model.php:1566
+msgid "Plastic"
+msgstr "Plastique"
+
+#: ../envoimoinscher_model.php:1567
+msgid "Opaque plastic"
+msgstr "Plastique opaque"
+
+#: ../envoimoinscher_model.php:1568
+msgid "Transparent plastic"
+msgstr "Plastique transparent"
+
+#: ../envoimoinscher_model.php:1569
+msgid "Polystyrene"
+msgstr "Polystyrène"
+
+#: ../envoimoinscher_model.php:1570
+msgid "Interior protection"
+msgstr "Protection intérieure utilisée"
+
+#: ../envoimoinscher_model.php:1571
+msgid "No specific protection"
+msgstr "Sans protection particulière"
+
+#: ../envoimoinscher_model.php:1572
+msgid "Paper cushioning"
+msgstr "Calage papier"
+
+#: ../envoimoinscher_model.php:1573
+msgid "Plastic bubble wrap"
+msgstr "Bulles plastiques"
+
+#: ../envoimoinscher_model.php:1574
+msgid "Impact-resistant cardboard"
+msgstr "Carton antichoc"
+
+#: ../envoimoinscher_model.php:1575
+msgid "Air cushion"
+msgstr "Coussin air"
+
+#: ../envoimoinscher_model.php:1576
+msgid "Foam cushion"
+msgstr "Coussin mousse"
+
+#: ../envoimoinscher_model.php:1577
+msgid "Cardboard bottle protector"
+msgstr "Manchon carton (bouteille)"
+
+#: ../envoimoinscher_model.php:1578
+msgid "Foam bottle protector"
+msgstr "Manchon mousse (bouteille)"
+
+#: ../envoimoinscher_model.php:1579
+msgid "Padding"
+msgstr "Matelassage"
+
+#: ../envoimoinscher_model.php:1580
+msgid "Foam pad"
+msgstr "Plaque mousse"
+
+#: ../envoimoinscher_model.php:1581
+msgid "Cushioning material"
+msgstr "Coussin de calage"
+
+#: ../envoimoinscher_model.php:1582
+msgid "Padded mailer"
+msgstr "Sachet bulles"
+
+#: ../envoimoinscher_model.php:1583
+msgid "Fastener used"
+msgstr "Fermeture utilisée"
+
+#: ../envoimoinscher_model.php:1584
+msgid "Self-adhesive fastener"
+msgstr "Fermeture autocollante"
+
+#: ../envoimoinscher_model.php:1585
+msgid "Adhesive tape"
+msgstr "Ruban adhésif"
+
+#: ../envoimoinscher_model.php:1586
+msgid "Staples"
+msgstr "Agrafes"
+
+#: ../envoimoinscher_model.php:1587
+msgid "Nails"
+msgstr "Clous"
+
+#: ../envoimoinscher_model.php:1588
+msgid "Binding"
+msgstr "Collage"
+
+#: ../envoimoinscher_model.php:1589
+msgid "Strapping tape"
+msgstr "Ruban de cerclage"
+
+#: ../envoimoinscher_model.php:1590
+msgid "Strap or coiled strip"
+msgstr "Sangle ou feuillard"
+
+#: ../envoimoinscher_model.php:1591
+msgid "Stapling and strapping"
+msgstr "Agraphes et cerclage"
+
+#: ../envoimoinscher_model.php:1592
+msgid "Nails and fastening"
+msgstr "Clous et cerclage"
+
+#: ../envoimoinscher_model.php:1593
+msgid "String"
+msgstr "Ficelles"
+
+#: ../envoimoinscher_model.php:1681
+msgid "Order tracking: ordered."
+msgstr "Etat de la commande : passée."
+
+#: ../envoimoinscher_model.php:1684
+msgid "Order tracking: processing."
+msgstr "Etat de la commande : envoyée."
+
+#: ../envoimoinscher_model.php:1687
+msgid "Order tracking: cancelled."
+msgstr "Etat de la commande : annulée."
+
+#: ../envoimoinscher_model.php:1690
+msgid "Order tracking: delivered."
+msgstr "Etat de la commande : livrée."
+
+#: ../envoimoinscher_view.php:6
+msgid "Close map"
+msgstr "Fermer la carte"
+
+#: ../includes/admin/class-emc-admin-menus.php:134
+msgid "EnvoiMoinsCher"
+msgstr "EnvoiMoinsCher"
+
+#: ../includes/admin/class-emc-admin-settings.php:71
+msgid "The changes you made will be lost if you navigate away from this page."
+msgstr ""
+"Les changements que vous avez effectués seront perdus si vous quittez cette "
+"page."
+
+#: ../includes/admin/class-emc-admin-settings.php:116
+msgid "Action failed. Please refresh the page and retry."
+msgstr "L'action n'a pas pu aboutir. Veuillez rafraîchir la page et réessayer."
+
+#: ../includes/admin/class-emc-admin-settings.php:147
+msgid "Your settings have been saved."
+msgstr "Vos paramètres ont été enregistrés."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:102
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:136
+msgid "Total shipping weight:"
+msgstr "Poids total de la commande :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:107
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:142
+msgid "Total shipping width:"
+msgstr "Largeur totale de la commande :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:112
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:148
+msgid "Total shipping length:"
+msgstr "Longueur totale de la commande :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:117
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:154
+msgid "Total shipping height:"
+msgstr "Hauteur totale de la commande :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:125
+msgid "Content description:"
+msgstr "Description du contenu :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:129
+msgid "Declared content value:"
+msgstr "Valeur déclarée du contenu :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:137
+msgid "weight"
+msgstr "poids"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:143
+msgid "width"
+msgstr "largeur"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:149
+msgid "length"
+msgstr "longueur"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:155
+msgid "height"
+msgstr "hauteur"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:163
+msgid "Customer pickup point:"
+msgstr "Point relais d'arrivée :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:170
+msgid "Dropoff point:"
+msgstr "Point relais de départ :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:177
+msgid "Insure this shipment with AXA"
+msgstr "Assurer cet envoi avec AXA"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:184
+msgid "Departure date:"
+msgstr "Date de départ :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:193
+msgid "Reason for your shipment *"
+msgstr "Raison de votre envoi *"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:198
+msgid "Sale"
+msgstr "Vente"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:199
+msgid "Repair"
+msgstr "Réparation"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:200
+msgid "Return"
+msgstr "Retour"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:201
+msgid "Present, gift"
+msgstr "Cadeau, don"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:202
+msgid "Sample, model"
+msgstr "Echantillon, maquette"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:203
+msgid "Personal use"
+msgstr "Usage personnel"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:204
+msgid "Inter-company documents"
+msgstr "Documents inter-entreprises"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:205
+msgid "Other"
+msgstr "Autre"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:213
+msgid "Describe your goods (English):"
+msgstr "Décrivez votre marchandise (en anglais) :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:218
+msgid "Describe your goods (language of the country of origin):"
+msgstr "Décrivez votre marchandise (langue du pays d'origine) :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:223
+msgid "Quantity:"
+msgstr "Quantité :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:228
+msgid "Unit price:"
+msgstr "Prix unitaire :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:234
+msgid "Country:"
+msgstr "Pays :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:239
+msgid "Unit weight:"
+msgstr "Poids unitaire :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:254
+msgid "Your current rate is:"
+msgstr "Votre prix d'expédition actuel est :"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:256
+msgid ""
+"The carrier selection is no longer valid for this order, please select "
+"another and click on \"Update rate\""
+msgstr ""
+"Le choix du transporteur n'est plus valide pour cette commande, veuillez en "
+"sélectionner un autre et cliquer sur \"Mettre à jour le prix\""
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:261
+msgid "Update rate"
+msgstr "Mettre à jour le prix"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:273
+msgid ""
+"You must first select an EnvoiMoinsCher carrier in order to send this order "
+"with us."
+msgstr ""
+"Vous devez d'abord choisir un transporteur EnvoiMoinsCher pour expédier "
+"votre commande."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:312
+msgid "International Shipping"
+msgstr "Expédition à l'international"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:350
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:390
+msgid "Edit Item"
+msgstr "Editer l'article"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:350
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:565
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:662
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:74
+msgid "Edit"
+msgstr "Editer"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:508
+msgid "Your offer is no longer available. Please choose another one."
+msgstr "Votre offre n'est plus disponible. Veuillez en choisir une autre."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:523
+msgid "Your order has already been sent."
+msgstr "Votre commande a déjà été expédiée."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:524
+#, php-format
+msgid "EnvoiMoinsCher reference: %s."
+msgstr "Référence EnvoiMoinsCher : %s."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:527
+#, php-format
+msgid ""
+"Customer tracking number (available in the front-office > order view page): "
+"%s."
+msgstr ""
+"Numéro de suivi client (disponible en front office > récapitulatif de la "
+"commande) : %s."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:532
+#, php-format
+msgid "Your waybill is available. Download it %s."
+msgstr "Votre bordereau est disponible. Téléchargez le %s."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:532
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:533
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:534
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:535
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:536
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:537
+msgid "here"
+msgstr "ici"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:533
+#, php-format
+msgid "Your delivery waybill is available. Download it %s."
+msgstr "Votre bordereau de remise est disponible. Téléchargez le %s."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:534
+#, php-format
+msgid "Your manifest is available. Download it %s."
+msgstr "Votre manifest est disponible. Téléchargez le %s."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:535
+#, php-format
+msgid "Your connote is available. Download it %s."
+msgstr "Votre connote est disponible. Téléchargez le %s."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:536
+#, php-format
+msgid "Your pro-forma invoice is available. Download it %s."
+msgstr "Votre facture proforma est disponible. Téléchargez la %s."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:537
+#, php-format
+msgid "Your B13A export declaration is available. Download it %s."
+msgstr "Votre document b13a est disponible. Téléchargez le %s."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:549
+msgid "Chosen carrier"
+msgstr "Transporteur sélectionné"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:554
+msgid "Please select a carrier"
+msgstr "Veuillez sélectionner un transporteur"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:565
+msgid "Shipment information"
+msgstr "Informations concernant l'envoi"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:629
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:637
+#: ../includes/envoimoinscher_carrier.php:149
+msgid "Get code"
+msgstr "Obtenir le code"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:662
+msgid "Dimensions"
+msgstr "Dimensions"
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:679
+#, php-format
+msgid "No %s defined yet."
+msgstr "Pas de %s défini."
+
+#: ../includes/admin/meta-boxes/class-emc-meta-box-order-shipping.php:699
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:157
+msgid "Insurance"
+msgstr "Assurance"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:23
+msgid "My Account"
+msgstr "Mon compte"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:59
+msgid "API account"
+msgstr "Compte API"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:62
+msgid "Login *"
+msgstr "Login *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:63
+msgid "EnvoiMoinsCher.com login"
+msgstr "Login de votre compte EnvoiMoinsCher.com"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:67
+msgid "login"
+msgstr "login"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:73
+msgid "Password *"
+msgstr "Mot de passe *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:74
+msgid "EnvoiMoinsCher.com password"
+msgstr "Mot de passe de votre compte EnvoiMoinsCher.com"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:78
+msgid "password"
+msgstr "mot de passe"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:84
+msgid "API key *"
+msgstr "Clé API *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:85
+msgid ""
+"Key received by mail from EnvoiMoinsCher.com. Insert test key or production "
+"key according to your environment."
+msgstr ""
+"Clé que vous avez reçue par mail de la part d'EnvoiMoinsCher.com. Cette clé "
+"doit correspondre à l'environnement de travail choisi : test ou production."
+
+#: ../includes/admin/settings/class-emc-settings-account.php:89
+msgid "API key"
+msgstr "clé API"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:95
+msgid "Environment *"
+msgstr "Environnement de travail *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:100
+msgid "Test"
+msgstr "Test"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:101
+msgid "Live"
+msgstr "Prod."
+
+#: ../includes/admin/settings/class-emc-settings-account.php:111
+msgid "Pickup address"
+msgstr "Adresse d'enlèvement"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:114
+msgid "Shipper civility *"
+msgstr "Civilité de l'expéditeur *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:115
+msgid "Shipper civility: choose Mr. or Mrs."
+msgstr ""
+"Civilité de la personne qui expédie les commandes : choisissez M. ou Mme."
+
+#: ../includes/admin/settings/class-emc-settings-account.php:120
+msgid "Mr."
+msgstr "M."
+
+#: ../includes/admin/settings/class-emc-settings-account.php:121
+msgid "Mrs"
+msgstr "Mme"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:129
+msgid "Shipper first name *"
+msgstr "Prénom de l'expéditeur *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:130
+msgid "Shipper first name"
+msgstr "Prénom de la personne qui expédie"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:134
+msgid "first name"
+msgstr "prénom"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:140
+msgid "Shipper last name *"
+msgstr "Nom de l'expéditeur *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:141
+msgid "Shipper last name"
+msgstr "Nom de la personne qui expédie"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:145
+msgid "last name"
+msgstr "nom"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:151
+msgid "Company *"
+msgstr "Société *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:152
+msgid "Parcel pickup company name"
+msgstr "Nom de la société d'où partent les colis"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:156
+msgid "company"
+msgstr "société"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:162
+msgid "Address *"
+msgstr "Adresse *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:163
+msgid "Parcel pickup address"
+msgstr "Adresse à partir de laquelle partent les colis"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:167
+msgid "address"
+msgstr "adresse"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:173
+msgid "ZIP code *"
+msgstr "Code postal *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:174
+msgid "Parcel pickup ZIP code"
+msgstr "Code postal de l'adresse d'où partent les colis"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:178
+msgid "ZIP code"
+msgstr "code postal"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:185
+msgid "City *"
+msgstr "Ville *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:186
+msgid "Parcel pickup city"
+msgstr "Ville de l'adresse d'où partent les colis"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:190
+msgid "city"
+msgstr "ville"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:196
+msgid "Phone number *"
+msgstr "Numéro de téléphone *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:197
+msgid ""
+"Shipper phone number (EMC or carriers may contact you concerning your "
+"shipment)"
+msgstr ""
+"Numéro de téléphone de l'expéditeur (EMC ou les transporteurs peuvent vous "
+"contacter à tout moment pour vos enlèvements)"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:201
+msgid "phone number"
+msgstr "téléphone"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:207
+msgid "Email *"
+msgstr "Adresse email *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:208
+msgid ""
+"Shipper email (EMC or carriers may contact you concerning your shipment)"
+msgstr ""
+"Adresse email de l'expéditeur (EMC ou les transporteurs peuvent vous "
+"contacter à tout moment pour vos enlèvements)"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:212
+msgid "email"
+msgstr "email"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:218
+msgid "Additional address information"
+msgstr "Informations supplémentaires sur l'adresse"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:222
+msgid "Floor, code, ..."
+msgstr "Etage, code, ..."
+
+#: ../includes/admin/settings/class-emc-settings-account.php:227
+msgid "Pickup opening hour *"
+msgstr "Début de disponibilité pour l'enlèvement *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:228
+msgid ""
+"Time from which you are available for pickup (pickup usually starts from "
+"midday)"
+msgstr ""
+"Heure à partir de laquelle vous êtes disponible pour les enlèvements de "
+"colis (les enlèvements effectués par les transporteurs commencent en général "
+"à partir de 12h00)"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:238
+msgid "Pickup closing hour *"
+msgstr "Fin de disponibilité pour l'enlèvement *"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:239
+msgid ""
+"Time until which you are available for pickup (pickup usually ends at 5pm)"
+msgstr ""
+"Heure à partir de laquelle vous n'êtes plus disponible pour les enlèvements "
+"de colis (les enlèvements effectués par les transporteurs se terminent en "
+"général à 17h00)"
+
+#: ../includes/admin/settings/class-emc-settings-account.php:340
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:290
+#, php-format
+msgid "%s is a required field."
+msgstr "%s est un champ obligatoire."
+
+#: ../includes/admin/settings/class-emc-settings-carriers.php:23
+msgid "Carriers"
+msgstr "Transporteurs"
+
+#: ../includes/admin/settings/class-emc-settings-carriers.php:48
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:26
+msgid "Simple Carriers"
+msgstr "Transporteurs simples"
+
+#: ../includes/admin/settings/class-emc-settings-carriers.php:49
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:20
+msgid "Advanced Carriers"
+msgstr "Transporteurs avancés"
+
+#: ../includes/admin/settings/class-emc-settings-carriers.php:50
+#: ../includes/admin/views/html-admin-carriers-weight-options.php:11
+msgid "Weight Options"
+msgstr "Options de poids"
+
+#: ../includes/admin/settings/class-emc-settings-carriers.php:143
+msgid "Your carrier list has been successfully updated."
+msgstr "Vos transporteurs ont bien été mis à jour."
+
+#: ../includes/admin/settings/class-emc-settings-carriers.php:149
+msgid "Your cache has been successfully flushed."
+msgstr "Votre cache a été vidé."
+
+#: ../includes/admin/settings/class-emc-settings-carriers.php:150
+msgid "An error occurred while flushing your cache."
+msgstr "Une erreur est survenue au moment de vider le cache."
+
+#: ../includes/admin/settings/class-emc-settings-help.php:23
+msgid "Help"
+msgstr "Aide"
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:23
+msgid "Settings"
+msgstr "Paramètres"
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:69
+msgid "Mails to send / receive"
+msgstr "Mails que vous souhaitez recevoir ou envoyer"
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:72
+msgid "Waybill mail"
+msgstr "Mail avec le bordereau"
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:73
+msgid ""
+"Sent to sender (you). This mail contain shipping instructions: waybill(s)."
+msgstr ""
+"Envoyé à l'expéditeur (vous). Ce mail contient des instructions "
+"d'expédition: bordereau(x)."
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:81
+msgid "Recipient notification mail"
+msgstr "Mail de notification au destinataire"
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:82
+msgid ""
+"Sent to recipient (your customer). He will be notified that a parcel is sent "
+"by EnvoiMoinsCher and not the carrier."
+msgstr ""
+"Envoyé au destinataire (votre client). Il sera notifié qu'un colis est "
+"envoyé par EnvoiMoinsCher et pas par le transporteur."
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:90
+msgid "Billing mail"
+msgstr "Mail avec la facture"
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:91
+msgid ""
+"Sent to billing adress, as your EnvoiMoinsCher profile. Sends you your bill "
+"for sent orders."
+msgstr ""
+"Envoyé à l'adresse de facturation indiquée dans votre profil EnvoiMoinsCher. "
+"Vous envoie votre facture pour les envois réalisés."
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:100
+msgid "Display"
+msgstr "Affichage"
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:103
+msgid "Carrier logos"
+msgstr "Logos transporteurs"
+
+#: ../includes/admin/settings/class-emc-settings-parameters.php:104
+msgid "Uncheck this box to hide carrier logos in front office."
+msgstr ""
+"Décochez cette case pour cacher les logos des transporteurs dans votre "
+"boutique."
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:23
+msgid "Shipping description"
+msgstr "Description des envois"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:52
+msgid "Your shipments"
+msgstr "Vos envois"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:55
+msgid "Shipment content *"
+msgstr "Nature des envois *"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:56
+msgid ""
+"You must specify the contents of your shipments. This information is "
+"transmitted to the carriers choose the most accurate among labels available "
+"language from the dropdown list. If you check the apply for the package "
+"description box, you use the language selected as the description of the "
+"contents of all your mail (this will be the information to be forwarded to "
+"(x) the carrier (s)). This data will be displayed on the shipping page on "
+"which you can trigger the order to send a parcel. It may be amended before "
+"validation of the page. Do not check the box if you want to resume direct "
+"name of products shipped (name that is saved in your product catalog)"
+msgstr ""
+"Vous devez indiquer le contenu de vos envois. Cette information est "
+"transmise aux transporteurs, choisissez le libellé le plus exact possible "
+"parmi les libellés disponibles dans la liste déroulante. Si vous cochez la "
+"case « appliquer pour la description du colis », vous appliquez le libellé "
+"choisi comme description du contenu de tous vos envois (ce sera donc cette "
+"information qui sera transmise au(x) transporteur(s)). Cette donnée sera "
+"affichée sur la page d'expédition sur laquelle vous pouvez déclencher "
+"l’ordre d’envoi d’un colis. Elle pourra être modifiée avant validation de la "
+"page. Ne cochez pas la case si vous souhaitez reprendre directement le nom "
+"des produits expédiés (nom qui est enregistré dans votre catalogue produits)"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:60
+msgid "-- Please choose one --"
+msgstr "-- Choisir --"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:67
+msgid ""
+"<strong>Apply to parcel description.</strong><br/>Choose the most accurate "
+"label as this information will be given to carriers.<br/>If checked, this "
+"label will replace your product's name in all your shipments' content "
+"description."
+msgstr ""
+"<strong>Appliquer pour la description du colis.</strong><br/>Information "
+"transmise au(x) transporteur(s), choisissez le libellé le plus exact "
+"possible. Si vous cochez la case, vous appliquez le libellé choisi comme "
+"description du contenu de vos envois (au lieu du nom des produits expédiés)."
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:75
+msgid "Packaging *"
+msgstr "Type d'emballage *"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:76
+msgid ""
+"Packaging must be specified for Colissimo offers. Additional charges may "
+"apply."
+msgstr ""
+"Le type d'emballage est nécessaire pour les offres Colissimo, un supplément "
+"peut-être ajouté."
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:105
+msgid "Product weight setup"
+msgstr "Gestion des poids des produits"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:108
+msgid "Default weight (kg)"
+msgstr "Poids par défaut (kg)"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:109
+msgid ""
+"You can specify a default weight that will be applied on missing product "
+"weights (product weight is set in Products -> Edit product -> Shipping)."
+msgstr ""
+"Vous pouvez spécifier le poids qui s'appliquera par défaut sur les produits "
+"( le poids est modifiable dans Produits -> Modifier -> Livraison)."
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:127
+msgid "Pick-ups"
+msgstr "Enlèvements"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:130
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:138
+msgid "Pick-up date D+ *"
+msgstr "Date d'enlèvement J+ *"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:142
+msgid "Define how many days between order and pickup date."
+msgstr ""
+"Indiquez combien de jours après la prise de commande par l'acheteur "
+"l'enlèvement doit être programmé."
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:147
+msgid "Label for delivery date"
+msgstr "Libellé pour la date de livraison"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:148
+msgid ""
+"You can customize delivery date front-office message. Example: \"Delivery "
+"planned on: {DATE}\". Leaving the field empty hides the delivery date."
+msgstr ""
+"Vous pouvez personnaliser le libellé informant vos clients de la date "
+"indicative de livraison. Exemple : \"Livraison prévue : {DATE}\". Laissez ce "
+"champ vide si vous ne souhaitez pas faire apparaître la date indicative de "
+"livraison."
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:160
+msgid "Use AXA insurance"
+msgstr "Utiliser l'assurance AXA"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:161
+msgid ""
+"<strong>Be careful that the cost of insurance is not automatically billed to "
+"your customers, and that if you choose this option, it will be automatically "
+"selected for all your orders.</strong><br/>By selecting declared value "
+"insurance, you declare to you have read <a href=\"http://www.boxtale.co.uk//"
+"faq/131-tout-savoir-sur-l-assurance-ad-valorem.html/notice/\" target=\"_blank"
+"\">AXA insurance declared value policy notice</a>. As packaging "
+"insufficiency and maladjustment are excluded risks of AXA warranty, you "
+"could benefit from some extra packaging."
+msgstr ""
+"<strong>Attention : le coût de l'assurance n'est pas automatiquement facturé "
+"à vos clients. Si vous choisissez cette option, cette option sera activée "
+"par défaut pour toutes vos commandes.</strong><br/>En sélectionnant l'option "
+"d'assurance à valeur déclarée, je déclare avoir pris connaissance de <a href="
+"\"http://www.envoimoinscher.com/faq/131-tout-savoir-sur-l-assurance-ad-"
+"valorem.html/notice/ \" target=\"_blank\">la notice du contrat d'assurance à "
+"valeur déclarée AXA</a>. L'insuffisance et l'inadaptation de votre emballage "
+"étant des risques exlus de la garantie AXA, veillez à surprotéger votre "
+"envoi."
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:234
+msgid "for orders between"
+msgstr "pour les commandes entre"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:251
+msgid "and"
+msgstr "et"
+
+#: ../includes/admin/settings/class-emc-settings-shipping-description.php:286
+msgid "All fields of pickup dates are required."
+msgstr "Tous les champs des dates d'enlèvement sont requis."
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:23
+msgid "Offers simulator"
+msgstr "Simulateur d'offres"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:53
+msgid "No product available in your online shop"
+msgstr "Pas de produit disponible dans votre boutique"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:60
+msgid "EnvoiMoinsCher: shipping cost estimation"
+msgstr "EnvoiMoinsCher : estimation des frais de port"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:60
+msgid ""
+"The simulation page allows you to make a quotation according to the "
+"characteristics of your parcel.<br />Prices and offers are displayed as seen "
+"by the client."
+msgstr ""
+"La page de simulation vous permet d'effectuer un devis suivant les "
+"caractéristiques de vos colis.<br />Les prix et les offres restitués sont "
+"ceux que verra votre client."
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:63
+msgid "Choose a product *"
+msgstr "Choisissez un produit *"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:73
+msgid "Sender address"
+msgstr "Adresse de départ"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:82
+msgid "Sender ZIP code *"
+msgstr "Code postal de départ *"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:90
+msgid "Sender city *"
+msgstr "Ville de départ *"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:98
+msgid "Recipient address"
+msgstr "Adresse d'arrivée"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:107
+msgid "Recipient ZIP code *"
+msgstr "Code postal d'arrivée *"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:115
+msgid "Recipient city *"
+msgstr "Ville d'arrivée *"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:123
+msgid "Recipient country *"
+msgstr "Pays de destination *"
+
+#: ../includes/admin/settings/class-emc-settings-simulator.php:176
+msgid "Please fill in all the required * fields."
+msgstr "Veuillez remplir les champs marqués par *"
+
+#: ../includes/admin/settings/faq.php:5
+msgid "Setup, activation and testing"
+msgstr "Installation, activation et test du module"
+
+#: ../includes/admin/settings/faq.php:8
+msgid "Can I test my plugin before activation on front office?"
+msgstr ""
+"Est-il possible de tester mon module avant de l'activer en front-office ?"
+
+#: ../includes/admin/settings/faq.php:9
+msgid ""
+"You can try your settings before switching to production. Make sure your "
+"environment option is on \"Test\" in your \"My account\" tab. A simulation "
+"section allows you to do test quotations with your catalog items and check "
+"front-office shipping costs."
+msgstr ""
+"Vous pouvez tester le bon paramétrage de votre module avant de l'activer en "
+"production. Vérifiez que l'option environnement de l'onglet \"Mon compte\" "
+"est bien sur \"Test\". Un onglet de simulation vous permet d'effectuer des "
+"cotations de transport sur les articles de votre catalogue et ainsi de "
+"vérifier les frais de port qui s'afficheront en front office."
+
+#: ../includes/admin/settings/faq.php:12
+msgid "How to enable production environment?"
+msgstr "Comment activer le module en production ?"
+
+#: ../includes/admin/settings/faq.php:13
+msgid ""
+"To enable production environment, you must switch the environment option in "
+"your \"My account\" tab to \"Prod.\" and change your API key to the "
+"production API key."
+msgstr ""
+"Pour activer l'environnement de travail en production, rendez-vous dans "
+"l'onglet Mon compte, changez l'option environnement en \"Prod.\" et "
+"remplacez votre clé API par la clé API de production."
+
+#: ../includes/admin/settings/faq.php:16
+msgid ""
+"I have got an \"Invalid account payment method\" error in production "
+"environment: what should i do?"
+msgstr ""
+"J'ai activé mon module en production et l'erreur \"Invalid account payment "
+"method\" s'affiche, que faire ?"
+
+#: ../includes/admin/settings/faq.php:17
+msgid ""
+"You have to enable the deferred payment to use the module in production "
+"environment. You can enable it in your account page / preferences on the "
+"EnvoiMoinsCher site, or contact us at the following address: <a href="
+"\"mailto:compta@envoimoinscher.com\">compta@envoimoinscher.com</a>. You must "
+"give us your login, iban and a debit authorisation."
+msgstr ""
+"Pour que le module fonctionne vous devez avoir activé le paiement différé "
+"par prélèvement. Cette erreur s'affiche lorsque vous essayez d'utiliser le "
+"module en environnement de production sans être en paiement différé. Pour "
+"faire la demande de passage en paiement différé, veuillez en faire la "
+"demande depuis votre compte sur le site EnvoiMoinsCher onglet Préférences ou "
+"à l'adresse suivante : <a href=\"mailto:compta@envoimoinscher.com"
+"\">compta@envoimoinscher.com</a>. Vous devrez transmettre votre login, RIB "
+"et une autorisation de prélèvement."
+
+#: ../includes/admin/settings/faq.php:20
+msgid ""
+"I have got an \"Error : Contact our billing service\" error: what should i "
+"do?"
+msgstr ""
+"L'erreur suivante est affichée « Erreur : Contact our billing service », que "
+"dois-je faire ?"
+
+#: ../includes/admin/settings/faq.php:21
+msgid ""
+"This error suggests a payment issue. You may have reached your account spend "
+"cap. Contact our accounting department at <a href=\"mailto:"
+"compta@envoimoinscher.com\">compta@envoimoinscher.com</a> and give us your "
+"EnvoiMoinsCher login."
+msgstr ""
+"Cette erreur est liée à un problème de paiement. Il peut s'agir par exemple "
+"de l'atteinte de l'encours maximum autorisé sur votre compte. Veuillez "
+"contacter notre service comptabilité avec votre login client à l'adresse "
+"suivante : <a href=\"mailto:compta@envoimoinscher.com"
+"\">compta@envoimoinscher.com</a>."
+
+#: ../includes/admin/settings/faq.php:27
+msgid "Plugin settings"
+msgstr "Configuration générale du module"
+
+#: ../includes/admin/settings/faq.php:30
+msgid "How should I configure the \"My account\" tab?"
+msgstr "Comment configurer l'onglet \"Mon compte\" ?"
+
+#: ../includes/admin/settings/faq.php:31
+msgid ""
+"Please enter the same login and password you have chosen to create your "
+"account at <a href=\"http://www.boxtale.co.uk\" target=\"_blank\">www."
+"boxtale.co.uk</a>. Thanks to this login information you can also access your "
+"personal account on the website. The API key was provided by our IT team "
+"following your request.<ul><li><strong>First choose the \"test\" API key</"
+"strong> to configure and test the plugin.</li><li><strong>When you are done "
+"configurating and testing, you can use your \"live\" API key.</strong> If "
+"the billing company is the same for your websites, you can use the same "
+"\"live\" API key on all websites. If not, we advice you to create another "
+"account and request a new API key.</li></ul>"
+msgstr ""
+"Le login et le mot de passe sont ceux que vous avez choisis en créant votre "
+"compte sur le site <a href=\"http://www.envoimoinscher.com\" target=\"_blank"
+"\">www.envoimoinscher.com</a>. Ils vous permettent également de vous "
+"connecter à votre espace en compte sur le site. La clé API vous a été "
+"fournie par le service technique suite à votre demande."
+"<ul><li><strong>Choisissez d'abord la clé API de test</strong> pour "
+"effectuer vos paramétrages puis vos tests.</li><li><strong>Une fois que vous "
+"aurez fini votre paramétrage et que les tests auront été concluants, vous "
+"pourrez utiliser définitivement la clé API de production.</strong> Une clé "
+"de production peut être utilisée sur plusieurs sites internet. Si votre "
+"société de facturation est la même pour vos différentes activités, la clé de "
+"production peut être utilisée sur plusieurs sites internet. Si votre société "
+"de facturation n'est pas la même pour vos différentes activités, nous nous "
+"vous conseillons de refaire une nouvelle demande de clé avec un nouveau "
+"compte.</li></ul>"
+
+#: ../includes/admin/settings/faq.php:34
+msgid "How should I configure the \"Shipping description\" tab?"
+msgstr "Comment configurer l'onglet \"Description des envois\" ?"
+
+#: ../includes/admin/settings/faq.php:35
+msgid ""
+"<ul><li>Select the type of <strong>shipment content</strong> from the drop-"
+"down list. If you distribute several categories, please choose the main one. "
+"<span style=\"color:red;\">Please pay attention: certain types of shipment "
+"content can be refused by some carriers.</span> Check the website or contact "
+"our client service to learn about possible restrictions.</li><li>You should "
+"select the <strong>packaging type</strong> only if you have activated "
+"Colissimo amongst your carriers. If the category \"<strong>Tube</strong>\" "
+"is selected, 6 euros will be added to every shipment.</li></ul>"
+msgstr ""
+"<ul><li>Choisissez <strong>la nature de vos envois</strong> parmi la liste "
+"disponible dans le menu déroulant. Si votre site distribue plus d'une de ces "
+"catégories, merci de faire le choix de la catégorie prédominante. <span "
+"style=\"color:red;\">Attention, certaines natures d'envoi ne donnent pas "
+"accès à certains transporteurs.</span> N'hésitez pas à consulter notre "
+"service client pour connaître les différentes contraintes pour l'envoi de "
+"produits spécifiques.</li><li><strong>Le type d'emballage</strong> n'est à "
+"renseigner que si vous choisissez de proposer au moins une des offres "
+"Colissimo disponible dans le module. Si vous expédiez dans des tubes, un "
+"supplément de 6 euros sera appliqué au coût de l'envoi pour chaque colis "
+"expédié.</li></ul>"
+
+#: ../includes/admin/settings/faq.php:38
+msgid "How should I configure the \"Carriers\" tab?"
+msgstr "Comment configurer l'onglet \"Transporteurs\" ?"
+
+#: ../includes/admin/settings/faq.php:39
+msgid ""
+"<ul><li>Click on \"Reload carriers from API\".</li><li>Select the carriers "
+"and activate them.</li><li>Click on \"<strong>Edit</strong>\" to set up a "
+"<strong>rate or the API's real price</strong>, select a <strong>drop-off "
+"point</strong>, configure a <strong>tracking link</strong> per carrier.</"
+"li></ul>"
+msgstr ""
+"<ul><li>Cliquez sur \"Mise à jour des transporteurs via l’API\" pour avoir "
+"une liste complète des offres transporteurs.</li><li>Faites votre choix "
+"parmi la liste des transporteurs proposés. <strong>En activant le "
+"transporteur</strong> vous choisissez de proposer ce transporteur à vos "
+"clients.</li><li>Pour <strong>fixer votre forfait, choisir un point relais "
+"ou configurer un lien du suivi</strong>, cliquez \"</strong>Editer</strong>"
+"\" à l’extrême droite de chaque transporteur.</li></ul>"
+
+#: ../includes/admin/settings/faq.php:42
+msgid ""
+"What is the difference between \"simple\" and \"advanced\" carriers? How "
+"should I configure \"Advanced carriers\"?"
+msgstr ""
+"Quelle est la différence entre les transporteurs \"simples\" et les "
+"transporteurs \"avancés\" ? Comment paramétrer les transporteurs avancés sur "
+"le plugin EnvoiMoinsCher ?"
+
+#: ../includes/admin/settings/faq.php:43
+msgid ""
+"<strong>Simple carriers</strong>: prices are calculated from grid based on "
+"parcel weight.<br/><strong>Advanced carriers</strong>: prices are calculated "
+"from grid based or parcel weight and size. Because parcel volume cannot be "
+"calculated during customer checkout, you must fill in the \"<strong>Weight "
+"options</strong>\" table. The plugin will use this table to get dimensions "
+"according to shopping cart weight and will display relevant shipping costs. "
+"Without customization, the default dimensions provided by Boxtale will be "
+"used."
+msgstr ""
+"<strong>Les transporteurs simples</strong> calculent leurs grilles "
+"tarifaires à partir du poids des colis.<br/><strong>Les transporteurs "
+"avancés</strong>, qui sont des transporteurs express pour la France et "
+"l'International, ont la particularité d'avoir une grille tarifaire à la fois "
+"basée sur le poids du colis mais également sur les dimensions de votre "
+"envoi. Le volume d'un colis ne pouvant pas être calculé en temps réel lors "
+"de la commande en ligne de votre client, vous devez définir au préalable "
+"<strong>une grille de correspondance Poids/Volume</strong> dans "
+"<strong>l'onglet \"Options de poids\"</strong>. Ainsi le plugin prendra en "
+"compte la dimension appliquée au poids calculé dans le panier de votre "
+"client, et affichera le coût du transport correspondant. Si vous ne "
+"personnalisez pas vos propres dimensions et poids, les dimensions par défaut "
+"seront utilisées."
+
+#: ../includes/admin/settings/faq.php:46
+msgid "How are the real price and the rate set?"
+msgstr "Comment le prix réel et le forfait sont-ils calculés ?"
+
+#: ../includes/admin/settings/faq.php:47
+msgid ""
+"<strong>Rate:</strong> shipping fees fixed by yourself.<br/><strong>Real "
+"price:</strong> shipping fees calculated automatically by Boxtale based on "
+"the shopping basket weight."
+msgstr ""
+"<strong>Le forfait :</strong> le montant des frais de port est <strong>fixé "
+"par vous-même</strong>.<br/><strong>Le prix réel :</strong> le montant des "
+"frais de port affichés en front-office est <strong>calculé automatiquement "
+"par EnvoiMoinsCher sur la base du poids du panier</strong>."
+
+#: ../includes/admin/settings/faq.php:53
+msgid "Shipping, tracking and insurance"
+msgstr "Expédition, suivi et assurance"
+
+#: ../includes/admin/settings/faq.php:56
+msgid "Where can I send my orders?"
+msgstr "Où aller pour envoyer mes commandes ?"
+
+#: ../includes/admin/settings/faq.php:57
+msgid ""
+"Go to \"<strong>WooCommerce</strong>\" tab and click on \"<strong>Orders</"
+"strong>\"."
+msgstr ""
+"Allez dans l'onglet \"<strong>WooCommerce</strong>\" et cliquez sur le sous-"
+"onglet \"<strong>Commandes</strong>\"."
+
+#: ../includes/admin/settings/faq.php:60
+msgid "What type of orders can I send?"
+msgstr "Quel type de commandes puis-je expédier ?"
+
+#: ../includes/admin/settings/faq.php:61
+msgid ""
+"You can send all your orders marked \"<strong>On hold</strong>\" or "
+"\"<strong>Processing</strong>\" either one by one or in bulk."
+msgstr ""
+"Toutes vos commandes flaguées \"<strong>En cours</strong>\" ou \"<strong>En "
+"attente</strong>\" peuvent être expédiées soit commande par commande soit en "
+"masse."
+
+#: ../includes/admin/settings/faq.php:64
+msgid "How can I ship my EnvoiMoinsCher orders one by one? "
+msgstr ""
+"Comment expédier mes commandes une par une avec des transporteurs "
+"EnvoiMoinsCher ?"
+
+#: ../includes/admin/settings/faq.php:65
+msgid ""
+"<ul><li>Click on \"<strong>View</strong>\" on the right end of order line. "
+"The \"<strong>Edit Order</strong>\" page is displayed. Default settings will "
+"be applied if you want to send right away. If needed, you can modify some "
+"data (carrier, weight-dimensions, ...) in the form in the middle of the "
+"\"<strong>Edit Order</strong>\" page => \"<strong>Shipping Options - "
+"EnvoiMoinsCher</strong>\".</li><li><strong>Choose \"Send using EnvoiMoinsCher"
+"\"</strong> in the drop-down list in the top right-hand corner of the page "
+"and click on \"<strong>Apply</strong>\".</li><li><strong>If the shipment is "
+"successful,</strong> the order status will be changed to \"<strong>Awaiting "
+"Shipment</strong>\" and a <strong>confirmation message</strong> will be "
+"displayed.</li></ul>If any problem occurs, you'll see an alert notice."
+msgstr ""
+"<ul><li>Cliquez sur le bouton \"<strong>Voir</strong>\" à l’extrême droite "
+"de la ligne de la commande. La page \"<strong>Modifier commande</strong>\" "
+"apparaît. Si vous souhaitez envoyer directement, les paramètres par défaut "
+"sont appliqués. Vous pouvez néanmoins si vous le souhaitez modifier les "
+"données (transporteur, poids-dimensions…) dans le formulaire au milieu de la "
+"page \"<strong>Modifier commande</strong>\" => \"<strong>Option d’envoi – "
+"EnvoiMoinsCher</strong>\".</li><li><strong>Sélectionnez \"Envoyer avec "
+"EnvoiMoinsCher\"</strong> dans le menu déroulant en haut à droite de la page "
+"et cliquez sur \"Appliquer\".</li><li><strong>Si l’envoi a réussi,</strong> "
+"son statut est changé en \"<strong>En attente d’expédition</strong>\" et un "
+"<strong>message de confirmation</strong> s’affiche.</li></ul>En cas de "
+"problème(s), un message d'erreur d'affichera."
+
+#: ../includes/admin/settings/faq.php:68
+msgid "How can I ship in bulk with EnvoiMoinsCher carriers?"
+msgstr ""
+"Comment expédier mes commandes en masse avec des transporteurs "
+"EnvoiMoinsCher ?"
+
+#: ../includes/admin/settings/faq.php:69
+msgid ""
+"<ul><li><strong>Tick the box in front of the orders you want to ship.</"
+"strong></li><li><strong>Choose \"Send using EnvoiMoinsCher\"</strong> in the "
+"bulk action drop-down list in the top left-hand corner of the page and "
+"<strong>click on \"Apply\"</strong>.</li><li><strong>If the shipments are "
+"successful,</strong> the orders statuses will be changed to "
+"\"<strong>Awaiting Shipment</strong>\" and a <strong>confirmation message</"
+"strong> will be displayed.</li></ul>If any problem occurs, you'll see an "
+"alert notice informing that you should correct the invalid orders one by "
+"one. Please note that as a security, you cannot send twice the same order "
+"using bulk actions."
+msgstr ""
+"<ul><li><strong>Sélectionnez à gauche les commandes que vous souhaitez "
+"envoyer.</strong></li><li><strong>Sélectionnez \"Envoyer avec EnvoiMoinsCher"
+"\"</strong> dans le menu déroulant des actions groupées en haut à gauche de "
+"la page et <strong>cliquez sur \"Appliquer\"</strong>.</li><li><strong>Si "
+"les envois ont réussi,</strong>leur statut est changé à \"<strong>En attente "
+"d’expédition</strong>\" et un <strong>message de confirmation</strong> "
+"s’affiche.</li></ul>En cas de problème(s) avec un ou plusieurs envois, un "
+"message d’alerte s’affiche pour que vous puissiez corriger les commandes non "
+"passées individuellement. Attention : par mesure de sécurité, une commande "
+"ne peut pas être réexpédiée via l'envoi en masse."
+
+#: ../includes/admin/settings/faq.php:72
+msgid "How can I download my waybills?"
+msgstr "Comment télécharger les bordereaux d'expédition ?"
+
+#: ../includes/admin/settings/faq.php:73
+msgid ""
+"You have three options to get your waybills: <strong>from WooCommerce</"
+"strong>, <strong>by email</strong> or in your <strong>Boxtale personal "
+"account</strong>, \"<strong>My shipments</strong>\" tab.<ul><li><strong>From "
+"WooCommerce :</strong> Go to the \"WooCommerce\" tab in your WordPress back-"
+"office => \"Orders\" / using \"Awaiting Shipment\" status filter. <strong>To "
+"download one or several waybills at once: select the orders</strong> you "
+"want to download by checking the box, <strong>choose \"Download all waybills"
+"\"</strong> in the bulk action drop-down list in the top left-hand corner of "
+"the page and <strong>click on \"Apply\"</strong>. A download link will also "
+"appear on your order page view: \"<strong>Shipping Options - EnvoiMoinsCher</"
+"strong>\" => \"<strong>Your waybill is available. Download it here.</strong>"
+"\".</li><li><strong>By email:</strong> You can choose to receive the waybill "
+"by email. This option configuration is available either in your "
+"EnvoiMoinsCher personal account or in WooCommerce: WooCommerce => "
+"EnvoiMoinsCher => Settings.</li><li><strong>From you EnvoiMoinsCher account, "
+"\"My shipments\" tab</strong></li></ul>"
+msgstr ""
+"Vous avez trois possibilités pour récupérer vos bordereaux d'expédition : "
+"<strong>à partir de WooCommerce</strong>, sur <strong>votre adresse email</"
+"strong>, à partir de votre <strong>espace en compte EnvoiMoinscher</strong>, "
+"rubrique \"<strong>Mes envois</strong>\".<ul><li><strong>A partir de "
+"WooCommerce :</strong> Allez dans l'onglet \"WooCommerce\" du back-office "
+"WordPress => sous-onglet \"Commandes\" / filtre \"En attente d’expédition\". "
+"<strong>Pour télécharger un ou plusieurs bordereaux : cochez les cases</"
+"strong> des commandes expédiées (\"En attente d’expédition\") dont vous "
+"souhaitez les bordereaux, <strong>sélectionnez \"Télécharger les bordereaux"
+"\"</strong> dans le menu déroulant d'actions groupées en haut à gauche de la "
+"page et <strong>cliquez sur \"Appliquer\"</strong>. Vous pouvez aussi "
+"télécharger le bordereau de chaque commande depuis la page "
+"\"<strong>Modifier commande</strong>\" => \"<strong>Option d’envoi – "
+"EnvoiMoinsCher</strong>\" => \"<strong>Votre bordereau est disponible. "
+"Téléchargez le ici.</strong>\".</li><li><strong>Sur votre adresse email :</"
+"strong> Vous pouvez choisir de recevoir les bordereaux d'expédition par "
+"email. Cette configuration peut se faire via votre espace en compte "
+"EnvoiMoinsCher ou via la configuration du plugin : WooCommerce => "
+"EnvoiMoinsCher => Paramètres.</li><li><strong>A partir de votre espace en "
+"compte EnvoiMoinsCher, rubrique \"Mes envois\"</strong></li></ul>"
+
+#: ../includes/admin/settings/faq.php:76
+msgid "I can't generate my waybill."
+msgstr "Mon bordereau ne se génère pas après une expédition."
+
+#: ../includes/admin/settings/faq.php:77
+msgid ""
+"<i>Did I wait long enough?</i> Depending on the carrier, generation can take "
+"up to 5 minutes, so you have to wait a bit.<br/><br/><i>Am I in a test "
+"environment?</i> In this case, the order was not accepted and the waybill "
+"will not be generated. If your order was real, you should switch to "
+"production environment (\"My account\" tab in EnvoiMoinsCher settings) and "
+"re-send your order. Alternatively, you can login in to the Boxtale site and "
+"send your order directly from the site (do not forget to log in for the "
+"order to be added to your bill).<br/><br/>Contact technical service <a href="
+"\"mailto:informationAPI@envoimoinscher.com\">informationAPI@envoimoinscher."
+"com</a> stating your problem and an access to your back office (url, login, "
+"password) to speed up the solving of your problem. You'll receive a response "
+"as soon as possible."
+msgstr ""
+"<i>Est-ce que j'ai attendu assez longtemps ?</i> Selon le transporteur, la "
+"génération peut prendre jusqu'à 5 minutes, il faut donc parfois attendre un "
+"peu.<br/><br/><i>Suis-je en environnement de test ?</i> Si c'est le cas, la "
+"commande n'a pas été prise en compte et le bordereau ne se génèrera pas. Si "
+"votre commande était réelle, vous devez tout d'abord passer en environnement "
+"de production (onglet : \"Mon Compte\" dans les paramètres EnvoiMoinsCher) "
+"et repasser votre commande. Vous pouvez également décider de vous loguer sur "
+"le site EnvoiMoinsCher.com et de passer directement votre commande "
+"(n'oubliez pas de vous connecter sur votre compte pour que la commande soit "
+"rajoutée à votre facture).<br/><br/>Contactez le service technique (<a href="
+"\"mailto:informationAPI@envoimoinscher.com\">informationAPI@envoimoinscher."
+"com</a>) en indiquant votre problème et un accès à votre back-office (url, "
+"login, mot de passe) pour accélérer la résolution de votre problème."
+
+#: ../includes/admin/settings/faq.php:80
+msgid ""
+"How can I track my shipment? How can I set up shipment tracking for my "
+"customers?"
+msgstr ""
+"Comment suivre mes colis ? Comment paramétrer le suivi des colis pour mes "
+"clients ?"
+
+#: ../includes/admin/settings/faq.php:81
+msgid ""
+"Tracking information is displayed in your order notes. In order to display a "
+"tracking URL for your customers in front office, you must configure the "
+"carrier tracking URLs of your carriers: <strong>WooCommerce</strong> => "
+"<strong>EnvoiMoinsCher</strong> => <strong>Carrier</strong> => <strong>Edit</"
+"strong> => <strong>Tracking URL</strong>.<br/>For information, here are "
+"tracking URLs which can be used with the EnvoiMoinsCher plugin. Please note "
+"that these URLs are provided for information only and can be changed without "
+"notice.<ul><li>Chronopost - <a href=\"http://www.chronopost.fr/transport-"
+"express/livraison-colis/cache/bypass/pid/701\" target=\"_blank\">http://www."
+"chronopost.fr/transport-express/livraison-colis/cache/bypass/pid/701</a></"
+"li><li>Colis Priv&eacute; - <a href=\"https://www.colisprive.com/moncolis/"
+"pages/detailColis.aspx?numColis=@\" target=\"_blank\">https://www.colisprive."
+"com/moncolis/pages/detailColis.aspx?numColis=@</a></li><li>Mondial relay - "
+"<a href=\"http://www.mondialrelay.fr/suivi-de-colis/\" target=\"_blank"
+"\">http://www.mondialrelay.fr/suivi-de-colis/</a></li><li>Relais colis - <a "
+"href=\"http://www.relaiscolis.com/index.php/application-suivi-colis\" target="
+"\"_blank\">http://www.relaiscolis.com/index.php/application-suivi-colis</a></"
+"li><li>UPS - <a href=\"http://wwwapps.ups.com/WebTracking/track?"
+"HTMLVersion=5.0&loc=fr_FR&Requester=UPSHome&WBPM_lid=homepage%2Fct1."
+"html_pnl_trk&track.x=Suivi&trackNums=@\" target=\"_blank\">http://wwwapps."
+"ups.com/WebTracking/track?"
+"HTMLVersion=5.0&loc=fr_FR&Requester=UPSHome&WBPM_lid=homepage%2Fct1."
+"html_pnl_trk&track.x=Suivi&trackNums=@</a></li><li>DHL Express - <a href="
+"\"http://www.dhl.fr/content/fr/fr/dhl_express/suivi_expedition.shtml?"
+"brand=DHL&AWB=@\" target=\"_blank\">http://www.dhl.fr/content/fr/fr/"
+"dhl_express/suivi_expedition.shtml?brand=DHL&AWB=@</a></li><li>Fedex - <a "
+"href=\"https://www.fedex.com/fedextrack/?tracknumbers=@\" target=\"_blank"
+"\">https://www.fedex.com/fedextrack/?tracknumbers=@</a></li><li>La Poste - "
+"<a href=\"http://www.colissimo.fr/portail_colissimo/suivre.do?language=fr_FR"
+"\" target=\"_blank\">http://www.colissimo.fr/portail_colissimo/suivre.do?"
+"language=fr_FR</a></li><li>TNT - <a href=\"http://www.tnt.fr/public/"
+"suivi_colis/recherche/index.do;jsessionid=78654DB3C246ADA008279CE05E802C7A\" "
+"target=\"_blank\">http://www.tnt.fr/public/suivi_colis/recherche/index.do;"
+"jsessionid=78654DB3C246ADA008279CE05E802C7A</a></li></ul>"
+msgstr ""
+"Les informations de suivi sont affichés dans vos notes de commande. Pour "
+"afficher un lien de suivi dans le compte de vos clients, vous devez "
+"configurer les URLs de suivi par transporteur : <strong>WooCommerce</strong> "
+"=> <strong>EnvoiMoinsCher</strong> => <strong>Transporteur</strong> => "
+"<strong>Editer</strong> => \"<strong>URL de suivi transporteur</strong>\"."
+"<br/>A titre indicatif, voici des URLs de suivi transporteur qui peuvent "
+"être utilisées avec le plugin EnvoiMoinsCher. Veuillez noter que ces URLs "
+"sont données à titre indicatif et peuvent être modifiées sans préavis."
+"<ul><li>Chronopost - <a href=\"http://www.chronopost.fr/transport-express/"
+"livraison-colis/cache/bypass/pid/701\" target=\"_blank\">http://www."
+"chronopost.fr/transport-express/livraison-colis/cache/bypass/pid/701</a></"
+"li><li>Colis Priv&eacute; - <a href=\"https://www.colisprive.com/moncolis/"
+"pages/detailColis.aspx?numColis=@\" target=\"_blank\">https://www.colisprive."
+"com/moncolis/pages/detailColis.aspx?numColis=@</a></li><li>Mondial relay - "
+"<a href=\"http://www.mondialrelay.fr/suivi-de-colis/\" target=\"_blank"
+"\">http://www.mondialrelay.fr/suivi-de-colis/</a></li><li>Relais colis - <a "
+"href=\"http://www.relaiscolis.com/index.php/application-suivi-colis\" target="
+"\"_blank\">http://www.relaiscolis.com/index.php/application-suivi-colis</a></"
+"li><li>UPS - <a href=\"http://wwwapps.ups.com/WebTracking/track?"
+"HTMLVersion=5.0&loc=fr_FR&Requester=UPSHome&WBPM_lid=homepage%2Fct1."
+"html_pnl_trk&track.x=Suivi&trackNums=@\" target=\"_blank\">http://wwwapps."
+"ups.com/WebTracking/track?"
+"HTMLVersion=5.0&loc=fr_FR&Requester=UPSHome&WBPM_lid=homepage%2Fct1."
+"html_pnl_trk&track.x=Suivi&trackNums=@</a></li><li>DHL Express - <a href="
+"\"http://www.dhl.fr/content/fr/fr/dhl_express/suivi_expedition.shtml?"
+"brand=DHL&AWB=@\" target=\"_blank\">http://www.dhl.fr/content/fr/fr/"
+"dhl_express/suivi_expedition.shtml?brand=DHL&AWB=@</a></li><li>Fedex - <a "
+"href=\"https://www.fedex.com/fedextrack/?tracknumbers=@\" target=\"_blank"
+"\">https://www.fedex.com/fedextrack/?tracknumbers=@</a></li><li>La Poste - "
+"<a href=\"http://www.colissimo.fr/portail_colissimo/suivre.do?language=fr_FR"
+"\" target=\"_blank\">http://www.colissimo.fr/portail_colissimo/suivre.do?"
+"language=fr_FR</a></li><li>TNT - <a href=\"http://www.tnt.fr/public/"
+"suivi_colis/recherche/index.do;jsessionid=78654DB3C246ADA008279CE05E802C7A\" "
+"target=\"_blank\">http://www.tnt.fr/public/suivi_colis/recherche/index.do;"
+"jsessionid=78654DB3C246ADA008279CE05E802C7A</a></li></ul>"
+
+#: ../includes/admin/settings/faq.php:84
+msgid "Where can I find the tracking number of my shipments?"
+msgstr "Où retrouver le numéro de suivi de mes envois ?"
+
+#: ../includes/admin/settings/faq.php:85
+msgid ""
+"For the buyer: the buyer will have access to the link on his order page in "
+"his account on your website (if you have configured the tracking url for the "
+"carrier).<br/><br/>For the seller: you can find both EnvoiMoinsCher "
+"reference and carrier tracking number on the \"Edit Order\" page => "
+"\"Shipping Options - EnvoiMoinsCher\". You can also track the shipment from "
+"your account on EnvoiMoinsCher.com."
+msgstr ""
+"Pour l'acheteur : l'acheteur aura accès au lien dans son espace client sur "
+"votre site (si vous avez configuré l'URL de suivi pour le transporteur de la "
+"commande).<br/><br/>Pour le vendeur : vous pouvez trouver le numéro de suivi "
+"EnvoiMoinsCher ainsi que le numéro de suivi du transporteur au milieu de la "
+"page \"Modifier commande\" => \"Options d’envoi – EnvoiMoinsCher\". Vous "
+"pouvez également suivre l'envoi depuis l’espace en compte sur EnvoiMoinsCher."
+"com."
+
+#: ../includes/admin/settings/faq.php:88
+msgid "How can I insure my shipments Ad Valorem?"
+msgstr "Comment assurer mes envois Ad Valorem ?"
+
+#: ../includes/admin/settings/faq.php:89
+msgid ""
+"<ol><li>Insurance will only be automatically added to your shipping options "
+"if in the configuration of EnvoiMoinsCher plugin / \"Shipping description\" "
+"tab, you check the \"Use AXA Insurance\" option. Be careful if you use this "
+"option that insurance is <strong>not</strong> automatically added to the "
+"carrier price given to your customer in your shop.</li><li>You can also add "
+"the option after the order was created in your order view page: "
+"<strong>WooCommerce</strong> => <strong>Orders</strong> => <strong>View</"
+"strong> => <strong>Shipping Options - EnvoiMoinsCher</strong> => "
+"<strong>Insurance</strong>.</li></ol>"
+msgstr ""
+"<ol><li>L'assurance sera automatiquement ajoutée à vos options d'envoi si "
+"dans la configuration du plugin EnvoiMoinsCher / onglet \"Descriptions des "
+"envois\", vous cochez l'option \"Utiliser l'assurance AXA\". Attention : si "
+"vous utilisez cette option, le prix de l'assurance <strong>n'est pas</"
+"strong> automatiquement ajouté au prix donné à votre client en front office."
+"</li><li>Vous pouvez aussi ajouter l'option assurance après la création de "
+"la commande dans la page d'édition de commande : <strong>WooCommerce</"
+"strong> => <strong>Commandes</strong> => <strong>Voir</strong> => "
+"<strong>Options d'envoi - EnvoiMoinsCher</strong> => <strong>Assurance</"
+"strong>.</li></ol>"
+
+#: ../includes/admin/settings/faq.php:92
+msgid "What are the specifics for shipping abroad?"
+msgstr "Quelles sont les spécificités pour un envoi à l'étranger ?"
+
+#: ../includes/admin/settings/faq.php:93
+msgid ""
+"For shipments abroad, you must describe the contents of your shipment both "
+"in English and in the language of the parcel's country of origin.<br/><br/"
+">Please note the following:<ul><li>For shipments abroad, the plugin does not "
+"block shipments if the content description is not translated to English. "
+"Please keep an eye on the translations.</li><li>You must attach to your "
+"package a commercial invoice in 5 copies for all international shipments "
+"(outside the EU).</li><li>Any specific documentation related to a special "
+"country or product is your responsibility.</li></ul>"
+msgstr ""
+"Pour les envois vers l’étranger, vous devez décrire le contenu de votre "
+"envoi à la fois en anglais et dans la langue du pays d'expédition.<br/><br/"
+">Remarques:<ul><li>Pour vos expéditions vers l’étranger, le module ne bloque "
+"pas les envois si la description du contenu n’a pas été traduite en anglais. "
+"Veuillez surveiller les traductions.</li><li>Vous devez joindre à votre "
+"colis une facture commerciale en 5 exemplaires pour tous les envois destinés "
+"à l'international (hors UE).</li><li>Toute documentation spécifique liée à "
+"une particularité pays ou produit relève de votre responsabilité.</li></ul>"
+
+#: ../includes/admin/settings/faq.php:99
+msgid "Updates"
+msgstr "Mises à jour"
+
+#: ../includes/admin/settings/faq.php:102
+msgid "Will the update affect my configuration?"
+msgstr ""
+"La mise à jour va-t-elle remettre en question mes préférences de "
+"configuration ?"
+
+#: ../includes/admin/settings/faq.php:103
+msgid "The update does not affect your configuration: settings, carriers..."
+msgstr ""
+"La mise à jour ne remet pas en question vos préférences de configuration : "
+"paramètres, transporteurs..."
+
+#: ../includes/admin/settings/faq.php:106
+msgid "Can I benefit from new carrier offers available through updates?"
+msgstr ""
+"Puis-je bénéficier des nouvelles offres de transport disponibles via les "
+"mises à jour ?"
+
+#: ../includes/admin/settings/faq.php:107
+msgid "No, you should update your carrier list manually on your carriers tab."
+msgstr ""
+"Non, vous devez mettre à jour votre liste de transporteurs manuellement "
+"depuis votre onglet Transporteurs."
+
+#: ../includes/admin/settings/faq.php:113
+msgid "Any other question?"
+msgstr "Une autre question ?"
+
+#: ../includes/admin/settings/faq.php:118
+msgid ""
+"If you do not find an answer to your questions in this FAQ, please contact "
+"our technical support (<a href=\"mailto:informationapi@envoimoinscher.com"
+"\">informationapi@envoimoinscher.com</a>) and explain your problem. Please "
+"provide us a superadmin access (url, login, password) so we can have a look "
+"at your back office. To do so, go to the Users tab > Add New, create a user "
+"with the \"Administrator\" role."
+msgstr ""
+"Si vous ne trouvez pas de réponse à vos questions dans cette FAQ, veuillez "
+"contacter notre service technique (<a href=\"mailto:"
+"informationapi@envoimoinscher.com\">informationapi@envoimoinscher.com</a>) "
+"en expliquant votre problème. Merci de nous fournir un accès superadmin "
+"(url, login, mot de passe) afin que nous puissions regarder au plus vite "
+"votre back-office. Pour se faire, allez dans l'onglet Utilisateurs > "
+"Ajouter, et créez un utilisateur avec le rôle \"Administrateur\"."
+
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:11
+msgid "Reload carriers from API"
+msgstr "Mise à jour des transporteurs via l'API"
+
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:12
+msgid "By clicking on this link, you ensure the carrier list is up to date."
+msgstr ""
+"En cliquant sur ce lien, vous vous assurez de maintenir à jour la liste des "
+"transporteurs sur votre module."
+
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:14
+msgid "Flush offers cache"
+msgstr "Vider le cache des offres"
+
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:15
+msgid ""
+"Flush your offers cache if you change your active carriers in order for new "
+"carriers to be taken into account."
+msgstr ""
+"Veuillez vider le cache des offres si vous changez vos transporteurs de "
+"manière à prendre en compte les nouveaux transporteurs."
+
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:21
+msgid ""
+"These carriers require dimensional weight. You must define dimensions per "
+"weight bracket for your parcels in tab \"Weight options\". Indicate "
+"dimensions that match the best your packages. Defaults dimensions grid may "
+"not be accurate and lead to wrong declaration to the carriers and "
+"complementary invoices."
+msgstr ""
+"Ces transporteurs ont une contrainte de poids volumétrique. Vous devez "
+"définir les dimensions de vos colis en fonction de leurs poids dans l'onglet "
+"\"Options de poids\". Indiquez les dimensions les plus courantes pour "
+"obtenir les tarifs les plus proches de la réalité. Sans personnalisation, ce "
+"sont les dimensions par défaut, élaborées par EnvoiMoinsCher, qui seront "
+"affichées. En cas de mauvaises déclarations, un complément de facturation "
+"peut vous être envoyé."
+
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:27
+msgid ""
+"These carriers allow you to send your parcel without dimensional weight. The "
+"weight is only used to calculate the shipping cost within the maximum size "
+"allowed by each carrier."
+msgstr ""
+"Ces transporteurs vous permettent d'envoyer vos colis sans contraintes de "
+"poids volumétrique. Seul le poids de votre envois est nécessaire pour "
+"calculer le coût du transport, dans la limite des dimensions maximales "
+"propres à chaque transporteurs."
+
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:35
+msgid "Offers"
+msgstr "Offres"
+
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:37
+#: ../includes/admin/views/html-admin-simulator.php:21
+#: ../includes/envoimoinscher_carrier.php:118
+msgid "Description"
+msgstr "Description"
+
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:39
+msgid "Status"
+msgstr "Statut"
+
+#: ../includes/admin/views/html-admin-carriers-carrier-list.php:41
+msgid "Edition"
+msgstr "Editer"
+
+#: ../includes/admin/views/html-admin-carriers-weight-options.php:12
+msgid ""
+"On this page, you can customize the maximum size of your parcel by weight "
+"brackets. Dimensions are one of the primary criteria for shipping "
+"attribution. Enter most common dimensions to get realistic prices. These "
+"options will be used to get advanced carriers rates."
+msgstr ""
+"Sur cette page, vous pouvez personnaliser la taille maximale de vos envois "
+"par catégories de poids. Nous vous recommandons d'effectuer ce travail de "
+"personnalisation, car les dimensions sont l'un des principaux critères pour "
+"l'attribution de l'appel d'offres à la livraison. Ces options sont utilisées "
+"par les transporteurs avancés."
+
+#: ../includes/admin/views/html-admin-carriers-weight-options.php:13
+msgid ""
+"Without customization, the default dimensions provided by EnvoiMoinsCher are "
+"used."
+msgstr ""
+"Sans personnalisation, ce sont les dimensions par défaut, mis au point par "
+"Envoimoinscher, qui seront affichés."
+
+#: ../includes/admin/views/html-admin-carriers-weight-options.php:21
+#: ../includes/envoimoinscher_carrier.php:135
+msgid "Weight"
+msgstr "Poids"
+
+#: ../includes/admin/views/html-admin-carriers-weight-options.php:23
+msgid "Max length"
+msgstr "Longueur max"
+
+#: ../includes/admin/views/html-admin-carriers-weight-options.php:25
+msgid "Max width"
+msgstr "Largeur max"
+
+#: ../includes/admin/views/html-admin-carriers-weight-options.php:27
+msgid "Max height"
+msgstr "Hauteur max"
+
+#: ../includes/admin/views/html-admin-help.php:19
+msgid "Frequently asked questions"
+msgstr "Questions courantes"
+
+#: ../includes/admin/views/html-admin-settings.php:30
+msgid "Save changes"
+msgstr "Enregistrer"
+
+#: ../includes/admin/views/html-admin-settings.php:34
+msgid "See Offers"
+msgstr "Voir les offres"
+
+#: ../includes/admin/views/html-admin-simulator.php:17
+msgid "Offer"
+msgstr "Offre"
+
+#: ../includes/admin/views/html-admin-simulator.php:18
+msgid "Carrier"
+msgstr "Transporteur"
+
+#: ../includes/admin/views/html-admin-simulator.php:19
+msgid "Price ET"
+msgstr "Prix HT €"
+
+#: ../includes/admin/views/html-admin-simulator.php:20
+msgid "Price ATI"
+msgstr "Prix TTC €"
+
+#: ../includes/envoimoinscher_carrier.php:107
+msgid "Enable/Disable"
+msgstr "Activer/Désactiver"
+
+#: ../includes/envoimoinscher_carrier.php:112
+msgid "Label"
+msgstr "Nom"
+
+#: ../includes/envoimoinscher_carrier.php:114
+msgid "This controls the label which the user sees during checkout."
+msgstr "Ceci contrôle le nom que voit l'utilisateur pendant le checkout."
+
+#: ../includes/envoimoinscher_carrier.php:120
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+"Ceci contrôle la description que voit l'utilisateur pendant le checkout."
+
+#: ../includes/envoimoinscher_carrier.php:124
+msgid "Prices"
+msgstr "Prix"
+
+#: ../includes/envoimoinscher_carrier.php:127
+msgid "Real price"
+msgstr "Prix réel"
+
+#: ../includes/envoimoinscher_carrier.php:127
+msgid "Rate"
+msgstr "Forfait"
+
+#: ../includes/envoimoinscher_carrier.php:132
+msgid ""
+"Define the type of rate to make your scales : weight for total cart weight "
+"and price for total cart price"
+msgstr ""
+"Veuillez indiquer sur quoi vous voulez baser votre forfait : le poids total "
+"du panier ou le prix total du panier."
+
+#: ../includes/envoimoinscher_carrier.php:135
+msgid "Price"
+msgstr "Prix"
+
+#: ../includes/envoimoinscher_carrier.php:140
+msgid "Handling fee"
+msgstr "Frais de manutention"
+
+#: ../includes/envoimoinscher_carrier.php:142
+#, php-format
+msgid ""
+"Fee excluding tax. Enter an amount, e.g. %s, or a percentage, e.g. 5%%. "
+"Leave blank or set to 0 to disable."
+msgstr ""
+"Les frais sans TVA. Entrez un montant, ex : %s, ou un pourcentage, ex : 5%%. "
+"Laissez vide ou à 0 pour désactiver."
+
+#: ../includes/envoimoinscher_carrier.php:148
+msgid "Dropoff relay point"
+msgstr "Point relais de départ"
+
+#: ../includes/envoimoinscher_carrier.php:154
+msgid "Carrier tracking url"
+msgstr "URL de suivi transporteur"
+
+#: ../includes/envoimoinscher_carrier.php:155
+msgid ""
+"Use this field to add a carrier tracking URL to your customer order view "
+"page. If you use @ it will be replaced by the carrier tracking reference to "
+"get a direct URL to your order tracking. Leave blank if you don't want to "
+"display a tracking link."
+msgstr ""
+"Utiliser ce champ pour ajouter une URL de suivi transporteur sur la page de "
+"récapitulatif de commande de vos clients. Si vous utlisez le caractère @, "
+"celui-ci sera remplacé par la référence de suivi transporteur pour former "
+"l'URL directe vers le suivi du colis. Laisser le champ vide si vous ne "
+"voulez pas afficher de lien."
+
+#: ../languages/categories.php:6
+msgid "Books and documents"
+msgstr "Livres et documents"
+
+#: ../languages/categories.php:7
+msgid "Documents without commercial value"
+msgstr "Documents sans valeur commerciale"
+
+#: ../languages/categories.php:8
+msgid "Newspapers"
+msgstr "Journaux"
+
+#: ../languages/categories.php:9
+msgid "Magazines, journals"
+msgstr "Magazines, revues"
+
+#: ../languages/categories.php:10
+msgid "Technical manuals"
+msgstr "Manuels techniques"
+
+#: ../languages/categories.php:11
+msgid "Books"
+msgstr "Livres"
+
+#: ../languages/categories.php:12
+msgid "Passports"
+msgstr "Passeports"
+
+#: ../languages/categories.php:13
+msgid "Plane tickets"
+msgstr "Billets d'avion"
+
+#: ../languages/categories.php:14
+msgid "X-rays"
+msgstr "Radiographies"
+
+#: ../languages/categories.php:15
+msgid "Photographs"
+msgstr "Photographies"
+
+#: ../languages/categories.php:16
+msgid "Internal company mail"
+msgstr "Courrier interne d'entreprise"
+
+#: ../languages/categories.php:17
+msgid "Business proposals"
+msgstr "Propositions commerciales"
+
+#: ../languages/categories.php:18
+msgid "Promotional materials"
+msgstr "Documents publicitaires"
+
+#: ../languages/categories.php:19
+msgid "Catalogues, annual reports"
+msgstr "Catalogues, rapports annuels"
+
+#: ../languages/categories.php:20
+msgid "Computer printouts"
+msgstr "Listings informatiques"
+
+#: ../languages/categories.php:21
+msgid "Plans, designs"
+msgstr "Plans, dessins"
+
+#: ../languages/categories.php:22
+msgid "Printed documents"
+msgstr "Documents d'impression"
+
+#: ../languages/categories.php:23
+msgid "Templates"
+msgstr "Patrons"
+
+#: ../languages/categories.php:24
+msgid "Labels, stickers"
+msgstr "Etiquettes, autocollants"
+
+#: ../languages/categories.php:25
+msgid "Tender documents"
+msgstr "Documents d'appels d'offres"
+
+#: ../languages/categories.php:26
+msgid "Food and perishables"
+msgstr "Alimentation et matières périssables"
+
+#: ../languages/categories.php:27
+msgid "Non-perishable foodstuffs"
+msgstr "Denrées alimentaires non périssables"
+
+#: ../languages/categories.php:28
+msgid "Fresh and perishable produce"
+msgstr "Produits frais et périssables"
+
+#: ../languages/categories.php:29
+msgid "Refrigerated products"
+msgstr "Produits réfrigérés"
+
+#: ../languages/categories.php:30
+msgid "Frozen products"
+msgstr "Produits surgelés"
+
+#: ../languages/categories.php:31
+msgid "Non-alcoholic beverages"
+msgstr "Boissons non alcoolisées"
+
+#: ../languages/categories.php:32
+msgid "Alcoholic beverages"
+msgstr "Boissons alcoolisées"
+
+#: ../languages/categories.php:33
+msgid "Plants, flowers, seeds"
+msgstr "Plantes, fleurs, semences"
+
+#: ../languages/categories.php:34
+msgid "Products"
+msgstr "Produits"
+
+#: ../languages/categories.php:35
+msgid "Cosmetics, well-being products"
+msgstr "Cosmétiques, bien-être"
+
+#: ../languages/categories.php:36
+msgid "Pharmaceuticals, medications"
+msgstr "Pharmacie, médicaments"
+
+#: ../languages/categories.php:37
+msgid "Chemicals, drugs, cleaning products"
+msgstr "Chimie, droguerie, produits d'entretien"
+
+#: ../languages/categories.php:38
+msgid "Tobacco"
+msgstr "Tabac"
+
+#: ../languages/categories.php:39
+msgid "Perfumes"
+msgstr "Parfums"
+
+#: ../languages/categories.php:40
+msgid "Clothing and accessories"
+msgstr "Habillement et accessoires"
+
+#: ../languages/categories.php:41
+msgid "Shoes"
+msgstr "Chaussures"
+
+#: ../languages/categories.php:42
+msgid "Fabrics, new clothes"
+msgstr "Tissus, vêtements neufs"
+
+#: ../languages/categories.php:43
+msgid "Used clothes"
+msgstr "Vêtements usagés"
+
+#: ../languages/categories.php:44
+msgid "Clothing/fashion accessories"
+msgstr "Accessoires vestimentaires, de mode"
+
+#: ../languages/categories.php:45
+msgid "Leather, skins, leather goods"
+msgstr "Cuirs, peaux, maroquinerie"
+
+#: ../languages/categories.php:46
+msgid "Costume jewellery"
+msgstr "Bijoux fantaisie"
+
+#: ../languages/categories.php:47
+msgid "Jewellery, precious objects"
+msgstr "Bijoux, objets précieux"
+
+#: ../languages/categories.php:48
+msgid "Equipment and appliances"
+msgstr "Appareils et matériels"
+
+#: ../languages/categories.php:49
+msgid "Medical equipment"
+msgstr "Matériel médical"
+
+#: ../languages/categories.php:50
+msgid "IT, high-tech and fixed-line telephony equipment"
+msgstr "Informatique, High tech, téléphonie fixe"
+
+#: ../languages/categories.php:51
+msgid "Mobile telephony and accessories"
+msgstr "Téléphonie mobile et accessoires"
+
+#: ../languages/categories.php:52
+msgid "Televisions, computer screens"
+msgstr "Téléviseurs, écrans d'ordinateur"
+
+#: ../languages/categories.php:53
+msgid "Other devices and equipment"
+msgstr "Autres appareils et matériels"
+
+#: ../languages/categories.php:54
+msgid "Digital media, CD, DVD"
+msgstr "Supports numériques, CD, DVD"
+
+#: ../languages/categories.php:55
+msgid "Spare parts and accessories (auto)"
+msgstr "Pièces de rechange et accessoires (auto)"
+
+#: ../languages/categories.php:56
+msgid "Spare parts and accessories (other)"
+msgstr "Pièces de rechange et accessoires (autres)"
+
+#: ../languages/categories.php:57
+msgid "Watches, timepieces (excluding jewellery)"
+msgstr "Montres, horlogerie (hors bijoux)"
+
+#: ../languages/categories.php:58
+msgid "Camping and fishing items"
+msgstr "Articles de camping, de pêche"
+
+#: ../languages/categories.php:59
+msgid "Sporting apparel (excluding clothing)"
+msgstr "Articles de sport (hors vêtement)"
+
+#: ../languages/categories.php:60
+msgid "Musical instruments and accessories"
+msgstr "Instruments de musique et accessoires"
+
+#: ../languages/categories.php:61
+msgid "Heating and boiler equipment"
+msgstr "Matériel de chauffage, chaudronnerie"
+
+#: ../languages/categories.php:62
+msgid "Laboratory, optical and measuring equipment"
+msgstr "Matériel de labo, optique, de mesure"
+
+#: ../languages/categories.php:63
+msgid "Electrical equipment, transformers, cables"
+msgstr "Matériel électrique, transfo., câbles"
+
+#: ../languages/categories.php:64
+msgid "Office supplies, stationery, refills"
+msgstr "Fournitures de bureau, papeterie, recharges"
+
+#: ../languages/categories.php:65
+msgid "Engines, gearboxes"
+msgstr "Moteurs, boites de vitesse"
+
+#: ../languages/categories.php:66
+msgid "Motor cycles, scooters"
+msgstr "Motos, scooters"
+
+#: ../languages/categories.php:67
+msgid "Bicycles, non-motorised cycles"
+msgstr "Vélos, cycles sans moteur"
+
+#: ../languages/categories.php:68
+msgid "Tooling, tools, DIY equipment"
+msgstr "Outillage, outils, bricolage"
+
+#: ../languages/categories.php:69
+msgid "Plumbing equipment, plastic tubes"
+msgstr "Plomberie, tubes plastiques"
+
+#: ../languages/categories.php:70
+msgid "Hardware, valves, locks"
+msgstr "Quincaillerie, robinetterie, serrurerie"
+
+#: ../languages/categories.php:71
+msgid "Furniture and decoration"
+msgstr "Mobilier et décoration"
+
+#: ../languages/categories.php:72
+msgid "Home furniture"
+msgstr "Mobilier d'habitation"
+
+#: ../languages/categories.php:73
+msgid "Office furniture"
+msgstr "Mobilier de bureau"
+
+#: ../languages/categories.php:74
+msgid "Dismantled and packaged furniture"
+msgstr "Mobilier démonté sous emballage"
+
+#: ../languages/categories.php:75
+msgid "Old (antique) furniture"
+msgstr "Mobilier ancien (antiquité)"
+
+#: ../languages/categories.php:76
+msgid "Household electrical goods"
+msgstr "Electroménager"
+
+#: ../languages/categories.php:77
+msgid "Small household electrical goods, small domestic appliances"
+msgstr "Petit électroménager, petits appareils ménagers"
+
+#: ../languages/categories.php:78
+msgid "Listed objects or paintings, collectible items, mirrors, windows"
+msgstr "Objets ou tableaux cotés, de collection, miroirs, vitres"
+
+#: ../languages/categories.php:79
+msgid "Works of art and paintings of low value"
+msgstr "Objets et tableaux courants"
+
+#: ../languages/categories.php:80
+msgid "Lamps, lighting"
+msgstr "Lampes, luminaire"
+
+#: ../languages/categories.php:81
+msgid "Carpets"
+msgstr "Tapis"
+
+#: ../languages/categories.php:82
+msgid "Linens, curtains, sheets"
+msgstr "Toiles, rideaux, draps"
+
+#: ../languages/categories.php:83
+msgid "Toilets, glasses, crystal glassware, dishware, ornaments"
+msgstr "Sanitaires, verres, cristallerie, vaisselle, bibelots"
+
+#: ../languages/categories.php:84
+msgid "Other fragile objects and sculptures"
+msgstr "Autres objets fragiles et sculptures"
+
+#: ../languages/categories.php:85
+msgid "Personal belongings, gifts"
+msgstr "Effets personnels, cadeaux"
+
+#: ../languages/categories.php:86
+msgid "Gifts, corporate gifts"
+msgstr "Cadeaux, cadeaux entreprise"
+
+#: ../languages/categories.php:87
+msgid "Luggage, suitcases, trunks"
+msgstr "Bagages, valises, malles"
+
+#: ../languages/categories.php:88
+msgid "Small-scale removals, boxes, personal effects"
+msgstr "Petit déménagement, cartons, effets personnels"
+
+#: ../languages/misc.php:5
+msgid ""
+"The EnvoiMoinsCher delivery plugin for WooCommerce connects your site to "
+"over 15 carriers and simplifies your shipping process."
+msgstr ""
+"Le module de livraison EnvoiMoinsCher pour WooCommerce vous permet de "
+"choisir parmi plus de 15 transporteurs et simplifie votre processus de "
+"livraison."
+
+#~ msgid "Could not compile %s.less:"
+#~ msgstr "%s.less n'a pas pu être compilé:"
+
+#~ msgid ""
+#~ "Shipping plugin allowing to compare and order negotiated delivery options "
+#~ "of 15 carriers."
+#~ msgstr ""
+#~ "Module de livraison permettant de comparer et commander les offres de 15 "
+#~ "transporteurs, à tarifs négociés."
+
+#~ msgid "Company"
+#~ msgstr "Société"
+
+#~ msgid "Select a page&hellip;"
+#~ msgstr "Choisissez une page&hellip;"
+
+#~ msgid "Choose a country&hellip;"
+#~ msgstr "Choisissez un pays&hellip;"
+
+#~ msgid "Country"
+#~ msgstr "Pays"
+
+#~ msgid "Choose countries&hellip;"
+#~ msgstr "Choisissez des pays&hellip;"
+
+#~ msgid "Select all"
+#~ msgstr "Tout sélectionner"
+
+#~ msgid "Select none"
+#~ msgstr "Aucun"
+
+#~ msgid "Shipping plugin: 20+ negotiated carriers."
+#~ msgstr "Module de livraison : plus de 20 transporteurs à tarifs négociés."
+
+#~ msgid ""
+#~ "Tracking information is displayed in your order notes. In order to "
+#~ "display a tracking URL for your customers in front office, you must "
+#~ "configure the carrier tracking URLs of your carriers: "
+#~ "<strong>WooCommerce</strong> => <strong>EnvoiMoinsCher</strong> => "
+#~ "<strong>Carrier</strong> => <strong>Edit</strong> => <strong>Tracking "
+#~ "URL</strong>.<br/>For information, here are tracking URLs which can be "
+#~ "used with the EnvoiMoinsCher plugin. Please note that these URLs are "
+#~ "provided for information only and can be changed without notice."
+#~ "<ul><li>Chronopost - http://www.chronopost.fr/transport-express/livraison-"
+#~ "colis/cache/bypass/pid/701</li><li>Colis Priv&eacute; - https://www."
+#~ "colisprive.com/moncolis/pages/detailColis.aspx?numColis=@</li><li>Mondial "
+#~ "relay - http://www.mondialrelay.fr/suivi-de-colis/</li><li>Relais colis - "
+#~ "http://www.relaiscolis.com/index.php/application-suivi-colis</li><li>UPS "
+#~ "- http://wwwapps.ups.com/WebTracking/track?"
+#~ "HTMLVersion=5.0&loc=fr_FR&Requester=UPSHome&WBPM_lid=homepage%2Fct1."
+#~ "html_pnl_trk&track.x=Suivi&trackNums=@</li><li>DHL Express - http://www."
+#~ "dhl.fr/content/fr/fr/dhl_express/suivi_expedition.shtml?brand=DHL&AWB=@</"
+#~ "li><li>Fedex - https://www.fedex.com/fedextrack/?tracknumbers=@</"
+#~ "li><li>La Poste - http://www.colissimo.fr/portail_colissimo/suivre.do?"
+#~ "language=fr_FR</li><li>TNT - http://www.tnt.fr/public/suivi_colis/"
+#~ "recherche/index.do;jsessionid=78654DB3C246ADA008279CE05E802C7A</li></ul>"
+#~ msgstr ""
+#~ "Les informations de suivi sont affichés dans vos notes de commande. Pour "
+#~ "afficher un lien de suivi dans le compte de vos clients, vous devez "
+#~ "configurer les URLs de suivi par transporteur : <strong>WooCommerce</"
+#~ "strong> => <strong>EnvoiMoinsCher</strong> => <strong>Transporteur</"
+#~ "strong> => <strong>Editer</strong> => \"<strong>URL de suivi "
+#~ "transporteur</strong>\".<br/>A titre indicatif, voici des URLs de suivi "
+#~ "transporteur qui peuvent être utilisées avec le plugin EnvoiMoinsCher. "
+#~ "Veuillez noter que ces URLs sont données à titre indicatif et peuvent "
+#~ "être modifiées sans préavis.<ul><li>Chronopost - http://www.chronopost.fr/"
+#~ "transport-express/livraison-colis/cache/bypass/pid/701</li><li>Colis "
+#~ "Priv&eacute; - https://www.colisprive.com/moncolis/pages/detailColis.aspx?"
+#~ "numColis=@</li><li>Mondial relay - http://www.mondialrelay.fr/suivi-de-"
+#~ "colis/</li><li>Relais colis - http://www.relaiscolis.com/index.php/"
+#~ "application-suivi-colis</li><li>UPS - http://wwwapps.ups.com/WebTracking/"
+#~ "track?HTMLVersion=5.0&loc=fr_FR&Requester=UPSHome&WBPM_lid=homepage%2Fct1."
+#~ "html_pnl_trk&track.x=Suivi&trackNums=@</li><li>DHL Express - http://www."
+#~ "dhl.fr/content/fr/fr/dhl_express/suivi_expedition.shtml?brand=DHL&AWB=@</"
+#~ "li><li>Fedex - https://www.fedex.com/fedextrack/?tracknumbers=@</"
+#~ "li><li>La Poste - http://www.colissimo.fr/portail_colissimo/suivre.do?"
+#~ "language=fr_FR</li><li>TNT - http://www.tnt.fr/public/suivi_colis/"
+#~ "recherche/index.do;jsessionid=78654DB3C246ADA008279CE05E802C7A</li></ul>"
+
+#~ msgid ""
+#~ "<i>Did I wait long enough?</i> Depending on the carrier, generation can "
+#~ "take up to 5 minutes, so you have to wait a bit.<br/><i>Am I in a test "
+#~ "environment?</i> In this case, the order was not accepted and the waybill "
+#~ "will not be generated. If your order was real, you should switch to "
+#~ "production environment (\"My account\" tab in EnvoiMoinsCher settings) "
+#~ "and re-send your order. Alternatively, you can login in to the Boxtale "
+#~ "site and send your order directly from the site (do not forget to log in "
+#~ "for the order to be added to your bill).<br/>Contact technical service <a "
+#~ "href=\"mailto:informationAPI@envoimoinscher.com"
+#~ "\">informationAPI@envoimoinscher.com</a> stating your problem and an "
+#~ "access to your back office (url, login, password) to speed up the solving "
+#~ "of your problem. You'll receive a response as soon as possible."
+#~ msgstr ""
+#~ "<i>Est-ce que j'ai attendu assez longtemps ?</i> Selon le transporteur, "
+#~ "la génération peut prendre jusqu'à 5 minutes, il faut donc parfois "
+#~ "attendre un peu.<br/><i>Suis-je en environnement de test ?</i> Si c'est "
+#~ "le cas, la commande n'a pas été prise en compte et le bordereau ne se "
+#~ "génèrera pas. Si votre commande était réelle, vous devez tout d'abord "
+#~ "passer en environnement de production (onglet : \"Mon Compte\" dans les "
+#~ "paramètres EnvoiMoinsCher) et repasser votre commande. Vous pouvez "
+#~ "également décider de vous loguer sur le site EnvoiMoinsCher.com et de "
+#~ "passer directement votre commande (n'oubliez pas de vous connecter sur "
+#~ "votre compte pour que la commande soit rajoutée à votre facture).<br/"
+#~ ">Contactez le service technique (<a href=\"mailto:"
+#~ "informationAPI@envoimoinscher.com\">informationAPI@envoimoinscher.com</"
+#~ "a>) en indiquant votre problème et un accès à votre back-office (url, "
+#~ "login, mot de passe) pour accélérer la résolution de votre problème."
+
+#~ msgid ""
+#~ "For the buyer: the buyer will have access to the link on his order page "
+#~ "in his account on your website (if you have configured the tracking url "
+#~ "for the carrier).<br/>For the seller: you can find both EnvoiMoinsCher "
+#~ "reference and carrier tracking number on the \"Edit Order\" page => "
+#~ "\"Shipping Options - EnvoiMoinsCher\". You can also track the shipment "
+#~ "from your account on EnvoiMoinsCher.com."
+#~ msgstr ""
+#~ "Pour l'acheteur : l'acheteur aura accès au lien dans son espace client "
+#~ "sur votre site (si vous avez configuré l'URL de suivi pour le "
+#~ "transporteur de la commande).<br/>Pour le vendeur : vous pouvez trouver "
+#~ "le numéro de suivi EnvoiMoinsCher ainsi que le numéro de suivi du "
+#~ "transporteur au milieu de la page \"Modifier commande\" => \"Options "
+#~ "d’envoi – EnvoiMoinsCher\". Vous pouvez également suivre l'envoi depuis "
+#~ "l’espace en compte sur EnvoiMoinsCher.com."
+
+#~ msgid ""
+#~ "For shipments abroad, you must describe the contents of your shipment "
+#~ "both in English and in the language of the parcel's country of origin.<br/"
+#~ ">Please note the following:<ul><li>For shipments abroad, the plugin does "
+#~ "not block shipments if the content description is not translated to "
+#~ "English. Please keep an eye on the translations.</li><li>You must attach "
+#~ "to your package a commercial invoice in 5 copies for all international "
+#~ "shipments (outside the EU).</li><li>Any specific documentation related to "
+#~ "a special country or product is your responsibility.</li></ul>"
+#~ msgstr ""
+#~ "Pour les envois vers l’étranger, vous devez décrire le contenu de votre "
+#~ "envoi à la fois en anglais et dans la langue du pays d'expédition.<br/"
+#~ ">Remarques:<ul><li>Pour vos expéditions vers l’étranger, le module ne "
+#~ "bloque pas les envois si la description du contenu n’a pas été traduite "
+#~ "en anglais. Veuillez surveiller les traductions.</li><li>Vous devez "
+#~ "joindre à votre colis une facture commerciale en 5 exemplaires pour tous "
+#~ "les envois destinés à l'international (hors UE).</li><li>Toute "
+#~ "documentation spécifique liée à une particularité pays ou produit relève "
+#~ "de votre responsabilité.</li></ul>"
+
+#~ msgid ""
+#~ "<ol><li>Insurance will only be automatically added to your shipping "
+#~ "options if you check this option in the configuration of EnvoiMoinsCher "
+#~ "plugin / \"Shipping description\" tab => <strong>WooCommerce</strong> => "
+#~ "<strong>EnvoiMoinsCher</strong> => <strong>Shipping description</strong> "
+#~ "=> <strong>Insurance</strong>. Be careful if you use this option that "
+#~ "insurance is <strong>not</strong> automatically added to the carrier "
+#~ "price given to your customer in your shop.</li><li>You can also add the "
+#~ "option after the order was created in your order view page: "
+#~ "<strong>WooCommerce</strong> => <strong>Orders</strong> => <strong>View</"
+#~ "strong> => <strong>Shipping Options - EnvoiMoinsCher</strong> => "
+#~ "<strong>Insurance</strong>.</li></ol>"
+#~ msgstr ""
+#~ "<ol><li>L'assurance sera automatiquement ajoutée à vos options d'envoi si "
+#~ "vous cochez l'option suivante dans la configuration du plugin "
+#~ "EnvoiMoinsCher / onglet \"Descriptions des envois\"Configurez votre "
+#~ "module EnvoiMoinsCher pour activer la possibilité d'assurer vos envois : "
+#~ "WooCommerce => EnvoiMoinsCher => Description des envois => Assurance."
+#~ "Cochez l’option \"Utiliser l’assurance AXA\" pour activer la possibilité "
+#~ "d'assurer tous vos envois, quelle que soit leur valeur.2. Renseignez les "
+#~ "informations complémentaires pour assurer au mieux votre envoi : "
+#~ "WooCommerce => Commandes => Voir => Modifier commande  => Option d’envoi "
+#~ "– EnvoiMoinsCher => Assurance. Le prix qui vous sera facturé est "
+#~ "recalculé automatiquement. Vous pouvez aussi décocher cette option si "
+#~ "vous ne souhaitez pas assurer un colis en particulier."
+
+#~ msgid ""
+#~ "You have three options to get your waybills: <strong>from WooCommerce</"
+#~ "strong>, <strong>by email</strong> or in your <strong>Boxtale personal "
+#~ "account</strong>, \"<strong>My shipments</strong>\" tab."
+#~ "<ul><li><strong>From WooCommerce :</strong> Go to the \"WooCommerce\" tab "
+#~ "in your WordPress back-office => \"Orders\" / using \"Awaiting Shipment\" "
+#~ "status filter. <strong>To download one or several waybills at once: "
+#~ "select the orders</strong> you want to download by checking the box, "
+#~ "<strong>choose \"Download all waybills\"</strong> in the bulk action drop-"
+#~ "down list in the top left-hand corner of the page and <strong>click on "
+#~ "\"Apply\"</strong>. A download link will also appear on your order page "
+#~ "view: \"<strong>Shipping Options - EnvoiMoinsCher</strong>\" => "
+#~ "\"<strong>Your waybill is available. Download it here.</strong>\".</"
+#~ "li><li><strong>By email :</strong> You can choose to receive the waybill "
+#~ "by email. This option configuration is available either in your "
+#~ "EnvoiMoinsCher personal account or in WooCommerce: WooCommerce => "
+#~ "EnvoiMoinsCher => Settings.</li><li><strong>From you EnvoiMoinsCher "
+#~ "account, \"My shipments\" tab</strong></li></ul>"
+#~ msgstr ""
+#~ "Vous avez trois possibilités pour récupérer vos bordereaux d'expédition : "
+#~ "<strong>à partir de WooCommerce</strong>, sur <strong>votre adresse "
+#~ "email<strong>, à partir de votre <strong>espace en compte EnvoiMoinscher</"
+#~ "strong>, rubrique \"<strong>Mes envois</strong>\".<ul><li><strong>A "
+#~ "partir de WooCommerce :</strong> Allez dans l'onglet \"WooCommerce\" du "
+#~ "back-office WordPress => sous-onglet \"Commandes\" / filtre \"En attente "
+#~ "d’expédition\". <strong>Pour télécharger un ou plusieurs bordereaux : "
+#~ "cochez les cases</strong> des commandes expédiées (\"En attente "
+#~ "d’expédition\") dont vous souhaitez les bordereaux, <strong>sélectionnez "
+#~ "\"Télécharger les bordereaux\"</strong> dans le menu déroulant d'actions "
+#~ "groupées en haut à gauche de la page et <strong>cliquez sur \"Appliquer"
+#~ "\"</strong>. Vous pouvez aussi télécharger le bordereau de chaque "
+#~ "commande depuis la page \"<strong>Modifier commande</strong>\" => "
+#~ "\"<strong>Option d’envoi – EnvoiMoinsCher</strong>\" => \"<strong>Votre "
+#~ "bordereau est disponible. Téléchargez le ici.</strong>\".</"
+#~ "li><li><strong>Sur votre adresse email :</strong>Vous pouvez choisir de "
+#~ "recevoir les bordereaux d'expédition par email. Cette configuration peut "
+#~ "se faire via votre espace en compte EnvoiMoinsCher ou via la "
+#~ "configuration du module : WooCommerce => EnvoiMoinsCher => Paramètres => "
+#~ "cochez la case \"Mail avec le bordereau\".A partir de votre espace en "
+#~ "compte EnvoiMoinsCher, rubrique \"Mes envois\"."
+
+#~ msgid "How can I download my waybill?"
+#~ msgstr "Comment télécharger les bordereaux d'expédition ?"
+
+#~ msgid ""
+#~ "You have three options to get your waybills: <strong>from WooCommerce</"
+#~ "strong>, <strong>by email</strong> or in your <strong>Boxtale personal "
+#~ "account</strong>, \"<strong>My shipments</strong>\" tab."
+#~ "<ul><li><strong>From WooCommerce :</strong> Go to the \"WooCommerce\" tab "
+#~ "in your WordPress back-office => \"Orders\" / using \"Awaiting Shipment\" "
+#~ "status filter. <strong>To download one or several waybills at once: "
+#~ "select the orders</strong> you want to download by checking the box, "
+#~ "<strong>choose \"Download all waybills\"</strong> in the bulk action drop-"
+#~ "down list in the top left-hand corner of the page and <strong>click on "
+#~ "\"Apply\"</strong>. A download link will also appear on your order page "
+#~ "view once the waybill is available.</li><li><strong>By email :</strong> "
+#~ "You can choose to receive the waybill by email. This option configuration "
+#~ "is available either in your EnvoiMoinsCher personal account or in "
+#~ "WooCommerce: WooCommerce => EnvoiMoinsCher => Settings.</"
+#~ "li><li><strong>From you EnvoiMoinsCher account, \"My shipments\" tab</"
+#~ "strong></li></ul>"
+#~ msgstr ""
+#~ "Vous avez trois possibilités pour récupérer vos bordereaux d'expédition : "
+#~ "<strong>à partir de WooCommerce</strong>, sur <strong>votre adresse "
+#~ "email<strong>, à partir de votre <strong>espace en compte EnvoiMoinscher</"
+#~ "strong>, rubrique \"<strong>Mes envois</strong>\".<ul><li><strong>A "
+#~ "partir de WooCommerce :</strong> Allez dans l'onglet \"WooCommerce\" du "
+#~ "back-office WordPress => sous-onglet \"Commandes\" / filtre \"En attente "
+#~ "d’expédition\". <strong>Pour télécharger un ou plusieurs bordereaux : "
+#~ "cochez les cases</strong> des commandes expédiées (\"En attente "
+#~ "d’expédition\") dont vous souhaitez les bordereaux, <strong>sélectionnez "
+#~ "\"Télécharger les bordereaux\"</strong> dans le menu déroulant d'actions "
+#~ "groupées en haut à gauche de la page et <strong>cliquez sur \"Appliquer"
+#~ "\"</strong>. Vous pouvez aussi télécharger le bordereau de chaque "
+#~ "commande depuis la page \"<strong>Modifier commande</strong>\" => "
+#~ "\"<strong>Option d’envoi – EnvoiMoinsCher</strong>\" => \"<strong>Votre "
+#~ "bordereau est disponible. Téléchargez le ici/\".Sur votre adresse "
+#~ "emailVous pouvez choisir de recevoir les bordereaux d'expédition par "
+#~ "email. Cette configuration peut se faire via votre espace en compte "
+#~ "EnvoiMoinsCher ou via la configuration du module : WooCommerce => "
+#~ "EnvoiMoinsCher => Paramètres => cochez la case \"Mail avec le bordereau\"."
+#~ "A partir de votre espace en compte EnvoiMoinsCher, rubrique \"Mes envois"
+#~ "\"."
+
+#~ msgid ""
+#~ "<ul><li><strong>Tick the box in front of the orders you want to ship.</"
+#~ "strong></li><li><strong>Choose \"Send using EnvoiMoinsCher\"</strong> in "
+#~ "the bulk action drop-down list in the top left-hand corner of the page "
+#~ "and <strong>click on \"Apply\"</strong>.</li><li><strong>If the shipment "
+#~ "is successful,</strong> the orders status be changed to "
+#~ "\"<strong>Awaiting Shipment</strong>\" and a <strong>confirmation "
+#~ "message</strong> will be displayed.</li></ul>If any problem occurs, "
+#~ "you'll see an alert notice informing that you should correct the invalid "
+#~ "orders one by one. Please note that as a security, you cannot send twice "
+#~ "the same order using bulk actions."
+#~ msgstr ""
+#~ "<ul><li><strong>Sélectionnez à gauche les commandes que vous souhaitez "
+#~ "envoyer.</strong></li><li><strong>Sélectionnez \"Envoyer avec "
+#~ "EnvoiMoinsCher\"</strong> dans le menu déroulant des actions groupées en "
+#~ "haut à gauche de la page et <strong>cliquez sur \"Appliquer\"</strong>.</"
+#~ "li><li><strong>Si tous les envois ont réussi, ils sont classés dans \"En "
+#~ "attente d’expédition\" et un message de confirmation s’affiche.En cas de "
+#~ "problème(s) avec un ou plusieurs envois, un message d’alerte s’affiche "
+#~ "pour que vous puissiez corriger et les déclencher ultérieurement."
+
+#~ msgid ""
+#~ "<strong>Be careful that the cost of insurance is not automatically billed "
+#~ "to your customers, and that if you choose this option, it will be "
+#~ "automatically selected for all your orders.</strong><br/>By selecting "
+#~ "declared value insurance, you declare to you have read <a href=\"http://"
+#~ "www.boxtale.co.uk/faq/131-tout-savoir-sur-l-assurance-ad-valorem."
+#~ "htmlinsurance\" target=\"_blank\">AXA insurance declared value policy "
+#~ "notice</a>. As packaging insufficiency and maladjustment are excluded "
+#~ "risks of AXA warranty, you could benefit from some extra packaging."
+#~ msgstr ""
+#~ "<strong>Attention : le coût de l'assurance n'est pas automatiquement "
+#~ "facturé à vos clients. Si vous choisissez cette option, cette option sera "
+#~ "activée par défaut pour toutes vos commandes.</strong><br/>En "
+#~ "sélectionnant l'option d'assurance à valeur déclarée, je déclare avoir "
+#~ "pris connaissance de <a href=\"http://www.envoimoinscher.com/faq/131-tout-"
+#~ "savoir-sur-l-assurance-ad-valorem.html\" target=\"_blank\">la notice du "
+#~ "contrat d'assurance à valeur déclarée AXA</a>. L'insuffisance et "
+#~ "l'inadaptation de votre emballage étant des risques exlus de la garantie "
+#~ "AXA, veillez à surprotéger votre envoi."
+
+#~ msgid ""
+#~ "Simulation page allow you to make a quotation according to the "
+#~ "characteristics of your parcel.<br />Prices and offers are displayed as "
+#~ "seen by the client."
+#~ msgstr ""
+#~ "La page de simulation vous permet d'effectuer un devis suivant les "
+#~ "caractéristiques de vos colis.<br />Les prix et les offres restitués sont "
+#~ "ceux que verra votre client."
+
+#~ msgid ""
+#~ "This error suggests a payment issue. You may have reached your account "
+#~ "spend cap. Contact our accounting department at <a href=\"mailto:"
+#~ "compta@envoimoinscher.com\">compta@envoimoinscher.com</a>."
+#~ msgstr ""
+#~ "Cette erreur est liée à un problème de paiement. Il peut s'agir par "
+#~ "exemple de l'atteinte de l'encours maximum autorisé sur votre compte. "
+#~ "Veuillez contacter notre service comptabilité avec votre login client à "
+#~ "l'adresse suivante : <a href=\"mailto:compta@envoimoinscher.com"
+#~ "\">compta@envoimoinscher.com</a>."
+
+#~ msgid ""
+#~ "Sent to billing adress, as your EnvoiMoinsCher profile. It permits you to "
+#~ "give you your bill for sent orders."
+#~ msgstr ""
+#~ "Envoyé à l'adresse de facturation indiquée dans votre profil "
+#~ "EnvoiMoinsCher.  Ce mail contient des instructions d'expédition: "
+#~ "bordereau(x)."
+
+#~ msgid "Carrier tracking number: %s."
+#~ msgstr "Numéro de suivi transporteur : %s."
+
+#~ msgid "Its reference is %s."
+#~ msgstr "Sa référence est %s."
+
+#~ msgid ""
+#~ "The carrier selection is no longer valid for this order, please select "
+#~ "another in your order items and then click on \"Update rate\""
+#~ msgstr ""
+#~ "Le choix du transporteur n'est plus valide pour cette commande, veuillez "
+#~ "sélectionnner un autre transporteur"
+
+#~ msgid "Nature of your item (en version):"
+#~ msgstr "Description de votre marchandise (en anglais) :"
+
+#~ msgid "Nature of your item (fr version):"
+#~ msgstr "Description de votre marchandise (en français) :"
+
+#~ msgid "Value of your item:"
+#~ msgstr "Prix unitaire :"
+
+#~ msgid "Origin:"
+#~ msgstr "Pays d'origine :"
+
+#~ msgid "Weight:"
+#~ msgstr "Poids unitaire :"
+
+#~ msgid "%s Shipping Options - EnvoiMoinsCher"
+#~ msgstr "Options d'envoi - EnvoiMoinsCher"
