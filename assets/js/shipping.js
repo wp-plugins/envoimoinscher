@@ -114,6 +114,14 @@ function show_pickup_points(parcel_points) {
 						
 			for (j in point.days){
 				day = point.days[j];
+
+                /* Test to prevent js errors */
+                if ((typeof(day.open_am)=="undefined") || (typeof(day.close_am)=="undefined") 
+                  || (typeof(day.open_pm)=="undefined") || (typeof(day.close_pm)=="undefined")) { 
+                    // Point not found, skipping... 
+                    continue; 
+                }
+                
 				am = day.open_am != "" && day.close_am != "";
 				pm = day.open_pm != "" && day.close_pm != "";
 				if (am || pm) {
